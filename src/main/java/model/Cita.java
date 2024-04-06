@@ -8,7 +8,7 @@ public class Cita {
     private  MotivoCita motivoCita;
     private boolean pagado = false;
 
-
+    private boolean tomado = false;
     public Cita(String idPaciente, Especialidad especialidad, String profesionalAsignado, MotivoCita motivoCita, boolean pagado) {
         this.idPaciente = idPaciente;
         this.especialidad = especialidad;

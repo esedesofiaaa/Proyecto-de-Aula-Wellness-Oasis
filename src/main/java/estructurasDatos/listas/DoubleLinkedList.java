@@ -295,13 +295,5 @@ public class DoubleLinkedList<T> implements DoubleLinkedListInterface<T> {
         return actual;
     } //Planeaba reutilizar este metodo en el de navegarMetodo, pero no me funciono bien y decidi hacerlo por los nodos y las referencias directamente en el otro metodo
 
-    public T buscarPorIndiceIterar(int indice) {
-        T valor = null;
-        Nodo<T>actual=cabeza;
-        for(int i = 0; i< indice; i++) {
-            actual = actual.getSiguiente();
-            valor = actual.getValor();
-        }
-        return valor;
-    }
+
 }
