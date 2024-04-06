@@ -1,17 +1,23 @@
 package model;
 
-public enum MotivoCita {
-    EXAMENES(50),
-    CONTROL(30),
-    VALORACION(40);
+public abstract class MotivoCita {
+    private String precio;
 
-    private final int costo;
 
-    MotivoCita(int costo) {
-        this.costo = costo;
+    public MotivoCita(String precio) {
+        this.precio = precio;
     }
 
-    public int getCosto() {
-        return costo;
-    }
+
+
+
+
+
+/*public class Examen extends MotivoCita {
+    // Atributos y métodos específicos de esta subclase
 }
+
+*/
+}
+
+

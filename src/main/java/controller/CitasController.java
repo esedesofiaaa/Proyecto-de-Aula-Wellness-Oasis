@@ -35,5 +35,5 @@ public class CitasController {
         pacienteTemp.agregarCitaAlHistorial(cita);
     }
 
-
+//metodo para validar si el tipo de cita es  Control y cambiar el boolean de pagado a true
 }
