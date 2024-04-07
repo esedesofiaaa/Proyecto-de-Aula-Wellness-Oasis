@@ -49,8 +49,4 @@ public class AutorizacionController {
         examen.setAutorizado(false);
         autorizacionRepository.eliminarRegistroExamenPila();
     }
-
-
-
-
 }
