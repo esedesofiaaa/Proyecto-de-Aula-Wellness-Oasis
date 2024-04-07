@@ -43,6 +43,8 @@ public class AutorizacionRepository {
     public void actualizarAutorizacionExamen() {
         RegistroExamen examen = examenesPorAutorizar.peek();
         examen.setAutorizado(true);
+        examen.setNota("AUTORIZADO");
+
         jsonAdapterAutorizacion.writeObjectsStack(pathFile, examenesPorAutorizar);
     }
 }

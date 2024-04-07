@@ -32,7 +32,7 @@ public class PacientesRepository {
     //añadirNuevoPaciente: Método para añadir un nuevo paciente
     public void añadirNuevoPaciente(Paciente nuevoPaciente) {
         listaPacientes.agregarAlFinal(nuevoPaciente); // Agrega el nuevo paciente a la lista
-        /* Aqui estamos reutilizando el metodo de la lista doble enlazada que nos permite agregar un elemento al final 
+        /* Aqui estamos reutilizando el metodo de la lista doble enlazada que nos permite agregar un elemento al final
          * de la lista doble enlazada*/
         jsonAdapterPacientes.writeObjects(pathFile, listaPacientes); // Actualizar el archivo JSON con la lista actualizada de pacientes
     }//añadirNuevoPaciente
@@ -71,4 +71,6 @@ public class PacientesRepository {
         // Si no se encontró ningún paciente con el ID especificado, retornar null
         return null;
     }//obtenerPorId
+
+
 }

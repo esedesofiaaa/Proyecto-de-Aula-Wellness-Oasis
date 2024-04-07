@@ -1,5 +1,7 @@
 package model.citas;
+
 import model.MotivoCita.Control;
+
 public class CitaControl extends Cita{
 
     private Control motivoCitaControl;

@@ -9,7 +9,7 @@ public class MainRegistroExamen {
 
         RegistroExamenController registroExamenController = new RegistroExamenController();
 
-        registroExamenController.agregarExamen(Examen.ELECTROCARDIOGRAMA, "1");
+        registroExamenController.agregarExamen(Examen.ELECTROCARDIOGRAMA, "2");
         registroExamenController.agregarExamen(Examen.ANALISIS_DE_SANGRE, "3");
         registroExamenController.agregarExamen(Examen.EXAMEN_FISICO_INFANTIL, "2");
         registroExamenController.agregarExamen(Examen.ENTREVISTA_PSIQUIATRICA, "3");

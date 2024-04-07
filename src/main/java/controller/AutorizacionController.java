@@ -31,7 +31,12 @@ public class AutorizacionController {
         registroExamenRepository = new RegistroExamenRepository();
 
         RegistroExamen examen = obtenerTodos().peek();
-        registroExamenRepository.añadirNuevoRegistroExamen(registroExamenRepository.buscarPorRadicadoExamen(examen.getRadicadoExamen()));
+        //examen.setAutorizado(true);
+        //examen.setNota("AUTORIZADO");
+        RegistroExamen examenFinal = examen;
+        examenFinal.setAutorizado(true);
+        examenFinal.setNota("AUTORIZADO");
+        registroExamenRepository.añadirNuevoRegistroExamen(registroExamenRepository.buscarPorRadicadoExamen(examenFinal.getRadicadoExamen()));
         autorizacionRepository.eliminarRegistroExamenPila();
     }
 

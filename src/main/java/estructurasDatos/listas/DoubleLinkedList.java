@@ -206,6 +206,17 @@ public class DoubleLinkedList<T> implements DoubleLinkedListInterface<T> {
     return null;
     }
 
+    //Metodo toArray() para convertir la lista en un arreglo
+    public T[] toArray() {
+        T[] arreglo = (T[]) new Object[tamano];
+        Nodo<T> actual = cabeza;
+        for (int i = 0; i < tamano; i++) {
+            arreglo[i] = actual.getValor();
+            actual = actual.getSiguiente();
+        }
+        return arreglo;
+    }
+
     // Clase interna Nodo
     private static class Nodo<T> {
         T valor;
@@ -296,12 +307,15 @@ public class DoubleLinkedList<T> implements DoubleLinkedListInterface<T> {
     } //Planeaba reutilizar este metodo en el de navegarMetodo, pero no me funciono bien y decidi hacerlo por los nodos y las referencias directamente en el otro metodo
 
     public T buscarPorIndiceIterar(int indice) {
-        T valor = null;
-        Nodo<T>actual=cabeza;
-        for(int i = 0; i< indice; i++) {
-            actual = actual.getSiguiente();
-            valor = actual.getValor();
+        if (indice < 0 || indice >= tamano()) { // Verificar si el índice está fuera de los límites de la lista
+            return null; // Retornar null si el índice no es válido
         }
-        return valor;
+
+        Nodo<T> actual = cabeza;
+        for (int i = 0; i < indice; i++) {
+            actual = actual.getSiguiente();
+        }
+        return actual.getValor(); // Retornar el valor del nodo actual después de iterar hasta el índice deseado
     }
+
 }

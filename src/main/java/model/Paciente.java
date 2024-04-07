@@ -2,6 +2,7 @@ package model;
 
 import java.util.Objects;
 import estructurasDatos.listas.DoubleLinkedList;
+import model.citas.Cita;
 
 public class Paciente {
     private TipoDocumento tipoDocumento;
@@ -26,7 +27,7 @@ public class Paciente {
     // Método para agregar una cita al historial de citas del paciente
     public void agregarCitaAlHistorial(Cita cita) {
         if (historialCitas == null) {
-            historialCitas = new DoubleLinkedList<>();
+            historialCitas = new DoubleLinkedList<Cita>();
         }
         historialCitas.agregarAlFinal(cita);
     }
