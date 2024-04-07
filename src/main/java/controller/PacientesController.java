@@ -16,6 +16,7 @@ public class PacientesController {
      * @param nuevoPaciente El nuevo paciente a agregar
      */
     public void agregarPaciente(Paciente nuevoPaciente) {
+
         pacientesRepository.añadirNuevoPaciente(nuevoPaciente);
     }
 

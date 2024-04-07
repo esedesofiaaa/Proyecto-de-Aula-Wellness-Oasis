@@ -18,9 +18,13 @@ public class Main {
         citasController.listaPacientes.agregarAlFinal(paciente1);
         citasController.listaPacientes.agregarAlFinal(paciente2);
 
+        /*
         // Agendar citas para los pacientes
         citasController.agendarCita("1", Especialidad.GENERAL, "Dr. López", MotivoCita.CONTROL);
         //citasController.agendarCita("2", Especialidad.CARDIOLOGIA, "Dr. Martínez", MotivoCita.EXAMENES);
+
+
+         */
 
         // Mostrar historial de citas de los pacientes
         paciente1.citasPaciente();

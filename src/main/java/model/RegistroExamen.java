@@ -10,12 +10,14 @@ public class RegistroExamen {
     private boolean autorizado;
     private GeneradorCodigo generadorCodigo = new GeneradorCodigo();// Inicializar la instancia de GeneradorCodigo
     private String idPaciente;
+    private String nota;
 
-    public RegistroExamen( Examen motivoCitaExamen, String idPaciente, boolean autorizado) {
+    public RegistroExamen( Examen motivoCitaExamen, String idPaciente ) {
         this.radicadoExamen = generadorCodigo.generarIdentificador();
-        this.autorizado = autorizado;
+        this.autorizado = false;
         this.idPaciente = idPaciente;
         this.motivoCitaExamen = motivoCitaExamen;
+        this.nota = "POR AUTORIZAR";
     }
 
     public String getRadicadoExamen() {
@@ -50,14 +52,22 @@ public class RegistroExamen {
         this.idPaciente = idPaciente;
     }
 
+    public String getNota() {
+        return nota;
+    }
+
+    public void setNota(String nota) {
+        this.nota = nota;
+    }
+
     @Override
     public String toString() {
         return "RegistroExamen{" +
                 "radicadoExamen='" + radicadoExamen + '\'' +
                 ", motivoCitaExamen=" + motivoCitaExamen +
                 ", autorizado=" + autorizado +
-                ", generadorCodigo=" + generadorCodigo +
                 ", idPaciente='" + idPaciente + '\'' +
+                ", nota='" + nota + '\'' +
                 '}';
     }
 }

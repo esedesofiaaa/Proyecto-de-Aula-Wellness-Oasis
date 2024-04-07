@@ -9,16 +9,17 @@ public class MainAutorizaciones {
             AutorizacionRepository autorizacionRepository = new AutorizacionRepository();
 
             AutorizacionController autorizacionController = new AutorizacionController();
+/*
+            autorizacionController.agregarPilaAutroizacion( "N141");
+            autorizacionController.agregarPilaAutroizacion( "X911");
+            autorizacionController.agregarPilaAutroizacion( "V566");
+            autorizacionController.agregarPilaAutroizacion( "S953");
+            autorizacionController.agregarPilaAutroizacion( "A637");
+  */
 
-            autorizacionController.agregarPilaAutroizacion( "L080");
+            autorizacionController.autorizarExamen();
 
-            autorizacionController.agregarPilaAutroizacion( "Y998");
-            autorizacionController.agregarPilaAutroizacion( "P745");
-            autorizacionController.agregarPilaAutroizacion( "S849");
-
-           // autorizacionController.autorizarExamen();
-
-            // autorizacionRepository.actualizarAutorizacionExamen();
+            //autorizacionRepository.actualizarAutorizacionExamen();
 
 
             //autorizacionController.obtenerTodos();

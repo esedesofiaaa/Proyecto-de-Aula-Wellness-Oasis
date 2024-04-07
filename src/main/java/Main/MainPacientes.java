@@ -3,9 +3,6 @@ package Main;
 import controller.CitasController;
 import estructurasDatos.listas.DoubleLinkedList;
 import model.*;
-import model.MotivoCita.Control;
-import model.MotivoCita.Examen;
-import model.MotivoCita.Valoracion;
 import model.repository.PacientesRepository;
 
 public class MainPacientes {
