@@ -8,30 +8,6 @@
     "nota": "POR AUTORIZAR"
   },
   {
-    "radicadoExamen": "X911",
-    "motivoCitaExamen": "ANALISIS_DE_SANGRE",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "V566",
-    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "2",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "S953",
-    "motivoCitaExamen": "ENTREVISTA_PSIQUIATRICA",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  },
-  {
     "radicadoExamen": "A637",
     "motivoCitaExamen": "DERMATOSCOPIA",
     "autorizado": false,
@@ -54,5 +30,29 @@
     "generadorCodigo": {},
     "idPaciente": "2",
     "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "X911",
+    "motivoCitaExamen": "ANALISIS_DE_SANGRE",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "V566",
+    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "2",
+    "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "S953",
+    "motivoCitaExamen": "ENTREVISTA_PSIQUIATRICA",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "AUTORIZADO"
   }
 ]

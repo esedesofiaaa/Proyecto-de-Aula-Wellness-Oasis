@@ -120,34 +120,32 @@ public class DoubleLinkedList<T> implements DoubleLinkedListInterface<T> {
 
 
     @Override
-    public T eliminarEnMedio( int indice) {
-        if (indice >=tamano || indice <0) {
-            throw new UnsupportedOperationException("Fuera de los limites de la lista"); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public T eliminarEnMedio(int indice) {
+        if (indice >= tamano || indice < 0) {
+            throw new UnsupportedOperationException("Índice fuera de los límites de la lista");
         }
-        if (indice==0) {//Si el elemento a eliminar es la posicion 1, reutilizamos el metodo 	eliminarDelInicio()
+        if (indice == 0) { // Si el elemento a eliminar es la primera posición, reutilizamos el método eliminarDelInicio()
             return eliminarDelInicio();
         }
-        if (indice==tamano-1) {//Si el elemento a eliminar es == al tanamo, reutilizamos el metodo 	eliminarDelFinal()
+        if (indice == tamano - 1) { // Si el elemento a eliminar es igual al tamaño menos uno, reutilizamos el método eliminarDelFinal()
             return eliminarDelFinal();
         }
 
         Nodo<T> actual = cabeza;
-        Nodo<T> anterior = null;
-        Nodo<T> siguiente = null;
-        for (int i = 0; i < indice - 1; i++) {
-
-            actual = actual.getSiguiente();//Se recorre la lista nodo por nodo
-            anterior = actual.getAnterior();
-            siguiente = actual.getSiguiente();
+        for (int i = 0; i < indice; i++) {
+            actual = actual.getSiguiente(); // Se recorre la lista nodo por nodo hasta llegar al nodo a eliminar
         }
-        T eliminado =  actual.getSiguiente().getValor(); // se almacena el valor a eliminar para poderlo retornar sin que sea nulo
+
+        Nodo<T> anterior = actual.getAnterior();
+        Nodo<T> siguiente = actual.getSiguiente();
         anterior.setSiguiente(siguiente);
         siguiente.setAnterior(anterior);
 
-
+        T eliminado = actual.getValor();
         tamano--;
         return eliminado;
     }
+
 
     @Override
     public int buscarElemento(T valor) {
