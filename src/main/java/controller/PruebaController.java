@@ -1,13 +1,14 @@
 package controller;
-
+/*
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import model.Paciente;
 import model.TipoDocumento;
 import controller.PacientesController;
-
+*/
 public class PruebaController {
+    /*
     @FXML
     private TextField txtTipoDeDocumento;
     @FXML
@@ -66,5 +67,5 @@ public class PruebaController {
         txtEdad.clear();
         txtTelefono.clear();
         txtCorreo.clear();
-    }
+    }*/
 }

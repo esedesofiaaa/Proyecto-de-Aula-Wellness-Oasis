@@ -5,17 +5,20 @@ import model.RegistroExamen;
 import shared.FileJsonAdapter;
 import estructurasDatos.listas.*; //Imoortamos la clase de la lista enlazada doble para poder usarla
 
-public class RegistroExamenRepository {
+public class    RegistroExamenRepository {
 
     private final FileJsonAdapter<RegistroExamen> jsonAdapterRegistroExamen; // Adaptador para manejar la lectura y escritura de objetos Paciente en formato JSON
-    private final String pathFile; // Esta variable de referencia guarda la ruta del archivo JSON que contiene los datos de los pacientes
+    private String pathFile; // Esta variable de referencia guarda la ruta del archivo JSON que contiene los datos de los pacientes
     // pero guarda la direccion dentro del proyecto no dentro del disco
     private DoubleLinkedList<RegistroExamen> registroExamenes; //Lista enlazada que almacena los objetos de tipo Paciente, en esta caso usamos una lista
+
+    private final AutorizacionRepository autorizacionRepository; //Instancia de la clase AutorizacionRepository
     //doble enlazada de nuestras estructuras de datos
     /**
      * Constructor de la clase RegistroExamenRepository
      */
    public RegistroExamenRepository(){
+       this.autorizacionRepository = new AutorizacionRepository();
        this.pathFile = "src/main/java/dataBase/RegistroExamen.Json"; // Ruta del archivo JSON dentro del proyecto
        this.jsonAdapterRegistroExamen = FileJsonAdapter.getInstance(); // Obtener una instancia del adaptador JSON para Pacientes
        this.registroExamenes = jsonAdapterRegistroExamen.getObjects(pathFile, RegistroExamen[].class);
@@ -132,6 +135,12 @@ public class RegistroExamenRepository {
             System.out.println("El registro de examen no se encontró en la lista."); // Si el paciente no se encuentra en la lista
         }
     }
+/*
+    public void traerAutorizacionJsonYActualizar(){
+        autorizacionRepository
+        pathFile = "src/main/java/dataBase/Autorizacion.Json";
+
+    }*/
 
 }
 

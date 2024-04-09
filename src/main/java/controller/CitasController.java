@@ -10,26 +10,33 @@ import model.Paciente;
 import model.citas.CitaControl;
 import model.citas.CitaExamen;
 import model.citas.CitaValoracion;
+import model.repository.CitaRepository;
+import model.repository.PacientesRepository;
+import model.repository.RegistroExamenRepository;
 
 public class CitasController {
+
+    private final CitaRepository citaRepository;
     private DoubleLinkedList<Cita> listaCitas;
-    public DoubleLinkedList<Paciente> listaPacientes;
+    private final PacientesRepository pacientesRepository;
+    private final RegistroExamenRepository  registroExamenRepository;
     public DoubleLinkedList<Paciente> listaExamenes;
 
     // Constructor
-    public CitasController() {
-        this.listaCitas = new DoubleLinkedList<>();
-        this.listaPacientes = new DoubleLinkedList<>();
-        this.listaExamenes = new DoubleLinkedList<>();
+    public CitasController(PacientesRepository pacientesRepository, RegistroExamenRepository registroExamenRepository) {
+        this.registroExamenRepository = new RegistroExamenRepository();
+        this.pacientesRepository = new PacientesRepository();
+        this.citaRepository = new CitaRepository();
+
     }
     public void agendarCitaControl(String idPaciente, boolean pagado, boolean tomado, Control motivoCitaControl) {
 
         // Ubica el paciente en la listaPacientes por si id,  para evitar agregar todos los datos del paciente
-        Paciente pacienteTemp =  listaPacientes.buscarPacientePorId(idPaciente);
+        Paciente pacienteTemp =  pacientesRepository.obtenerPorId(idPaciente);
         // Verificar si el paciente ya está registrado
         int indicePaciente = listaPacientes.buscarElemento(pacienteTemp);
         if (indicePaciente == -1) { // El paciente no está registrado, se agrega a la lista de pacientes
-            listaPacientes.agregarAlFinal(pacienteTemp);
+            listaPacientes.guardarCita(pacienteTemp);
         }
 
         // Crear la cita para el paciente y asociarla al paciente
