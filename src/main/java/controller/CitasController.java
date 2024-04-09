@@ -17,36 +17,40 @@ import model.repository.RegistroExamenRepository;
 public class CitasController {
 
     private final CitaRepository citaRepository;
-    private DoubleLinkedList<Cita> listaCitas;
     private final PacientesRepository pacientesRepository;
+    private final PacientesController pacientesController;
     private final RegistroExamenRepository  registroExamenRepository;
     public DoubleLinkedList<Paciente> listaExamenes;
 
     // Constructor
-    public CitasController(PacientesRepository pacientesRepository, RegistroExamenRepository registroExamenRepository) {
+    public CitasController() {
+        this.pacientesController = new PacientesController();
         this.registroExamenRepository = new RegistroExamenRepository();
         this.pacientesRepository = new PacientesRepository();
         this.citaRepository = new CitaRepository();
 
     }
-    public void agendarCitaControl(String idPaciente, boolean pagado, boolean tomado, Control motivoCitaControl) {
+    public void agendarCitaControl(String idPaciente, boolean pagado, Control motivoCitaControl) {
 
-        // Ubica el paciente en la listaPacientes por si id,  para evitar agregar todos los datos del paciente
+        // Ubica el paciente en la listaPacientes por su id,  para evitar agregar todos los datos del paciente
         Paciente pacienteTemp =  pacientesRepository.obtenerPorId(idPaciente);
-        // Verificar si el paciente ya está registrado
-        int indicePaciente = listaPacientes.buscarElemento(pacienteTemp);
-        if (indicePaciente == -1) { // El paciente no está registrado, se agrega a la lista de pacientes
-            listaPacientes.guardarCita(pacienteTemp);
+        if(pacienteTemp!= null) {
+            Cita cita = new CitaControl(idPaciente, false, motivoCitaControl);
+            citaRepository.guardarCita(cita);
+            pacienteTemp.agregarCitaAlHistorial(cita);
+            System.out.println("Cita agendada para el paciente: " + pacienteTemp.getNombre() + " " + pacienteTemp.getApellido());
+
+        }else {
+            System.out.println("El paciente no está registrado, ");
+
         }
 
         // Crear la cita para el paciente y asociarla al paciente
-        Cita cita = new CitaControl(idPaciente, false, false, motivoCitaControl);
-        listaCitas.agregarAlFinal(cita);
+
 
         // Agregar la cita al historial de citas del paciente
-        pacienteTemp.agregarCitaAlHistorial(cita);
     }
-
+/*
     public void agendarCitaValoracion(String idPaciente, boolean pagado, boolean tomado, Valoracion motivoCitaValoracion) {
 
         // Ubica el paciente en la listaPacientes por si id,  para evitar agregar todos los datos del paciente
@@ -83,6 +87,6 @@ public class CitasController {
         pacienteTemp.agregarCitaAlHistorial(cita);
     }
 
-
+*/
 //metodo para validar si el tipo de cita es  Control y cambiar el boolean de pagado a true
 }

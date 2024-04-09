@@ -7,8 +7,8 @@ public class CitaExamen extends Cita {
 
     private Examen motivoCitaExamen;
 
-    public CitaExamen(String idPaciente, boolean pagado, boolean tomado, Examen motivoCitaExamen) {
-        super(idPaciente, pagado, tomado);
+    public CitaExamen(String idPaciente, boolean pagado, Examen motivoCitaExamen) {
+        super(idPaciente, pagado);
         this.motivoCitaExamen = motivoCitaExamen;
     }
 

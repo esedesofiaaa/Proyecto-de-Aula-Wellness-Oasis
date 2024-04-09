@@ -3,17 +3,17 @@ public class Cita {
 
     private String idPaciente;
 
-    private boolean pagado = false;
+    private boolean pagado;
 
-    private boolean tomado = false;
+    private boolean tomado;
 
 
     public Cita() {
     }
 
-    public Cita(String idPaciente, boolean pagado, boolean tomado) {
+    public Cita(String idPaciente, boolean pagado) {
         this.idPaciente = idPaciente;
-        this.tomado = tomado;
+        this.tomado = false;
         this.pagado = pagado;
     }
 
