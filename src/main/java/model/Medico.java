@@ -4,12 +4,12 @@ public class Medico {
 
         private String nombre;
         private Especialidad especialidad;
-        private String id;
+        private String idMedico;
 
-        public Medico(String nombre, Especialidad especialidad, String id) {
+        public Medico(String nombre, Especialidad especialidad, String idMedico) {
             this.nombre = nombre;
             this.especialidad = especialidad;
-            this.id = id;
+            this.idMedico = idMedico;
         }
 
     public String getNombre() {
@@ -28,12 +28,20 @@ public class Medico {
         this.especialidad = especialidad;
     }
 
-    public String getId() {
-        return id;
+    public String getIdMedico() {
+        return idMedico;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setIdMedico(String idMedico) {
+        this.idMedico = idMedico;
     }
 
+    @Override
+    public String toString() {
+        return "Medico{" +
+                "nombre='" + nombre + '\'' +
+                ", especialidad=" + especialidad +
+                ", idMedico='" + idMedico + '\'' +
+                '}';
+    }
 }
