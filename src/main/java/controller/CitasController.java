@@ -1,15 +1,10 @@
 package controller;
 import estructurasDatos.listas.DoubleLinkedList;
 import model.MotivoCita.Control;
-import model.MotivoCita.Examen;
-import model.MotivoCita.Valoracion;
 import model.citas.Cita;
 /*import model.Especialidad.Especialidad;
 import model.MotivoCita;*/
 import model.Paciente;
-import model.citas.CitaControl;
-import model.citas.CitaExamen;
-import model.citas.CitaValoracion;
 import model.repository.CitaRepository;
 import model.repository.PacientesRepository;
 import model.repository.RegistroExamenRepository;

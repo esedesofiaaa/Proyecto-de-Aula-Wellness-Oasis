@@ -1,22 +1,19 @@
 package model.citas;
 
-import model.MotivoCita.Examen;
-
 public class CitaExamen extends Cita {
 
+    private String motivoCitaExamen;
 
-    private Examen motivoCitaExamen;
-
-    public CitaExamen(String idPaciente, boolean pagado, Examen motivoCitaExamen) {
-        super(idPaciente, pagado);
+    public CitaExamen(String idPaciente, boolean pagado, boolean tomado, String motivoCitaExamen) {
+        super(idPaciente, pagado, tomado);
         this.motivoCitaExamen = motivoCitaExamen;
     }
 
-    public Examen getMotivoCitaExamen() {
+    public String getMotivoCitaExamen() {
         return motivoCitaExamen;
     }
 
-    public void setMotivoCitaExamen(Examen motivoCitaExamen) {
+    public void setMotivoCitaExamen(String motivoCitaExamen) {
         this.motivoCitaExamen = motivoCitaExamen;
     }
 
@@ -29,4 +26,5 @@ public class CitaExamen extends Cita {
                 ", motivo Cita=" + motivoCitaExamen +
                 '}';
     }
+
 }
