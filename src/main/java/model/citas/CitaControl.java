@@ -6,8 +6,8 @@ public class CitaControl extends Cita{
 
     private Control motivoCitaControl;
 
-    public CitaControl(String idPaciente, boolean pagado, boolean tomado, Control motivoCitaControl) {
-        super(idPaciente, pagado, tomado);
+    public CitaControl(String idPaciente, boolean pagado, Control motivoCitaControl) {
+        super(idPaciente, pagado);
         this.motivoCitaControl = motivoCitaControl;
     }
 
@@ -21,10 +21,10 @@ public class CitaControl extends Cita{
 
     @Override
     public String toString() {
-        return  "idPaciente='" + getIdPaciente() + '\'' +
-                ", pagado=" + isPagado() +
-                ", tomado=" + isTomado() +
-                ", motivo Cita=" + motivoCitaControl +
+        return "CitaControl{" +
+                "Control=" + motivoCitaControl +
+                "costo=" + motivoCitaControl.getCosto() +
+                ", profesionalAsignado=" + motivoCitaControl.getProfesionalAsignado() +
                 '}';
     }
 }

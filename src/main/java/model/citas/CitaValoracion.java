@@ -8,8 +8,8 @@ public class CitaValoracion extends Cita{
 
         private Valoracion motivoCitaValoracion;
 
-        public CitaValoracion(String idPaciente, boolean pagado, boolean tomado, Valoracion motivoCitaValoracion) {
-            super(idPaciente, pagado, tomado);
+        public CitaValoracion(String idPaciente, boolean pagado, Valoracion motivoCitaValoracion) {
+            super(idPaciente, pagado);
             this.motivoCitaValoracion = motivoCitaValoracion;
         }
 

@@ -44,8 +44,8 @@ public class MainPacientes {
 
 
 
-
-        /*// Agendar citas para los pacientes
+/*
+        // Agendar citas para los pacientes
         citasController.agendarCitaValoracion("1",false, false, Valoracion.MEDICINA_GENERAL );
         citasController.agendarCitaControl("2", false, false, Control.CARDIOLOGIA);
 
@@ -53,7 +53,7 @@ public class MainPacientes {
         paciente1.citasPaciente();
         paciente2.citasPaciente();
 
-         */
+     */
     }
 
 
