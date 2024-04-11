@@ -1,0 +1,18 @@
+[
+  {
+    "idPaciente": "3",
+    "pagado": false,
+    "tomado": false
+  },
+  {
+    "idPaciente": "2",
+    "pagado": false,
+    "tomado": false
+  },
+  {
+    "motivoCitaControl": "DERMATOLOGIA",
+    "idPaciente": "2",
+    "pagado": false,
+    "tomado": false
+  }
+]
