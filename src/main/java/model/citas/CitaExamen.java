@@ -3,6 +3,7 @@ package model.citas;
 public class CitaExamen extends Cita {
 
     private String motivoCitaExamen;
+    private
 
     public CitaExamen(String idPaciente, boolean pagado, boolean tomado, String motivoCitaExamen) {
         super(idPaciente, pagado, tomado);

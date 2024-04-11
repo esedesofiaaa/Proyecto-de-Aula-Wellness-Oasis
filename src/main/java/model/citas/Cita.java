@@ -1,6 +1,7 @@
 package model.citas;
 
 import estructurasDatos.GeneradorCodigo;
+import model.Medico;
 
 /**
  * Clase que representa una cita
@@ -13,6 +14,7 @@ public class Cita {
     private String costo;
     private String motivoCita;
     private String especialidad;
+    private Medico medico;
 
     /**
      * Instancia de la clase GeneradorCodigo
@@ -29,7 +31,7 @@ public class Cita {
      * @param pagado Estado de pago de la cita
      * @param tomado Estado de toma de la cita
      */
-    public Cita(String costo, String especialidad, String idCita, String idPaciente, String motivoCita, boolean pagado, boolean tomado) {
+    public Cita(String costo, String especialidad, String idCita, String idPaciente, String motivoCita, boolean pagado, boolean tomado,String medico) {
         this.costo = costo;
 
         if (motivoCita == "CONTROL") {
@@ -39,6 +41,7 @@ public class Cita {
         } else if (motivoCita == "VALORACION" && especialidad == "MEDICINA_GENERAL") {
             this.costo = "2500";
         }
+
 
         this.idCita = generadorCodigo.generarCodigo(motivoCita, especialidad);
         this.idPaciente = idPaciente;
@@ -123,6 +126,7 @@ public class Cita {
                 ", costo='" + costo + '\'' +
                 ", motivoCita='" + motivoCita + '\'' +
                 ", especialidad='" + especialidad + '\'' +
+                ", medico=" + medico +
                 '}';
     }
 }
