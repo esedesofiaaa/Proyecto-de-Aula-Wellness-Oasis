@@ -1,3 +1,4 @@
+/*
 
 package controller;
 
@@ -68,4 +69,4 @@ public class ViewRegistroPacienteController {
         txtTelefono.clear();
         txtCorreo.clear();
     }
-}
+}*/

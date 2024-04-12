@@ -72,5 +72,6 @@ public class PacientesRepository {
         return null;
     }//obtenerPorId
 
+    //metodo para buscar las citas por id del paciente y retornar la lista
 
 }

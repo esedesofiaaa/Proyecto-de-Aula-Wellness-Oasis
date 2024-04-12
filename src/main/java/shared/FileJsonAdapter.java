@@ -2,7 +2,9 @@ package shared;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
 import estructurasDatos.listas.DoubleLinkedList;
+import estructurasDatos.listas.QueueList;
 import estructurasDatos.listas.StackList;
 
 import java.io.*;
@@ -76,6 +78,43 @@ public class FileJsonAdapter<E> {
         return objStack;
     }
     public Boolean writeObjectsStack(String pathFile, StackList<E> objects) {
+        boolean successful = false;
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        try (FileWriter writer = new FileWriter(pathFile)) {
+            synchronized (fileWriterLock) {
+                // Limpiar el archivo (eliminar todos los objetos)
+                writer.write(""); // Esto eliminará todo el contenido del archivo
+
+                // Escribir los nuevos objetos
+                gson.toJson(objects.toArray(), writer);
+
+                successful = true;
+            }
+        } catch (IOException e) {
+            Logger.getLogger(this.getClass().getName()).log(Level.WARNING, e.getMessage(), e);
+        }
+        return successful;
+    }
+
+    public QueueList<E> getObjectsQueue(String pathFile, Class<E[]> classOfT) {
+        QueueList<E> objQueue = new QueueList<>();
+        try {
+            Gson gson = new GsonBuilder().create();
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(pathFile));
+            E[] objArray = gson.fromJson(bufferedReader, classOfT);
+            if (objArray != null) {
+                for (E obj : objArray) {
+                    objQueue.enqueue(obj); // Agregar objetos a la cola
+                }
+            }
+        } catch (IOException e) {
+            Logger.getLogger(this.getClass().getName()).log(Level.WARNING, e.getMessage(), e);
+        }
+        return objQueue;
+    }
+
+    public Boolean writeObjectsQueue(String pathFile, QueueList<E> objects) {
         boolean successful = false;
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 

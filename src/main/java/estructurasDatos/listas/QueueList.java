@@ -6,9 +6,12 @@ public class QueueList<T> implements  QueueInterface <T> {
     private Nodo<T> inicio;
     private Nodo<T> fin;
 
+    private int size = 0;
+
     public QueueList() {
         this.inicio = null;
         this.fin = null;
+        this.size = 0;
     }
 
     public void enqueue(T elemento) {
@@ -19,6 +22,7 @@ public class QueueList<T> implements  QueueInterface <T> {
             fin.siguiente = nuevoNodo;
         }
         fin = nuevoNodo;
+        size++; // Incrementar el tamaño al agregar un elemento
     }
 
     public T dequeue() {
@@ -30,6 +34,7 @@ public class QueueList<T> implements  QueueInterface <T> {
         if (inicio == null) {
             fin = null;
         }
+        size--; // Decrementar el tamaño al quitar un elemento
         return elemento;
     }
 
@@ -41,14 +46,11 @@ public class QueueList<T> implements  QueueInterface <T> {
     }
 
     public boolean estaVacia() {
-        if (inicio == null)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return inicio == null;
+    }
+
+    public int tamano() {
+        return size; // Devolver el tamaño actual de la cola
     }
 
     private static class Nodo<T> {
@@ -85,11 +87,9 @@ public class QueueList<T> implements  QueueInterface <T> {
             throw new IndexOutOfBoundsException("La cola está vacía");
         }
 
-
         if (inicio.getElemento().equals(clienteAEliminar)) {
             return dequeue();
         }
-
 
         Nodo<T> guia = inicio;
         while (guia.getSiguiente() != null && !guia.getSiguiente().getElemento().equals(clienteAEliminar)) {
@@ -121,6 +121,17 @@ public class QueueList<T> implements  QueueInterface <T> {
         }
         sb.append(" ");
         return sb.toString();
+    }
+
+    //toArray
+    public Object[] toArray() {
+        Object[] array = new Object[tamano()];
+        Nodo<T> temp = inicio;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = temp.getElemento();
+            temp = temp.getSiguiente();
+        }
+        return array;
     }
 
 }

@@ -13,8 +13,8 @@ public class CitaExamen extends Cita {
 
     private boolean autorizado;
 
-    public CitaExamen(String costo, String especialidad, String idCita, String idPaciente, String motivoCita, boolean pagado, boolean tomado, String medico, String radicadoExamen, boolean autorizado) {
-        super(costo, especialidad, idCita, idPaciente, motivoCita, pagado, tomado, medico);
+    public CitaExamen(String idPaciente, String motivoCita, String especialidad, String medico, boolean pagado, String radicadoExamen, boolean autorizado) {
+        super(idPaciente, motivoCita, especialidad, medico, pagado);
         this.radicadoExamen = radicadoExamen;
         this.autorizado = autorizado;
     }

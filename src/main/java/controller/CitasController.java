@@ -30,29 +30,45 @@ public class CitasController {
         this.citaRepository = new CitaRepository();
 
     }
-    public void agendarCitaControlValoracion( String idPaciente, String motivoCita,String especialidad,String medico, boolean pagado){
+    public void agendarCitaControlValoracion(Cita cita) {
+        // Ubica el paciente en la listaPacientes por su id, para evitar agregar todos los datos del paciente
+        Paciente pacienteTemp = pacientesRepository.obtenerPorId(cita.getIdPaciente());
+        Medico medicoTemp = medicosController.buscarMedicoPorId(cita.getMedico());
 
-        // Ubica el paciente en la listaPacientes por su id,  para evitar agregar todos los datos del paciente
-        Paciente pacienteTemp =  pacientesRepository.obtenerPorId(idPaciente);
-        Medico medicoTemp =  medicosController.buscarMedicoPorId(medico);
+        if (pacienteTemp != null && medicoTemp != null) {
+            // Verificar si el costo debe ser actualizado según el motivo de la cita y la especialidad
+            actualizarCostoCita(cita);
 
-        if(pacienteTemp!= null && medicoTemp != null) {
-            Cita cita = new Cita( pacienteTemp.getId(), motivoCita ,  especialidad, medicoTemp.getIdMedico(), pagado) ;
             citaRepository.guardarCita(cita);
-            pacienteTemp.agregarCitaAlHistorial(cita);
-            System.out.println("Cita agendada para el paciente: " + pacienteTemp.getNombre() + " " + pacienteTemp.getApellido()+
-            '\''+"Tu codigo de cita es:" + cita.getCodigoCita());
-
-        }else {
-            System.out.println("El paciente  o el medico no estan registrados en el sistema");
-
+            System.out.println("Cita agendada para el paciente: " + pacienteTemp.getNombre() + " " + pacienteTemp.getApellido() +
+                    ". Tu código de cita es: " + cita.getIdCita());
+        } else {
+            System.out.println("El paciente o el médico no están registrados en el sistema.");
         }
+    }
 
-        // Crear la cita para el paciente y asociarla al paciente
+    private void actualizarCostoCita(Cita cita) {
+        if ("CONTROL".equals(cita.getMotivoCita())) {
+            cita.setCosto("Gratis");
+        } else if ("VALORACION".equals(cita.getMotivoCita())) {
+            if (!"MEDICINA_GENERAL".equals(cita.getEspecialidad())) {
+                cita.setCosto("4500");
+            } else {
+                cita.setCosto("2500");
+            }
+        } else if ("EXAMEN".equals(cita.getMotivoCita())) {
+            cita.setCosto("5000");
+        }
+    }
+
+    public DoubleLinkedList<Cita> citasDelPaciente (String idPaciente) {
+        citaRepository.buscarCitasPorIdPaciente(idPaciente).mostrarLista();
+        return citaRepository.buscarCitasPorIdPaciente(idPaciente);
+    }
 
 
-        // Agregar la cita al historial de citas del paciente
-    }/*
+
+    /*
     public void agendarCitaExamen (String idPaciente, String motivoCita, boolean pagado) {
         Paciente pacienteTemp =  pacientesRepository.obtenerPorId(idPaciente);
         if(pacienteTemp!= null) {
@@ -67,43 +83,4 @@ public class CitasController {
 
         }
     }*/
-/*
-    public void agendarCitaValoracion(String idPaciente, boolean pagado, boolean tomado, Valoracion motivoCitaValoracion) {
-
-        // Ubica el paciente en la listaPacientes por si id,  para evitar agregar todos los datos del paciente
-        Paciente pacienteTemp =  listaPacientes.buscarPacientePorId(idPaciente);
-        // Verificar si el paciente ya está registrado
-        int indicePaciente = listaPacientes.buscarElemento(pacienteTemp);
-        if (indicePaciente == -1) { // El paciente no está registrado, se agrega a la lista de pacientes
-            listaPacientes.agregarAlFinal(pacienteTemp);
-        }
-
-        // Crear la cita para el paciente y asociarla al paciente
-        Cita cita = new CitaValoracion(idPaciente, false, false, motivoCitaValoracion);
-        listaCitas.agregarAlFinal(cita);
-
-        // Agregar la cita al historial de citas del paciente
-        pacienteTemp.agregarCitaAlHistorial(cita);
-    }
-
-    public void agendarCitaExamen(String idPaciente, boolean pagado, boolean tomado, Examen motivoCitaExamen) {
-
-        // Ubica el paciente en la listaPacientes por si id,  para evitar agregar todos los datos del paciente
-        Paciente pacienteTemp =  listaPacientes.buscarPacientePorId(idPaciente);
-        // Verificar si el paciente ya está registrado
-        int indicePaciente = listaPacientes.buscarElemento(pacienteTemp);
-        if (indicePaciente == -1) { // El paciente no está registrado, se agrega a la lista de pacientes
-            listaPacientes.agregarAlFinal(pacienteTemp);
-        }
-
-        // Crear la cita para el paciente y asociarla al paciente
-        Cita cita = new CitaExamen(idPaciente, false, false, motivoCitaExamen);
-        listaCitas.agregarAlFinal(cita);
-
-        // Agregar la cita al historial de citas del paciente
-        pacienteTemp.agregarCitaAlHistorial(cita);
-    }
-
-*/
-//metodo para validar si el tipo de cita es  Control y cambiar el boolean de pagado a true
 }

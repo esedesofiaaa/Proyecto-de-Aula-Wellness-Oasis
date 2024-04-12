@@ -5,34 +5,41 @@ import java.util.Random;
 public class GeneradorCodigo {
 
     // Método para generar un código compuesto por una letra y un número aleatorio
-    public String generarCodigo(String especialidad, String tipoCita) {
-        Random random = new Random();
+    public String generarCodigo(String tipoCita, String especialidad) {
+        try {
+            Random random = new Random();
 
-        // Obtener la letra correspondiente a la especialidad y al tipo de cita
-        String letraEspecialidad = obtenerLetraEspecialidad(especialidad);
-        String letraTipoCita = obtenerLetraTipoCita(tipoCita);
+            // Obtener la letra correspondiente a la especialidad y al tipo de cita
+            String letraEspecialidad = obtenerLetraEspecialidad(especialidad);
+            String letraTipoCita = obtenerLetraTipoCita(tipoCita);
 
-        // Generar un número aleatorio entre 100 y 999
-        int numeroAleatorio = random.nextInt(900) + 100; // Rango de 100 a 999
+            // Generar un número aleatorio entre 100 y 999
+            int numeroAleatorio = random.nextInt(900) + 100; // Rango de 100 a 999
 
-        // Concatenar las letras de la especialidad, tipo de cita y el número aleatorio
-        String codigo = letraEspecialidad + letraTipoCita + numeroAleatorio;
+            // Concatenar las letras de la especialidad, tipo de cita y el número aleatorio
+            String codigo = letraEspecialidad + letraTipoCita + numeroAleatorio;
 
-        return codigo;
+            return codigo;
+        } catch (IllegalArgumentException e) {
+            // Captura la excepción y muestra el mensaje de error
+            System.out.println("Error al generar código: " + e.getMessage());
+            return null; // Devuelve null para indicar que ocurrió un error
+        }
     }
+
 
     // Método auxiliar para obtener la letra correspondiente a la especialidad
     private String obtenerLetraEspecialidad(String especialidad) {
         switch (especialidad) {
-            case "Medicina general":
+            case "MEDICINA_GENERAL":
                 return "M";
-            case "Pediatria":
+            case "PEDIATRIA":
                 return "P";
-            case "Cardiologia":
+            case "CARDIOLOGIA":
                 return "C";
-            case "Dermatologia":
+            case "DERMATOLOGIA":
                 return "D";
-            case "Ginecologia":
+            case "GINECOLOGIA":
                 return "G";
             default:
                 throw new IllegalArgumentException("Especialidad no válida: " + especialidad);

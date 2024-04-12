@@ -1,5 +1,6 @@
 package model.repository;
 import estructurasDatos.listas.DoubleLinkedList; //Imoortamos la clase de la lista enlazada doble para poder usarla
+import model.Medico;
 import model.domain.cita.Cita;
 import shared.FileJsonAdapter;
 
@@ -44,7 +45,7 @@ public class CitaRepository {
 
 
     //Metodo buscar cita por idPaciente
-    public DoubleLinkedList<Cita> buscarCitaPorIdPaciente(String idPaciente) {
+    public DoubleLinkedList<Cita> buscarCitasPorIdPaciente(String idPaciente) {
         DoubleLinkedList<Cita> citasPaciente = new DoubleLinkedList<>();
 
         int indice = 0; // Inicializamos el índice en 0 para el primer nodo
@@ -60,6 +61,12 @@ public class CitaRepository {
 
         return citasPaciente; // Retornar la lista de registros de examen del paciente
     }
+    //Metodo para mostrar la lista de citas
+    public DoubleLinkedList<Cita> obtenerTodos() {
+        return historialCitas; // Retorna la lista de pacientes
+    }
+
+    //Crear metodo de buscar cita por idCita
 
 
 }

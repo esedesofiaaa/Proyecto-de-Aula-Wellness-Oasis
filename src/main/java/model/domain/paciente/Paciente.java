@@ -26,24 +26,7 @@ public class Paciente {
     }
 
     // Método para agregar una cita al historial de citas del paciente
-    public void agregarCitaAlHistorial(Cita cita) {
-        if (historialCitas == null) {
-            historialCitas = new DoubleLinkedList<Cita>();
-        }
-        historialCitas.agregarAlFinal(cita);
-    }
 
-    //metodo para que el paciente pueda ver sus citas
-    // usar metodo buscarPacientePorId para buscar el paciente en la lista de citas y retornar la cita con sus atributos
-    public   void citasPaciente() {
-        if (historialCitas != null) {
-            System.out.println("Historial de citas del paciente: " + nombre + " " + apellido);
-            historialCitas.mostrarLista();
-        } else {
-            System.out.println("No hay citas registradas para este paciente: " + nombre + " " + apellido  );
-        }
-
-    }
     public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
