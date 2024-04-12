@@ -1,0 +1,20 @@
+[
+  {
+    "tipoDocumento": "TI",
+    "id": "2",
+    "nombre": "María",
+    "apellido": "Gómez",
+    "edad": "25",
+    "telefono": "987654321",
+    "correo": "maria456@gmail"
+  },
+  {
+    "tipoDocumento": "CC",
+    "id": "3",
+    "nombre": "Pedro",
+    "apellido": "García",
+    "edad": "40",
+    "telefono": "123456789",
+    "correo": "pedro123@gmail"
+  }
+]
