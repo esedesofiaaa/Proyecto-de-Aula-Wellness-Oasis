@@ -1,0 +1,24 @@
+[
+  {
+    "idCita": "MV227",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "costo": "2500",
+    "motivoCita": "VALORACION",
+    "especialidad": "MEDICINA_GENERAL",
+    "medico": "123456",
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "DV416",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "4500",
+    "motivoCita": "VALORACION",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "123456",
+    "generadorCodigo": {}
+  }
+]
