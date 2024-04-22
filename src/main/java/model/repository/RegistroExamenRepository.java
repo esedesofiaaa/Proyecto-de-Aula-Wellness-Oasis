@@ -133,12 +133,8 @@ public class    RegistroExamenRepository {
             System.out.println("El registro de examen no se encontró en la lista."); // Si el paciente no se encuentra en la lista
         }
     }
-/*
-    public void traerAutorizacionJsonYActualizar(){
-        autorizacionRepository
-        pathFile = "src/main/java/dataBase/Autorizacion.Json";
 
-    }*/
+
 
 }
 

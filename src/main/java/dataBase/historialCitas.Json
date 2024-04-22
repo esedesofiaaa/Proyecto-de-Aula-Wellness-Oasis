@@ -1,6 +1,6 @@
 [
   {
-    "idCita": "MV227",
+    "idCita": "MV249",
     "idPaciente": "3",
     "pagado": true,
     "tomado": false,
@@ -11,7 +11,7 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "DV416",
+    "idCita": "DV395",
     "idPaciente": "2",
     "pagado": true,
     "tomado": false,
@@ -19,6 +19,32 @@
     "motivoCita": "VALORACION",
     "especialidad": "DERMATOLOGIA",
     "medico": "123456",
+    "generadorCodigo": {}
+  },
+  {
+    "radicadoExamen": "S953",
+    "autorizado": true,
+    "idCita": "PSE123",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "5000",
+    "motivoCita": "EXAMEN",
+    "especialidad": "PSIQUIATRIA",
+    "medico": "Dr. Fuentes",
+    "generadorCodigo": {}
+  },
+  {
+    "radicadoExamen": "V566",
+    "autorizado": true,
+    "idCita": "PE814",
+    "idPaciente": "3",
+    "pagado": false,
+    "tomado": false,
+    "costo": "5000",
+    "motivoCita": "EXAMEN",
+    "especialidad": "PEDIATRIA",
+    "medico": "Dr. Lopez",
     "generadorCodigo": {}
   }
 ]

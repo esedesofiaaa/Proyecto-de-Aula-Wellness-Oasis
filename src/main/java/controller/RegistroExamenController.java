@@ -40,6 +40,16 @@ public class RegistroExamenController {
         // Aquí podrías realizar más lógica relacionada con la creación o manipulación de registros de examen
     }
 
+    //Metodo para revisar si el radicado examen existe
+    public boolean validarRadicadoExamen(String radicadoExamen) {
+        RegistroExamen registroExamen = registroExamenRepository.buscarPorRadicadoExamen(radicadoExamen);
+        if (registroExamen != null) {
+            return true;
+        } else {
+            System.out.println("El radicado de examen " + radicadoExamen + " no existe.");
+            return false;
+        }
+    }
     //Metodo para cambiar el boolean autorizado a true
 
 

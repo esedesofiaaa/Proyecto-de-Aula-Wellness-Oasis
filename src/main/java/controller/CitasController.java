@@ -2,9 +2,11 @@ package controller;
 import estructurasDatos.listas.DoubleLinkedList;
 import model.Medico;
 import model.MotivoCita.Control;
+import model.RegistroExamen;
 import model.domain.cita.Cita;
 /*import model.Especialidad.Especialidad;
 import model.MotivoCita;*/
+import model.domain.cita.CitaExamen;
 import model.domain.paciente.Paciente;
 import model.repository.CitaRepository;
 import model.repository.MedicoRepository;
@@ -17,12 +19,14 @@ public class CitasController {
     private final PacientesRepository pacientesRepository;
     private final PacientesController pacientesController;
     private final RegistroExamenRepository  registroExamenRepository;
+    private final RegistroExamenController  registroExamenController;
 
     private final MedicosController medicosController;
     public DoubleLinkedList<Paciente> listaExamenes;
 
     // Constructor
     public CitasController() {
+        this.registroExamenController =  new RegistroExamenController();
         this.medicosController =    new MedicosController();
         this.pacientesController = new PacientesController();
         this.registroExamenRepository = new RegistroExamenRepository();
@@ -47,6 +51,26 @@ public class CitasController {
         }
     }
 
+    public void agendarCitaExamen (String idPaciente, String radicadoExamen, String medico, boolean pagado) {
+        Paciente pacienteTemp = pacientesRepository.obtenerPorId(idPaciente);
+        boolean existenciaRegistro = registroExamenController.validarRadicadoExamen(radicadoExamen);
+        Medico medicoTemp = medicosController.buscarMedicoPorId(medico);
+        RegistroExamen registroExamen = registroExamenRepository.buscarPorRadicadoExamen(radicadoExamen);
+        if (pacienteTemp != null && existenciaRegistro && medicoTemp != null) {
+                if(registroExamen.isAutorizado()){
+                Cita cita = new CitaExamen(pacienteTemp.getId(), registroExamen.getMotivoCitaExamen().getEspecialidad() ,registroExamen.getMotivoCitaExamen().getProfesionalAsignado(), pagado , radicadoExamen, registroExamen.isAutorizado()) ;
+                citaRepository.guardarCita(cita);
+                System.out.println("Cita agendada para el paciente: "+pacienteTemp.getNombre()+" "+pacienteTemp.getApellido()+
+                        '\''+"Tu codigo de cita es:"+cita.getIdCita());
+
+            }else{
+                System.out.println("El examen no esta autorizado");
+            }
+        }else {
+            System.out.println("El paciente/Examen/Medico no estan registrados en el sistema");
+        }
+    }
+
     private void actualizarCostoCita(Cita cita) {
         if ("CONTROL".equals(cita.getMotivoCita())) {
             cita.setCosto("Gratis");
@@ -68,19 +92,5 @@ public class CitasController {
 
 
 
-    /*
-    public void agendarCitaExamen (String idPaciente, String motivoCita, boolean pagado) {
-        Paciente pacienteTemp =  pacientesRepository.obtenerPorId(idPaciente);
-        if(pacienteTemp!= null) {
-            Cita cita = new Cita( pacienteTemp.getId(), motivoCita , pagado) {
-            citaRepository.guardarCita(cita);
-            pacienteTemp.agregarCitaAlHistorial(cita);
-            System.out.println("Cita agendada para el paciente: " + pacienteTemp.getNombre() + " " + pacienteTemp.getApellido()+
-            '\''+"Tu codigo de cita es:" + cita.getCodigoCita());
 
-        }else {
-            System.out.println("El paciente no esta registrado en el sistema");
-
-        }
-    }*/
 }

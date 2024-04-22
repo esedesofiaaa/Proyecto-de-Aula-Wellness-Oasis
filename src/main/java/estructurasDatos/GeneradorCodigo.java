@@ -41,6 +41,8 @@ public class GeneradorCodigo {
                 return "D";
             case "GINECOLOGIA":
                 return "G";
+            case "PSIQUIATRIA":
+                return "PS";
             default:
                 throw new IllegalArgumentException("Especialidad no válida: " + especialidad);
         }

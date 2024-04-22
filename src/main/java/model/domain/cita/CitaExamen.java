@@ -13,8 +13,9 @@ public class CitaExamen extends Cita {
 
     private boolean autorizado;
 
-    public CitaExamen(String idPaciente, String motivoCita, String especialidad, String medico, boolean pagado, String radicadoExamen, boolean autorizado) {
-        super(idPaciente, motivoCita, especialidad, medico, pagado);
+
+    public CitaExamen(String idPaciente, String especialidad, String medico, boolean pagado, String radicadoExamen, boolean autorizado) {
+        super(idPaciente, "EXAMEN", especialidad, medico, pagado);
         this.radicadoExamen = radicadoExamen;
         this.autorizado = autorizado;
     }
@@ -38,6 +39,7 @@ public class CitaExamen extends Cita {
     @Override
     public String toString() {
         return "CitaExamen{" +
+                "Motivo : Examen =" + '\'' +
                 "radicadoExamen='" + radicadoExamen + '\'' +
                 ", autorizado=" + autorizado +
                 '}';

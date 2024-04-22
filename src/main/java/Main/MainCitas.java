@@ -16,8 +16,8 @@ public class MainCitas {
         citasController.agendarCitaControlValoracion(new Cita("2","VALORACION","DERMATOLOGIA", "123456", true));;
 
         //probar cita examen
-
-
+        citasController.agendarCitaExamen("2", "S953", "123456", true);
+        citasController.agendarCitaExamen("3", "V566", "123456", false);
     }
 
 }

@@ -30,6 +30,26 @@ public enum Examen {
         this.breveDescripcion = breveDescripcion;
     }
 
+    public String getTipoExamen() {
+        return tipoExamen;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public String getCosto() {
+        return costo;
+    }
+
+    public String getProfesionalAsignado() {
+        return profesionalAsignado;
+    }
+
+    public String getBreveDescripcion() {
+        return breveDescripcion;
+    }
+
     @Override
     public String toString() {
         return " Examen" +
