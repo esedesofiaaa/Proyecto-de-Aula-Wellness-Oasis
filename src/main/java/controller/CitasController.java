@@ -91,6 +91,85 @@ public class CitasController {
     }
 
 
+    //Metodo para eliminar una cita por el idCita
+    public void eliminarCita(String idCita) {
+        Cita cita = citaRepository.buscarCitaPorId(idCita);
+        if (cita != null) {
+            citaRepository.eliminarCita(cita);
+        } else {
+            System.out.println("La cita con id " + idCita + " no existe.");
+        }
+    }
+    //Metodo para mostrar modificar citas
+    //Buscar la cita, eliminarla pero mantener ese valor temporalmente
+    // y modificar el atributo seleccionado
+    public void modificarCita(String idCita, String atributo, String valor) {
+        Cita cita = citaRepository.buscarCitaPorId(idCita);
+
+
+        if (cita != null) {
+            citaRepository.eliminarCita(cita);
+                if(cita.getMotivoCita().equals("EXAMEN")){
+
+                    CitaExamen citaExamen = new CitaExamen(
+                            cita.getIdPaciente(),
+                            cita.getEspecialidad(),
+                            cita.getMedico(),
+                            cita.isPagado(),
+                            ((CitaExamen) cita).getRadicadoExamen(), // Obtener el radicadoExamen de la cita original
+                            ((CitaExamen) cita).isAutorizado()
+                    );
+                    //Atributos solo de CitaExamen
+                    switch (atributo) {
+                            case "radicadoExamen":
+                                citaExamen.setRadicadoExamen(valor);
+                                break;
+                            default:
+                                System.out.println("El atributo " + atributo + " no es válido.");
+                                break;
+                        }
+                }
+            //Atributos compartidos de Cita
+            switch (atributo) {
+                case "motivoCita":
+                    cita.setMotivoCita(valor);
+                    break;
+                case "medico":
+                    cita.setMedico(valor);
+                    break;
+                case "especialidad":
+                    cita.setEspecialidad(valor);
+                    break;
+                case "pagado":
+                    cita.setPagado(Boolean.parseBoolean(valor));
+                    break;
+                default:
+                    System.out.println("El atributo " + atributo + " no es válido.");
+                    break;
+            }
+            citaRepository.guardarCita(cita);
+            System.out.println("Cita modificada: " + cita.getIdCita());
+        } else {
+            System.out.println("La cita con id " + idCita + " no existe.");
+        }
+    }
+    // 1 REVISAR SI FUNCIONA COMO TIPO CITA
+    // 2 SI AL CAMBIAR EL MOTIVOCITA
+    // A EXAMEN, COMO MANEJARLO (continue en la linea x), NO PASA NADA SI CAMBIA DE CONTROL A VALORACION
+    // 3 PENSAR COMO SERIA EL FLUJO DESDE LA VISTA
+
+    public void mostrarCitas() {
+        citaRepository.obtenerTodos().mostrarLista();
+    }
+
+    public void mostrarCitaPorId(String idCita) {
+        Cita cita = citaRepository.buscarCitaPorId(idCita);
+        if (cita != null) {
+            System.out.println(cita.toString());
+        } else {
+            System.out.println("La cita con id " + idCita + " no existe.");
+        }
+    }
 
 
 }

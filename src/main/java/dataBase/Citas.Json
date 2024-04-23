@@ -1,6 +1,6 @@
 [
   {
-    "idCita": "MV249",
+    "idCita": "MV424",
     "idPaciente": "3",
     "pagado": true,
     "tomado": false,
@@ -11,7 +11,7 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "DV395",
+    "idCita": "DV615",
     "idPaciente": "2",
     "pagado": true,
     "tomado": false,
@@ -22,22 +22,7 @@
     "generadorCodigo": {}
   },
   {
-    "radicadoExamen": "S953",
-    "autorizado": true,
-    "idCita": "PSE123",
-    "idPaciente": "2",
-    "pagado": true,
-    "tomado": false,
-    "costo": "5000",
-    "motivoCita": "EXAMEN",
-    "especialidad": "PSIQUIATRIA",
-    "medico": "Dr. Fuentes",
-    "generadorCodigo": {}
-  },
-  {
-    "radicadoExamen": "V566",
-    "autorizado": true,
-    "idCita": "PE814",
+    "idCita": "PE148",
     "idPaciente": "3",
     "pagado": false,
     "tomado": false,
