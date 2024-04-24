@@ -1,6 +1,6 @@
 [
   {
-    "idCita": "MV441",
+    "idCita": "MV568",
     "idPaciente": "3",
     "pagado": true,
     "tomado": false,
@@ -11,7 +11,7 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "DV931",
+    "idCita": "DV746",
     "idPaciente": "2",
     "pagado": true,
     "tomado": false,
@@ -22,7 +22,7 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "PV365",
+    "idCita": "PV611",
     "idPaciente": "3",
     "pagado": true,
     "tomado": false,
@@ -35,7 +35,7 @@
   {
     "radicadoExamen": "S953",
     "autorizado": true,
-    "idCita": "PSE120",
+    "idCita": "PSE965",
     "idPaciente": "3",
     "pagado": true,
     "tomado": false,
@@ -48,7 +48,7 @@
   {
     "radicadoExamen": "V566",
     "autorizado": true,
-    "idCita": "PE727",
+    "idCita": "PE125",
     "idPaciente": "2",
     "pagado": false,
     "tomado": false,

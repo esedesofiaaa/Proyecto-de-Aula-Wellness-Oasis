@@ -57,7 +57,10 @@ public class SalaEsperaRepository {
         jsonAdapterSalasEspera.writeObjectsQueue(pathFile, salaDeEspera);
     }
 
-
+//Metodo para ver la cita en pantalla
+    public Cita verCitaEnPantalla() {
+        return salaDeEspera.peek();
+    }
 
 }
 
