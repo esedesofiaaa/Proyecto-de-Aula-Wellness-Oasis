@@ -1,6 +1,6 @@
 [
   {
-    "idCita": "MV424",
+    "idCita": "MV441",
     "idPaciente": "3",
     "pagado": true,
     "tomado": false,
@@ -11,7 +11,7 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "DV615",
+    "idCita": "DV931",
     "idPaciente": "2",
     "pagado": true,
     "tomado": false,
@@ -22,8 +22,34 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "PE148",
+    "idCita": "PV365",
     "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "costo": "4500",
+    "motivoCita": "VALORACION",
+    "especialidad": "PEDIATRIA",
+    "medico": "123456",
+    "generadorCodigo": {}
+  },
+  {
+    "radicadoExamen": "S953",
+    "autorizado": true,
+    "idCita": "PSE120",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "costo": "5000",
+    "motivoCita": "EXAMEN",
+    "especialidad": "PSIQUIATRIA",
+    "medico": "Dr. Fuentes",
+    "generadorCodigo": {}
+  },
+  {
+    "radicadoExamen": "V566",
+    "autorizado": true,
+    "idCita": "PE727",
+    "idPaciente": "2",
     "pagado": false,
     "tomado": false,
     "costo": "5000",

@@ -53,21 +53,27 @@ public class CitasController {
 
     public void agendarCitaExamen (String idPaciente, String radicadoExamen, String medico, boolean pagado) {
         Paciente pacienteTemp = pacientesRepository.obtenerPorId(idPaciente);
+
         boolean existenciaRegistro = registroExamenController.validarRadicadoExamen(radicadoExamen);
         Medico medicoTemp = medicosController.buscarMedicoPorId(medico);
-        RegistroExamen registroExamen = registroExamenRepository.buscarPorRadicadoExamen(radicadoExamen);
-        if (pacienteTemp != null && existenciaRegistro && medicoTemp != null) {
-                if(registroExamen.isAutorizado()){
-                Cita cita = new CitaExamen(pacienteTemp.getId(), registroExamen.getMotivoCitaExamen().getEspecialidad() ,registroExamen.getMotivoCitaExamen().getProfesionalAsignado(), pagado , radicadoExamen, registroExamen.isAutorizado()) ;
-                citaRepository.guardarCita(cita);
-                System.out.println("Cita agendada para el paciente: "+pacienteTemp.getNombre()+" "+pacienteTemp.getApellido()+
-                        '\''+"Tu codigo de cita es:"+cita.getIdCita());
 
-            }else{
-                System.out.println("El examen no esta autorizado");
+        RegistroExamen registroExamen = registroExamenRepository.buscarPorRadicadoExamen(radicadoExamen);
+        if (pacienteTemp.getId().equals(registroExamen.getIdPaciente())) {        //corroborar que el examen corresponda al id del paciente al crear la cita
+            if (pacienteTemp != null && existenciaRegistro && medicoTemp != null) {
+                if (registroExamen.isAutorizado()) {
+                    Cita cita = new CitaExamen(pacienteTemp.getId(), registroExamen.getMotivoCitaExamen().getEspecialidad(), registroExamen.getMotivoCitaExamen().getProfesionalAsignado(), pagado, radicadoExamen, registroExamen.isAutorizado());
+                    citaRepository.guardarCita(cita);
+                    System.out.println("Cita agendada para el paciente: " + pacienteTemp.getNombre() + " " + pacienteTemp.getApellido() +
+                            '\'' + "Tu codigo de cita es:" + cita.getIdCita());
+
+                } else {
+                    System.out.println("El examen no esta autorizado");
+                }
+            } else {
+                System.out.println("El paciente/Examen/Medico no estan registrados en el sistema");
             }
-        }else {
-            System.out.println("El paciente/Examen/Medico no estan registrados en el sistema");
+        } else {
+            System.out.println("El radicado de examen no corresponde al id del paciente");
         }
     }
 
@@ -106,48 +112,35 @@ public class CitasController {
     public void modificarCita(String idCita, String atributo, String valor) {
         Cita cita = citaRepository.buscarCitaPorId(idCita);
 
-
         if (cita != null) {
             citaRepository.eliminarCita(cita);
-                if(cita.getMotivoCita().equals("EXAMEN")){
-
-                    CitaExamen citaExamen = new CitaExamen(
-                            cita.getIdPaciente(),
-                            cita.getEspecialidad(),
-                            cita.getMedico(),
-                            cita.isPagado(),
-                            ((CitaExamen) cita).getRadicadoExamen(), // Obtener el radicadoExamen de la cita original
-                            ((CitaExamen) cita).isAutorizado()
-                    );
-                    //Atributos solo de CitaExamen
-                    switch (atributo) {
-                            case "radicadoExamen":
-                                citaExamen.setRadicadoExamen(valor);
-                                break;
-                            default:
-                                System.out.println("El atributo " + atributo + " no es válido.");
-                                break;
-                        }
-                }
-            //Atributos compartidos de Cita
             switch (atributo) {
                 case "motivoCita":
+                    if (valor.equals("EXAMEN")){
+                        break;
+                    }
                     cita.setMotivoCita(valor);
+                    citaRepository.guardarCita(cita);
                     break;
                 case "medico":
                     cita.setMedico(valor);
+                    citaRepository.guardarCita(cita);
+
                     break;
                 case "especialidad":
                     cita.setEspecialidad(valor);
+                    citaRepository.guardarCita(cita);
+
                     break;
                 case "pagado":
                     cita.setPagado(Boolean.parseBoolean(valor));
+                    citaRepository.guardarCita(cita);
+
                     break;
                 default:
                     System.out.println("El atributo " + atributo + " no es válido.");
                     break;
             }
-            citaRepository.guardarCita(cita);
             System.out.println("Cita modificada: " + cita.getIdCita());
         } else {
             System.out.println("La cita con id " + idCita + " no existe.");
@@ -158,6 +151,45 @@ public class CitasController {
     // A EXAMEN, COMO MANEJARLO (continue en la linea x), NO PASA NADA SI CAMBIA DE CONTROL A VALORACION
     // 3 PENSAR COMO SERIA EL FLUJO DESDE LA VISTA
 
+
+    public void modificarCitaExamen(String idCita, String atributo, String valor) {
+        Cita cita = citaRepository.buscarCitaPorId(idCita);
+        CitaExamen citaExamen = new CitaExamen(
+                cita.getIdPaciente(),
+                cita.getEspecialidad(),
+                cita.getMedico(),
+                cita.isPagado(),
+                ((CitaExamen) cita).getRadicadoExamen(), // Obtener el radicadoExamen de la cita original
+                ((CitaExamen) cita).isAutorizado()
+        );
+        if (citaExamen != null) {
+            citaRepository.eliminarCita(cita);
+            switch (atributo) {
+                case "motivoCita": //Control y valoracion, pasar de cita examen a Cita
+                    Cita citaMap=  mapCitaExamenToCita(citaExamen);
+                    citaMap.setMotivoCita(valor);
+                    citaRepository.guardarCita(citaMap);
+                    break;
+                case "radicadoExamen":
+                    if (registroExamenController.validarRadicadoExamen(valor)){//Revisar que el codigo si exista en registro examen
+                        citaExamen.setRadicadoExamen(valor);
+                    } else {
+                        System.out.println("El radicado de examen " + valor + " no existe.");
+                    }
+                    citaRepository.guardarCita(citaExamen);
+
+                    break; //Corroborar que no deje agregar radicados sin autorizar, sino no puede agendar la cita
+                default:
+                    System.out.println("El atributo " + atributo + " no es válido.");
+                    break;
+            }
+            System.out.println("Cita modificada: " + citaExamen.getIdCita());
+        } else {
+            System.out.println("La cita con id " + idCita + " no existe.");
+        }
+    }
+    //Falta verificar que los medicos coincidan con la especialidad en ambos modificar
+    //No funcionan los cast de CItaExamen a Cita
     public void mostrarCitas() {
         citaRepository.obtenerTodos().mostrarLista();
     }
@@ -171,5 +203,15 @@ public class CitasController {
         }
     }
 
+    //map CitaExamen to Cita
+    private Cita mapCitaExamenToCita(CitaExamen citaExamen){
+        Cita cita = new Cita(citaExamen.getIdPaciente(), citaExamen.getMotivoCita(), citaExamen.getEspecialidad(), citaExamen.getMedico(), citaExamen.isPagado());
+        return  cita;
+    }
+    // map Cita to CitaExamen
+    private CitaExamen mapCitaToCitaExamen(Cita cita){
+        CitaExamen citaExamen = new CitaExamen(cita.getIdPaciente(), cita.getEspecialidad(), cita.getMedico(), cita.isPagado(), ((CitaExamen) cita).getRadicadoExamen(), ((CitaExamen) cita).isAutorizado());
+        return citaExamen;
+    }
 
 }

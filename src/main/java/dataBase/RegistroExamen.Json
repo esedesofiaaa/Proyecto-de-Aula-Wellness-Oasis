@@ -34,7 +34,7 @@
   {
     "radicadoExamen": "X911",
     "motivoCitaExamen": "ANALISIS_DE_SANGRE",
-    "autorizado": false,
+    "autorizado": true,
     "generadorCodigo": {},
     "idPaciente": "3",
     "nota": "POR AUTORIZAR"

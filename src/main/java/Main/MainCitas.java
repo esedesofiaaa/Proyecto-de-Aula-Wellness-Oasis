@@ -17,10 +17,13 @@ public class MainCitas {
         citasController.agendarCitaControlValoracion(new Cita("2","VALORACION","DERMATOLOGIA", "123456", true));
         citasController.agendarCitaControlValoracion(citaTemp);
         //probar cita examen
-        citasController.agendarCitaExamen("2", "S953", "123456", true);
-        citasController.agendarCitaExamen("3", "V566", "123456", false);*/
-        citasController.eliminarCita("PSE832");
-        citasController.eliminarCita("PV290");
+        citasController.agendarCitaExamen("3", "S953", "123456", true);
+        citasController.agendarCitaExamen("2", "V566", "123456", false);
+        *//*citasController.eliminarCita("PSE832");
+        citasController.eliminarCita("PV290");*/
+
+        citasController.modificarCitaExamen("PE727","radicadoExamen", "S953");
+
 
     }
 
