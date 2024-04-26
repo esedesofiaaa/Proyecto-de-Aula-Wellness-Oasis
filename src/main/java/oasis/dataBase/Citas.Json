@@ -1,0 +1,27 @@
+[
+  {
+    "idCita": "MV809",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "costo": "2500",
+    "motivoCita": "VALORACION",
+    "especialidad": "MEDICINA_GENERAL",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "PSE336",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "A637",
+    "autorizado": true,
+    "generadorCodigo": {}
+  }
+]
