@@ -4,11 +4,90 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e669f143-dc2f-4595-94a9-5e3c458d472f" name="Changes" comment="" />
+    <list default="true" id="e669f143-dc2f-4595-94a9-5e3c458d472f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainAutorizaciones.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainCitas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainMedicos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainPacientes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainRegistroExamen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainSaladeEspera.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/MainRegistroMedico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/MainViewRegistroPaciente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/ViewRegistroMedicoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/ViewRegistroPacienteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/AutorizacionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/CitasController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/FinalController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/MedicosController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/PacientesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/PruebaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/RegistroExamenController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/SalaEsperaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Autorizacion.Json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Final.Json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Pacientes.Json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/SalaDeEspera.Json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Users.Json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/estructurasDatos/GeneradorCodigo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/estructurasDatos/interfaces/DoubleLinkedListInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/estructurasDatos/interfaces/QueueInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/estructurasDatos/interfaces/StackInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/estructurasDatos/listas/DoubleLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/estructurasDatos/listas/QueueList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/estructurasDatos/listas/StackList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/domain/Especialidad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/domain/cita/Cita.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/domain/medico/Medico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/domain/motivoCita/Examen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/domain/paciente/Paciente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/domain/paciente/TipoDocumento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/domain/registroExamen/RegistroExamen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/AutorizacionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/CitaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/FinalRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/MedicoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/PacientesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/RegistroExamenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/SalaEsperaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/shared/FileJsonAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/12313123.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/8208630.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/8375612.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lOGIN.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/loginsd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/paciente.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewConfirmacionRegistroPaciente.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCita.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroMedico.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroPaciente.fxml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,20 +97,63 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2fgv1UY3eMESBnc4aLCJ7eZow90" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.MainCitas.executor": "Run",
+    "Application.MainRegistroCita.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/ProyectoEstructuras/Proyecto-de-Aula-Wellness-Oasis",
+    "last_opened_file_path": "C:/ProyectoEstructuras/Proyecto-de-Aula-Wellness-Oasis/src/main/resources/view/ViewRegistroPaciente.fxml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.MainRegistroCita">
+    <configuration name="MainCitas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.Main.MainCitas" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainRegistroCita" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.MainRegistroCita" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.aplicacion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainRegistroCita" />
+        <item itemvalue="Application.MainCitas" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -50,6 +172,7 @@
       <updated>1714235321255</updated>
       <workItem from="1714235322749" duration="75000" />
       <workItem from="1714235443252" duration="26000" />
+      <workItem from="1714235529268" duration="11937000" />
     </task>
     <servers />
   </component>
