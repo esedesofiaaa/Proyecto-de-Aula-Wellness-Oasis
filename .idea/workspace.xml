@@ -5,11 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d573e3d2-1b0b-4b32-8170-5e379784d62a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaExamenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCitaExamen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewIniciarSesionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainRegistroCita.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewAdministrador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewIniciarSesion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/MainRegistroMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewRegistroMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/MainViewRegistroPaciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewRegistroPaciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/ViewRegistroMedicoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroMedicoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/ViewRegistroPacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroPacienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroMedico.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroMedico.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroPaciente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroPaciente.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,23 +54,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainViewAdministrador.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/UPB/ING. SISTEMAS/03 Tercer Semestre/Estructura de datos/GitBash/Proyecto-de-Aula-Wellness-Oasis",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/UPB/ING. SISTEMAS/03 Tercer Semestre/Estructura de datos/GitBash/Proyecto-de-Aula-Wellness-Oasis&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.MainViewAdministrador">
+}</component>
+  <component name="RunManager" selected="Application.MainRegistroCita">
     <configuration name="MainRegistroCita" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainRegistroCita" />
       <module name="Wellness-Oasis" />
@@ -100,19 +104,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainViewAdministrador" />
         <item itemvalue="Application.MainRegistroCita" />
+        <item itemvalue="Application.MainViewAdministrador" />
         <item itemvalue="Application.MainViewRegistroMedico" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -122,11 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714229383829</updated>
-      <workItem from="1714250947654" duration="3896000" />
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
