@@ -1,7 +1,7 @@
 package oasis.model;
 
 import oasis.estructurasDatos.GeneradorCodigo;
-import oasis.model.MotivoCita.Examen;
+import oasis.model.domain.motivoCita.Examen;
 
 public class RegistroExamen {
     private String radicadoExamen;

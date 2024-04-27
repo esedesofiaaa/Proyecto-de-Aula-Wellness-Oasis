@@ -6,7 +6,7 @@ import oasis.model.TipoDocumento;
 import oasis.model.domain.cita.Cita;
 
 public class Paciente {
-    public String tipoDocumento;
+    public TipoDocumento tipoDocumento;
     private String id;
     private String nombre;
     private String apellido;
@@ -15,7 +15,7 @@ public class Paciente {
     private String correo;
     private DoubleLinkedList<Cita> historialCitas; // Historial de citas del paciente
 
-    public Paciente(String tipoDocumento, String id, String nombre, String apellido, String edad, String telefono, String correo) {
+    public Paciente(TipoDocumento tipoDocumento, String id, String nombre, String apellido, String edad, String telefono, String correo) {
         this.tipoDocumento = tipoDocumento;
         this.id = id;
         this.nombre = nombre;
@@ -28,11 +28,11 @@ public class Paciente {
     // Método para agregar una cita al historial de citas del paciente
 
 
-    public String getTipoDocumento() {
+    public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(String tipoDocumento) {
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 

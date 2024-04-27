@@ -1,4 +1,4 @@
-package oasis.model.MotivoCita;
+package oasis.model.domain.motivoCita;
 
 public enum Examen {
     EXAMEN_FISICO_INFANTIL("Examen físico infantil", "PEDIATRIA", "Evaluación exhaustiva de la salud y desarrollo del niño, incluyendo mediciones de peso, altura, perímetro cefálico, y examen de sistemas como cardiovascular, respiratorio, digestivo, etc."),

@@ -18,7 +18,7 @@ public class AutorizacionRepository {
      * Constructor de la clase RegistroExamenRepository
      */
     public AutorizacionRepository() {
-        this.pathFile = "src/main/oasis/java/dataBase/Autorizacion.Json"; // Ruta del archivo JSON dentro del proyecto
+        this.pathFile = "src/main/java/oasis/dataBase/Autorizacion.Json"; // Ruta del archivo JSON dentro del proyecto
         this.jsonAdapterAutorizacion = FileJsonAdapter.getInstance(); // Obtener una instancia del adaptador JSON para Pacientes
         this.examenesPorAutorizar = jsonAdapterAutorizacion.getObjectsStack(pathFile, RegistroExamen[].class);
 

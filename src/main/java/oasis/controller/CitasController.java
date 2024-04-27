@@ -2,13 +2,10 @@ package oasis.controller;
 import oasis.estructurasDatos.GeneradorCodigo;
 import oasis.estructurasDatos.listas.DoubleLinkedList;
 import oasis.model.Medico;
-import oasis.model.MotivoCita.Control;
 import oasis.model.RegistroExamen;
 import oasis.model.domain.cita.Cita;
-import oasis.model.domain.cita.CitaExamen;
 import oasis.model.domain.paciente.Paciente;
 import oasis.model.repository.CitaRepository;
-import oasis.model.repository.MedicoRepository;
 import oasis.model.repository.PacientesRepository;
 import oasis.model.repository.RegistroExamenRepository;
 
@@ -100,13 +97,6 @@ public class CitasController {
         }
     }
 
-    private void actualizarMotivoCita(Cita cita) {
-        if ("CONTROL".equals(cita.getMotivoCita()) && "VALORACION".equals(cita.getMotivoCita())) {
-            cita.setAutorizado(true);
-            cita.setRadicadoExamen("No aplica");
-
-        }
-    }
 
     public DoubleLinkedList<Cita> citasDelPaciente(String idPaciente) {
         citaRepository.buscarCitasPorIdPaciente(idPaciente).mostrarLista();
@@ -133,9 +123,12 @@ public class CitasController {
             citaRepository.eliminarCita(cita);
             switch (atributo) {
                 case "motivoCita":
-                    cita.setMotivoCita(valor);
-                    actualizarMotivoCita(cita);
+                    if("VALORACION".equals(valor)||"CONTROL".equals(valor)){
+                        cita.setMotivoCita(valor);
+                        cita.setRadicadoExamen("No aplica");
+                        cita.setAutorizado(true);
 
+                    }
                     //Falta cuando se convierte en Examen, hacer metodo para agregar los 2 atributos
                     //Que se elimine la cita y en la visual la redirija a crear una cita examen
                     break;
@@ -149,29 +142,55 @@ public class CitasController {
                     // que filtra a los medicos por especialidad
                     cita.setEspecialidad(valor);
                 case "radicadoExamen":
+                    if(cita.getMotivoCita().equals("EXAMEN")){
                     RegistroExamen registroExamen= registroExamenRepository.buscarPorRadicadoExamen(valor);
-                    if (registroExamen!= null) {
-                        //corroborar que el examen corresponda al id del paciente al crear la cita
-                        if (cita.getIdPaciente().toString().equals(registroExamen.getIdPaciente().toString())) {
-                            cita.setRadicadoExamen(valor);
-                            cita.setEspecialidad(registroExamen.getMotivoCitaExamen().getEspecialidad());
-                        } else {
-                            System.out.println("El examen" + valor + "No pertenece al paciente" + cita.getIdPaciente());
+                        if (registroExamen!= null) {
+                            //corroborar que el examen corresponda al id del paciente al crear la cita
+                            if (cita.getIdPaciente().toString().equals(registroExamen.getIdPaciente().toString())) {
+                                cita.setRadicadoExamen(valor);
+                                cita.setEspecialidad(registroExamen.getMotivoCitaExamen().getEspecialidad());
+                            } else {
+                                System.out.println("El examen" + valor + "No pertenece al paciente" + cita.getIdPaciente());
+                            }
+                        } else{
+                            System.out.println("El examen con radicado" + valor + "no existe");
+
                         }
+                    } else {
+                        System.out.println("La cita no es de tipo examen");
                     }
-                        break;
-                        default:
-                            System.out.println("El atributo " + atributo + " no es válido.");
-                            break;
-                    }
-                    cita.setIdCita(generadorCodigo.generarCodigo(cita.getMotivoCita(), cita.getEspecialidad()));
-                    citaRepository.guardarCita(cita);
-                    System.out.println("Cita modificada: " + cita.getIdCita());
+                break;
+                default:
+                    System.out.println("El atributo " + atributo + " no es válido.");
+                    break;
+                }
+                cita.setIdCita(generadorCodigo.generarCodigo(cita.getMotivoCita(), cita.getEspecialidad()));
+                citaRepository.guardarCita(cita);
+                System.out.println("Cita modificada: " + cita.getIdCita());
             } else{
                 System.out.println("La cita con id " + idCita + " no existe.");
             }
     }
 
+    public void citaACitaExamen(String idCita, String atributo, String valor, String radicadoExamen, String medico, boolean pagado) {
+        Cita cita = citaRepository.buscarCitaPorId(idCita);
+        if (cita != null) {
+            citaRepository.eliminarCita(cita);
+            switch (atributo) {
+                case "motivoCita":
+                    if("EXAMEN".equals(valor)){
+                        agendarCitaExamen(cita.getIdPaciente(), radicadoExamen, medico, pagado);
+                    }
+                    break;
+
+                default:
+                    System.out.println("El atributo " + atributo + " no es válido.");
+                    break;
+            }
+        } else {
+            System.out.println("La cita con id " + idCita + " no existe.");
+        }
+    }
         //Metodo para pagar cita
         public void pagarCita (String idCita){
             Cita cita = citaRepository.buscarCitaPorId(idCita);

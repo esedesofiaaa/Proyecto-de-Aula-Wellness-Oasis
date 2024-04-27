@@ -15,7 +15,7 @@ public class MedicoRepository
 
     //Constructor
     public MedicoRepository() {
-        this.pathFile = "src/main/oasis/java/dataBase/Medicos.Json"; // Ruta del archivo JSON dentro del proyecto
+        this.pathFile = "src/main/java/oasis/dataBase/Medicos.Json"; // Ruta del archivo JSON dentro del proyecto
         this.jsonAdapterMedicos = FileJsonAdapter.getInstance(); // Obtener una instancia del adaptador JSON para Pacientes
         // Inicializar la lista de pacientes obteniendo los datos del archivo JSON
         this.listaMedicos = jsonAdapterMedicos.getObjects(pathFile, Medico[].class);

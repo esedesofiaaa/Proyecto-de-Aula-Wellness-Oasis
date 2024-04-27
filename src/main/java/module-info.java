@@ -5,14 +5,20 @@ module oasis {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
-    requires javafx.media;
 
     opens oasis.aplicacion to javafx.fxml;
     opens oasis.controller to javafx.fxml;
+    opens oasis.model.domain.paciente to com.google.gson;
+    opens oasis.estructurasDatos.listas to com.google.gson;
+    opens oasis.model.domain.cita to com.google.gson;
+    opens oasis.model.repository to com.google.gson;
+    opens oasis.model to com.google.gson;
+    opens oasis.estructurasDatos to com.google.gson;
+    opens   oasis. model. domain. motivoCita to com.google.gson;
 
-    // Exporta el paquete que contiene la clase Paciente
-    exports oasis.model.domain.paciente to com.google.gson;
 
     exports oasis.aplicacion;
     exports oasis.controller;
+    exports oasis.model;
+    exports oasis.estructurasDatos.listas;
 }

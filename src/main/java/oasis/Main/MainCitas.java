@@ -2,8 +2,6 @@ package oasis.Main;
 
 import oasis.controller.CitasController;
 import oasis.estructurasDatos.GeneradorCodigo;
-import oasis.model.MotivoCita.Control;
-import oasis.model.domain.cita.Cita;
 import oasis.model.repository.CitaRepository;
 
 public class MainCitas {
@@ -21,8 +19,7 @@ public class MainCitas {
         citasController.agendarCitaExamen("2", "V566", "123456", false);
         citasController.eliminarCita("PE787");
         citasController.eliminarCita("DV550");*/
-
-        citasController.modificarCita("MV809","radicadoExamen", "A637");
+        citasController.modificarCita("PSE336","radicadoExamen","X911");
         //citasController.mostrarCitas();
     }
 

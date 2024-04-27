@@ -15,7 +15,7 @@ public class CitaRepository {
      */
     public CitaRepository() {
 
-        this.pathFile = "src/main/oasis/java/dataBase/Citas.Json"; // Ruta del archivo JSON dentro del proyecto
+        this.pathFile = "src/main/java/oasis/dataBase/Citas.Json"; // Ruta del archivo JSON dentro del proyecto
         this.jsonAdapterCita = FileJsonAdapter.getInstance(); // Obtener una instancia del adaptador JSON para Pacientes
         this.listaCitas = jsonAdapterCita.getObjects(pathFile, Cita[].class);
     }

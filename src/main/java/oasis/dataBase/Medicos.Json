@@ -4,4 +4,9 @@
     "especialidad": "CARDIOLOGIA",
     "idMedico": "123456"
   }
+  , {
+  "nombre": "Raul Zozorrita",
+  "especialidad": "PEDIATRIA",
+  "idMedico": "098765"
+}
 ]

@@ -2,7 +2,6 @@ package oasis.Main;
 
 
 import oasis.controller.RegistroExamenController;
-import oasis.model.MotivoCita.Examen;
 import oasis.model.repository.RegistroExamenRepository;
 
 public class MainRegistroExamen {

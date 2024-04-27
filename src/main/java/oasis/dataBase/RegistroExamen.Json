@@ -10,26 +10,10 @@
   {
     "radicadoExamen": "A637",
     "motivoCitaExamen": "DERMATOSCOPIA",
-    "autorizado": false,
+    "autorizado": true,
     "generadorCodigo": {},
     "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "N141",
-    "motivoCitaExamen": "ELECTROCARDIOGRAMA",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "2",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "A637",
-    "motivoCitaExamen": "DERMATOSCOPIA",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
+    "nota": "AUTORIZADO"
   },
   {
     "radicadoExamen": "X911",

@@ -1,10 +1,5 @@
 package oasis.model.domain.cita;
 
-import oasis.model.MotivoCita.Examen;
-import oasis.model.RegistroExamen;
-import oasis.model.RegistroExamen;
-import oasis.model.domain.cita.Cita;
-
 public class CitaExamen extends Cita {
 
 
