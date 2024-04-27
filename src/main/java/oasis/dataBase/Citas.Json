@@ -1,0 +1,39 @@
+[
+  {
+    "idCita": "DV858",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "4500",
+    "motivoCita": "VALORACION",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "PV358",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "VALORACION",
+    "especialidad": "PEDIATRIA",
+    "medico": "098765",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "DE335",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "A637",
+    "autorizado": true,
+    "generadorCodigo": {}
+  }
+]

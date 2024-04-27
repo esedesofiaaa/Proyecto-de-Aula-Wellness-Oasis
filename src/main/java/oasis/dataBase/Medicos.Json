@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Maria Lopez",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "123456"
+  },
+  {
+    "nombre": "Raul Zozorrita",
+    "especialidad": "PEDIATRIA",
+    "idMedico": "098765"
+  },
+  {
+    "nombre": "hgjk",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "ghjkhk"
+  }
+]
