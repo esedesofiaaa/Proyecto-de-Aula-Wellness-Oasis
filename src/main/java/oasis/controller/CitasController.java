@@ -1,8 +1,8 @@
 package oasis.controller;
 import oasis.estructurasDatos.GeneradorCodigo;
 import oasis.estructurasDatos.listas.DoubleLinkedList;
-import oasis.model.Medico;
-import oasis.model.RegistroExamen;
+import oasis.model.domain.medico.Medico;
+import oasis.model.domain.registroExamen.RegistroExamen;
 import oasis.model.domain.cita.Cita;
 import oasis.model.domain.paciente.Paciente;
 import oasis.model.repository.CitaRepository;

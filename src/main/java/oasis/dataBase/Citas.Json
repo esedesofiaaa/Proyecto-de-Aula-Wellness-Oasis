@@ -25,14 +25,14 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "ME226",
+    "idCita": "DE335",
     "idPaciente": "3",
     "pagado": true,
     "tomado": false,
     "motivoCita": "EXAMEN",
-    "especialidad": "MEDICINA_GENERAL",
+    "especialidad": "DERMATOLOGIA",
     "medico": "123456",
-    "radicadoExamen": "X911",
+    "radicadoExamen": "A637",
     "autorizado": true,
     "generadorCodigo": {}
   }

@@ -15,6 +15,5 @@ public interface DoubleLinkedListInterface<T> {
         void mostrarLista ();
         //T navegarMetodo (int posicion);
 
-        Paciente buscarPacientePorId(String id);//Metodo para buscar un paciente por su id en la lista y asi no tener que escribir todos los datos para encontrarlo
 
 }

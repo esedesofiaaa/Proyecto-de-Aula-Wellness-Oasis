@@ -1,4 +1,4 @@
-package oasis.model;
+package oasis.model.domain.paciente;
 
 public enum TipoDocumento {
     CC("CC"),

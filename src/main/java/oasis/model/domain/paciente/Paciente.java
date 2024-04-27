@@ -2,7 +2,6 @@ package oasis.model.domain.paciente;
 
 import java.util.Objects;
 import oasis.estructurasDatos.listas.DoubleLinkedList;
-import oasis.model.TipoDocumento;
 import oasis.model.domain.cita.Cita;
 
 public class Paciente {

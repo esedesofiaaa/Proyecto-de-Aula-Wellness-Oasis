@@ -2,9 +2,8 @@ package oasis.Main;
 
 import oasis.controller.MedicosController;
 import oasis.estructurasDatos.listas.DoubleLinkedList;
-import oasis.model.Especialidad;
-import oasis.model.Medico;
-import oasis.model.repository.MedicoRepository;
+import oasis.model.domain.Especialidad;
+import oasis.model.domain.medico.Medico;
 
 public class MainMedicos {
     public static void main(String[] args) {

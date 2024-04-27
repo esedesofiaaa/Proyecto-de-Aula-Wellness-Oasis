@@ -1,9 +1,7 @@
 package oasis.controller;
 
-import oasis.estructurasDatos.interfaces.StackInterface;
-import oasis.estructurasDatos.listas.DoubleLinkedList;
 import oasis.estructurasDatos.listas.StackList;
-import oasis.model.RegistroExamen;
+import oasis.model.domain.registroExamen.RegistroExamen;
 import oasis.model.repository.AutorizacionRepository;
 import oasis.model.repository.RegistroExamenRepository;
 

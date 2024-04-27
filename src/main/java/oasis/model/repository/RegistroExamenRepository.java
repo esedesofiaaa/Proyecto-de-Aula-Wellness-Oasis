@@ -1,6 +1,6 @@
 package oasis.model.repository;
 import oasis.estructurasDatos.listas.DoubleLinkedList; //Imoortamos la clase de la lista enlazada doble para poder usarla
-import oasis.model.RegistroExamen;
+import oasis.model.domain.registroExamen.RegistroExamen;
 import oasis.shared.FileJsonAdapter;
 
 public class    RegistroExamenRepository {

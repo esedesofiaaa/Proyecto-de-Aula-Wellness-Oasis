@@ -19,7 +19,7 @@ public class MainCitas {
         citasController.agendarCitaExamen("2", "V566", "123456", false);
         citasController.eliminarCita("PE787");
         citasController.eliminarCita("DV550");*/
-        citasController.modificarCita("PSE336","radicadoExamen","X911");
+        citasController.modificarCita("ME226","radicadoExamen","A637");
         //citasController.mostrarCitas();
     }
 

@@ -190,19 +190,7 @@ public class DoubleLinkedList<T> implements DoubleLinkedListInterface<T> {
         }
     }
 
-    @Override
-    public Paciente buscarPacientePorId(String id) {
-            Nodo<T> actual = cabeza;
-            for (int i = 0; i <tamano; i++) {
-                Paciente pacienteActual = (Paciente) actual.getValor();
-                if (pacienteActual.getId().equals(id)) {
-                    return pacienteActual;
-                }
-                actual = actual.getSiguiente();
-            }
-    System.out.println("No se encontro el paciente");
-    return null;
-    }
+
 
     //Metodo toArray() para convertir la lista en un arreglo
     public T[] toArray() {

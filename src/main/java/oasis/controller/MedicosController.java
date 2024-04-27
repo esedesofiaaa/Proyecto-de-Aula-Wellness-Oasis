@@ -1,7 +1,7 @@
 package oasis.controller;
 
 import oasis.estructurasDatos.listas.DoubleLinkedList;
-import oasis.model.Medico;
+import oasis.model.domain.medico.Medico;
 import oasis.model.repository.MedicoRepository;
 
 public class MedicosController {

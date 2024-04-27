@@ -1,7 +1,7 @@
 package oasis.controller;
 import oasis.model.domain.motivoCita.Examen;
 import oasis.model.domain.paciente.Paciente;
-import oasis.model.RegistroExamen;
+import oasis.model.domain.registroExamen.RegistroExamen;
 import oasis.model.repository.RegistroExamenRepository;
 
 

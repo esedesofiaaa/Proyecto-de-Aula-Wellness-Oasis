@@ -1,4 +1,4 @@
-package oasis.model;
+package oasis.model.domain;
 
 public enum Especialidad {
 PEDIATRIA,

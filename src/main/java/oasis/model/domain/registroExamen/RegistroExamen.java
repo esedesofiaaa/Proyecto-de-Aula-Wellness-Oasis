@@ -1,4 +1,4 @@
-package oasis.model;
+package oasis.model.domain.registroExamen;
 
 import oasis.estructurasDatos.GeneradorCodigo;
 import oasis.model.domain.motivoCita.Examen;

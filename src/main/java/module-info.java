@@ -12,13 +12,19 @@ module oasis {
     opens oasis.estructurasDatos.listas to com.google.gson;
     opens oasis.model.domain.cita to com.google.gson;
     opens oasis.model.repository to com.google.gson;
-    opens oasis.model to com.google.gson;
+
     opens oasis.estructurasDatos to com.google.gson;
     opens   oasis. model. domain. motivoCita to com.google.gson;
 
 
     exports oasis.aplicacion;
     exports oasis.controller;
-    exports oasis.model;
     exports oasis.estructurasDatos.listas;
+    exports oasis.model.domain.medico;
+    opens oasis.model.domain.medico to com.google.gson;
+    exports oasis.model.domain.paciente;
+    exports oasis.model.domain.registroExamen;
+    opens oasis.model.domain.registroExamen to com.google.gson;
+    exports oasis.model.domain;
+    opens oasis.model.domain to com.google.gson;
 }

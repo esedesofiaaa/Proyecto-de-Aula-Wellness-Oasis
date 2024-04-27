@@ -2,8 +2,8 @@ package oasis.Main;
 
 import oasis.controller.CitasController;
 import oasis.estructurasDatos.listas.DoubleLinkedList;
-import oasis.model.*;
 import oasis.model.domain.paciente.Paciente;
+import oasis.model.domain.paciente.TipoDocumento;
 import oasis.model.repository.PacientesRepository;
 
 public class MainPacientes {

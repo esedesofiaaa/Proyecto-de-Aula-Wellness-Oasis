@@ -1,7 +1,6 @@
 package oasis.model.domain.cita;
 
 import oasis.estructurasDatos.GeneradorCodigo;
-import oasis.model.Medico;
 
 /**
  * Clase que representa una cita

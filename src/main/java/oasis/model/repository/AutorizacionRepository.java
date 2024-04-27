@@ -2,7 +2,7 @@ package oasis.model.repository;
 
 import oasis.estructurasDatos.listas.DoubleLinkedList;
 import oasis.estructurasDatos.listas.StackList;
-import oasis.model.RegistroExamen;
+import oasis.model.domain.registroExamen.RegistroExamen;
 import oasis.shared.FileJsonAdapter;
 
 public class AutorizacionRepository {

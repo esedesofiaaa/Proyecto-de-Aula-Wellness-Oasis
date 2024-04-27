@@ -1,4 +1,6 @@
-package oasis.model;
+package oasis.model.domain.medico;
+
+import oasis.model.domain.Especialidad;
 
 public class Medico {
 
