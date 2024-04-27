@@ -16,5 +16,14 @@
     "edad": "40",
     "telefono": "123456789",
     "correo": "pedro123@gmail"
+  },
+  {
+    "tipoDocumento": "TI",
+    "id": "1",
+    "nombre": "1",
+    "apellido": "1",
+    "edad": "1",
+    "telefono": "1",
+    "correo": "1"
   }
 ]
