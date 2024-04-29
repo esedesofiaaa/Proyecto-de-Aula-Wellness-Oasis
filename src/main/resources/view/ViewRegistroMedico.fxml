@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="372.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oasis.aplicacion.controllerView.ViewRegistroMedicoController">
+   <children>
+      <GridPane layoutX="268.0" layoutY="180.0" prefHeight="110.0" prefWidth="350.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="180.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="175.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="195.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="53.0" minHeight="0.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="TOP_LEFT" prefHeight="17.0" prefWidth="163.0" text="Nombre:">
+               <padding>
+                  <Insets right="6.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" prefHeight="17.0" prefWidth="160.0" text="Especialidad:" GridPane.rowIndex="1">
+               <padding>
+                  <Insets right="6.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="165.0" text="Numero de documento:" GridPane.rowIndex="2">
+               <padding>
+                  <Insets right="6.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idNombreMedico" prefHeight="25.0" prefWidth="169.0" promptText="Nombre" GridPane.columnIndex="1" />
+            <TextField fx:id="idNumeroDeDocumentoMedico" prefHeight="27.0" prefWidth="185.0" promptText="Numero de documento" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="tipoEspecialidadComboBox" opacity="0.35" prefHeight="28.0" prefWidth="193.0" promptText="Seleccione" style="-fx-background-color: #23B9CE;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <AnchorPane layoutX="305.0" layoutY="285.0" prefHeight="71.0" prefWidth="225.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="305.0" AnchorPane.rightAnchor="70.0">
+         <children>
+            <HBox layoutX="70.0" layoutY="22.0" prefHeight="30.0" prefWidth="107.0">
+               <children>
+                  <Button fx:id="bottonGuardarMedico" mnemonicParsing="false" onAction="#guardar" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #23B9CE;" text="GUARDAR" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="63.0" prefWidth="652.0" style="-fx-background-color: #23B9CE;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../0008.PNG" />
+               </image>
+            </ImageView>
+            <Label layoutX="346.0" layoutY="20.0" text="Registro Medico" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="78.0" layoutX="545.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../1560871.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="78.0" fitWidth="81.0" layoutX="403.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../6543005.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="306.0" fitWidth="230.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../port21.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
