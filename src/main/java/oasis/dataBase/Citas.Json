@@ -48,5 +48,70 @@
     "radicadoExamen": "No aplica",
     "autorizado": true,
     "generadorCodigo": {}
+  },
+  {
+    "idCita": "CC604",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "CARDIOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "CC393",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "CARDIOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "CC883",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "CARDIOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "CC220",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "CARDIOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "CC213",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "CARDIOLOGIA",
+    "medico": "ghjkhk",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
   }
 ]

@@ -74,7 +74,18 @@ public class MedicoRepository
         return medicosEspecialidad;
     }//obtenerPorEspecialidad
 
-
+//Metodo que retorne un String que sea el id de un medico y reciba el nombre del medico
+    public String buscarIdPorNombre(String nombre){
+        DoubleLinkedList<Medico> medicos = obtenerTodos(); // Obtener la lista completa de pacientes
+        for (int i = 0; i < medicos.tamano(); i++) { // Recorrer la lista de pacientes
+            Medico medico = medicos.buscarPorIndiceIterar(i); // Obtener el paciente en el índice actual
+            if (medico.getNombre().equals(nombre)) { // Verificar si el ID del paciente coincide
+                return medico.getIdMedico(); // Retornar el paciente encontrado
+            }
+        }
+        // Si no se encontró ningún paciente con el ID especificado, retornar null
+        return null;
+    }//obtenerPorId
 
 
 

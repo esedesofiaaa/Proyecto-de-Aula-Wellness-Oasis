@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89a0a72b-7021-4e30-9587-10b3e0b6b877" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Pacientes.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Pacientes.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewIniciarSesion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewIniciarSesion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/MedicosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/MedicosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/MedicoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/MedicoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCita.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroMedico.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroMedico.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroPaciente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroPaciente.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +21,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2fl5xaMzD99SoK0Mu92elJYlC4h" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,7 +35,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ssant/Downloads/mapasytablashash",
+    "last_opened_file_path": "C:/ProyectoEstructuras/Proyecto-de-Aula-Wellness-Oasis",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714363070341</updated>
       <workItem from="1714363071829" duration="5587000" />
+      <workItem from="1714409056235" duration="8483000" />
     </task>
     <servers />
   </component>

@@ -33,6 +33,9 @@ public class MedicosController {
         medicoRepository.buscarPorEspecialidad(especialidad).mostrarLista();
         return medicoRepository.buscarPorEspecialidad(especialidad);
     }
-
+//Metodo que retorne un String que sea el id de un medico y reciba el nombre del medico
+    public String buscarIdPorNombre(String nombre){
+        return medicoRepository.buscarIdPorNombre(nombre);
+    }
 
 }

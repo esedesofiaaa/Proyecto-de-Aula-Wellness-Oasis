@@ -37,6 +37,7 @@ public class ViewRegistroCitaController {
 
     private final CitasController citaController;
     private final MedicosController medicosController;
+    private String idMedicoMomentario;
 
 
     public ViewRegistroCitaController() {
@@ -68,22 +69,20 @@ public class ViewRegistroCitaController {
                 DoubleLinkedList<Medico> medicoEspecialidad = filtrarMedicosPorEspecialidad(newValue);
                 for (int i = 0; i < medicoEspecialidad.tamano(); i++) {
                     Medico medico = medicoEspecialidad.buscarPorIndiceIterar(i);
-                    idComboBoxMedicos.getItems().add(medico.getNombre());
+                    idComboBoxMedicos.getItems().add(medico.getIdMedico());
                 }
+
             }
         });
 
     }//Elementos del combo box
 
     @FXML
-    private void guardarCita (){
+    private void guardarCita() {
         // Obtener los valores de los campos de la vista
-        /* Se debe declaran las variables que se quieren extraer con su tipo de variable y nombre y se igualan
-         * a la get de los id de los campos de la vista, por eso estos nombres deben coincidir con los id creados
-         * para cada campo*/
         String documentoPaciente = idDocuementoPaciente.getText().trim();
         String motivoCita = idMotivoCita.getText().trim();
-        String medico = idMedico.getText().trim();
+        String medico =idComboBoxMedicos.getValue(); // Obtener el valor del ComboBox directamente
         Especialidad especialidad = tipoEspecialidadComboBox.getValue();
         boolean pagado = obtenerPagadoSeleccionado();
 
@@ -92,13 +91,15 @@ public class ViewRegistroCitaController {
             return; // Salir del método si falta algún dato
         }
 
-        //agregar el nuevo medico utilizando el controlador de paciente
-        citaController.agendarCitaControlValoracion(documentoPaciente, motivoCita, especialidad.toString(),medico,  pagado);
+        // Agregar la cita utilizando el controlador de citas
+        citaController.agendarCitaControlValoracion(documentoPaciente, motivoCita, especialidad.toString(), medico, pagado);
 
-        // Limpiar los campos después de agregar el paciente (opcional)
-        limpiarCampos();
 
         System.out.println("Cita guardada con éxito");
+
+        // Limpiar los campos después de agregar la cita
+        limpiarCampos();
+
     }//guardar
 
     private boolean obtenerPagadoSeleccionado() {
@@ -112,7 +113,7 @@ public class ViewRegistroCitaController {
         idDocuementoPaciente.clear();
         tipoEspecialidadComboBox.getSelectionModel().clearSelection();
         idMotivoCita.clear();
-        idMedico.clear();
+        idComboBoxMedicos.getSelectionModel().clearSelection();
         idPagado.clear();
     }//limpiarCampos
 
