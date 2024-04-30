@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="920fcd69-fc65-4536-91ad-7aa6750c12e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewPacienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewPagarCitaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroExamenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewUsuarioNoExisteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainUsuarioNoExiste.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewPaciente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewPagarCita.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewRegistroExamen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewLogin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewPaciente.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewPagarCita.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroExamen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewUsuarioNoExiste.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewIniciarSesionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/RegistroExamenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/RegistroExamenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2fok9G9LGvEkmpL4AFSm1HBmgNn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainViewAdministrador.executor": "Run",
+    "Application.MainViewPaciente.executor": "Run",
+    "Application.MainViewRegistroExamen.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ssant/Downloads/Proyecto-de-Aula-Wellness-Oasis",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.MainViewAdministrador">
+    <configuration name="MainViewAdministrador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewAdministrador" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainViewPaciente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewPaciente" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainViewRegistroExamen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewRegistroExamen" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Proyecto-de-Aula-Wellness-Oasis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Proyecto-de-Aula-Wellness-Oasis" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainViewAdministrador" />
+        <item itemvalue="Application.MainViewRegistroExamen" />
+        <item itemvalue="Application.MainViewPaciente" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="920fcd69-fc65-4536-91ad-7aa6750c12e8" name="Changes" comment="" />
+      <created>1714474665481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714474665481</updated>
+      <workItem from="1714474668544" duration="2296000" />
+      <workItem from="1714477112886" duration="5315000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
