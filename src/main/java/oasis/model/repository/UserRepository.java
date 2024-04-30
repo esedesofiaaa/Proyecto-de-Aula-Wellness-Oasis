@@ -3,6 +3,7 @@ package oasis.model.repository;
 import oasis.estructurasDatos.listas.DoubleLinkedList;
 import oasis.model.domain.User;
 import oasis.model.domain.cita.Cita;
+import oasis.model.domain.medico.Medico;
 import oasis.shared.FileJsonAdapter;
 
 public class UserRepository {
@@ -46,13 +47,27 @@ public class UserRepository {
         }
     }
 
-    //meotod para buscaar usuario que retorne boolean si lo encuentra
-    public boolean buscarUsuario(User user) {
-        int indice = listaUsers.buscarElemento(user);
-        if (indice != -1) {
-            return true;
-        } else {
-            return false;
+
+    //Metodo para buscar usuario por contraseña y usuario que retorne boolean si lo encuentra
+
+    public boolean buscarPorUsuario(String user ,String password) {
+        for (int i = 0; i < listaUsers.tamano(); i++) { // Recorrer la lista de pacientes
+            User usuario = listaUsers.buscarPorIndiceIterar(i); // Obtener el paciente en el índice actual
+            if (usuario.getIdUser()==user&& usuario.getPassword()==password) { // Verificar si el ID del paciente coincide
+                return true; // Retornar el usuario encontrado
+            }
         }
+        return false;
     }
+
+    public User buscarUsuario(String user ,String password) {
+        for (int i = 0; i < listaUsers.tamano(); i++) { // Recorrer la lista de pacientes
+            User usuario = listaUsers.buscarPorIndiceIterar(i); // Obtener el paciente en el índice actual
+            if (usuario.getIdUser()==user&& usuario.getPassword()==password) { // Verificar si el ID del paciente coincide
+                return usuario; // Retornar el usuario encontrado
+            }
+         }
+        return null;
+    }
+
 }

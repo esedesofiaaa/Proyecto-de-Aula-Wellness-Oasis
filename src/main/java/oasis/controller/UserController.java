@@ -21,14 +21,18 @@ public class UserController {
         userRepository.eliminarUser(user);
     }
 
-    public void interfazUsuario(User user) {
-       if(userRepository.buscarUsuario(user) == true) {
-           if (user.getIdUser().equals("admin") && user.getPassword().equals("admin")) {
-               userRepository.iniciarSession(user);
-               // Se activa el controller de vista de admin
-           } else {
-           //Se activa el controller de vista paciente
-           }
-       }
+    public String interfazUsuario(String user, String password) {
+        if (userRepository.buscarPorUsuario(user, password)) {
+            if (user.equals("admin") && password.equals("admin")) {
+                User usuarioNew = userRepository.buscarUsuario(user, password);
+                userRepository.iniciarSession(usuarioNew);
+                return "admin";
+                // Se activa el controller de vista de admin
+            } else {
+                return "user";
+                // Se activa el controller de vista de usuario
+            }
+        }
+        return "No existe";
     }
 }

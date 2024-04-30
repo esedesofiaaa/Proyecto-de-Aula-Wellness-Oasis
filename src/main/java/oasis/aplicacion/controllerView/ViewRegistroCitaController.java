@@ -66,10 +66,10 @@ public class ViewRegistroCitaController {
                 // Limpiar los médicos anteriores
                 idComboBoxMedicos.getItems().clear();
                 // Obtener los nombres de los médicos por especialidad y agregarlos al ComboBox
-                DoubleLinkedList<Medico> medicoEspecialidad = filtrarMedicosPorEspecialidad(newValue);
+                DoubleLinkedList<Medico> medicoEspecialidad = filtrarMedicosPorEspecialidad(tipoEspecialidadComboBox.getValue());
                 for (int i = 0; i < medicoEspecialidad.tamano(); i++) {
                     Medico medico = medicoEspecialidad.buscarPorIndiceIterar(i);
-                    idComboBoxMedicos.getItems().add(medico.getIdMedico());
+                    idComboBoxMedicos.getItems().add(medico.getNombre());
                 }
 
             }
@@ -82,7 +82,7 @@ public class ViewRegistroCitaController {
         // Obtener los valores de los campos de la vista
         String documentoPaciente = idDocuementoPaciente.getText().trim();
         String motivoCita = idMotivoCita.getText().trim();
-        String medico =idComboBoxMedicos.getValue(); // Obtener el valor del ComboBox directamente
+        String medico =medicosController.buscarIdPorNombre(idComboBoxMedicos.getValue()); // Obtener el valor del ComemboBox directamente
         Especialidad especialidad = tipoEspecialidadComboBox.getValue();
         boolean pagado = obtenerPagadoSeleccionado();
 

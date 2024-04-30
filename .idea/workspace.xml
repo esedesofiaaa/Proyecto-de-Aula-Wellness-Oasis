@@ -5,33 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89a0a72b-7021-4e30-9587-10b3e0b6b877" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewPacienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroExamenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewUsuarioNoExisteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainUsuarioNoExiste.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewPaciente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewLogin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewPaciente.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroExamen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewUsuarioNoExiste.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/Main/MainUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewIniciarSesionController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/MedicosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/MedicosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/MedicoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/MedicoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Users.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Users.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/oasis/Main/MainUser.java" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2fl5xaMzD99SoK0Mu92elJYlC4h" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.MainUser.executor": "Run",
+    "Application.MainUsuarioNoExiste.executor": "Run",
     "Application.MainViewAdministrador.executor": "Run",
+    "Application.MainViewLogin.executor": "Run",
+    "Application.MainViewPaciente.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -44,9 +74,61 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainUser">
+    <configuration name="MainUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.Main.MainUser" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainUsuarioNoExiste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainUsuarioNoExiste" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainViewAdministrador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewAdministrador" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainViewLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewLogin" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainViewPaciente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewPaciente" />
       <module name="Wellness-Oasis" />
       <extension name="coverage">
         <pattern>
@@ -73,6 +155,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainUser" />
+        <item itemvalue="Application.MainViewLogin" />
+        <item itemvalue="Application.MainViewPaciente" />
+        <item itemvalue="Application.MainUsuarioNoExiste" />
         <item itemvalue="Application.MainViewAdministrador" />
       </list>
     </recent_temporary>
@@ -94,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714363070341</updated>
       <workItem from="1714363071829" duration="5587000" />
-      <workItem from="1714409056235" duration="8483000" />
+      <workItem from="1714409056235" duration="17189000" />
     </task>
     <servers />
   </component>

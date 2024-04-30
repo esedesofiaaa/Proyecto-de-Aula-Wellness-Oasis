@@ -113,5 +113,31 @@
     "radicadoExamen": "No aplica",
     "autorizado": true,
     "generadorCodigo": {}
+  },
+  {
+    "idCita": "PC419",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "PEDIATRIA",
+    "medico": "098765",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "PV491",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "4500",
+    "motivoCita": "VALORACION",
+    "especialidad": "PEDIATRIA",
+    "medico": "8520",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
   }
 ]
