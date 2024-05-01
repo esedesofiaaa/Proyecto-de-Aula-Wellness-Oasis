@@ -2,6 +2,7 @@ package oasis.aplicacion.controllerView;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import oasis.controller.RegistroExamenController;
 import oasis.model.domain.motivoCita.Examen;
@@ -16,6 +17,8 @@ public class ViewRegistroExamenController {
 
     private final RegistroExamenController registroExamenController;
 
+    @FXML
+    private Label idMensajeLabel;
 
     public ViewRegistroExamenController() {
         this.registroExamenController = new RegistroExamenController();
@@ -43,6 +46,10 @@ public class ViewRegistroExamenController {
 
         Examen examenSeleccionado = registroExamenController.buscarExamenPorTipoExamen(idComboBoxExamenes.getValue());
 
+        if (examenSeleccionado == null && idComboBoxExamenes.getValue() == null) {
+            System.out.println("Por favor completa todos los campos.");
+
+        }
 
     }
 
@@ -52,9 +59,12 @@ public class ViewRegistroExamenController {
         Examen examen = registroExamenController.buscarExamenPorTipoExamen(idComboBoxExamenes.getValue());
         if (idDocumento.isEmpty() || examen == null) {
             System.out.println("Por favor complete todos los campos.");
+            idMensajeLabel.setText("Por favor completa todos los campos");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
         } else {
             registroExamenController.agregarExamen(examen, idDocumento);
-
+            idMensajeLabel.setText("Cita agendada con éxito");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
         }
         limpiarCampos();
     }

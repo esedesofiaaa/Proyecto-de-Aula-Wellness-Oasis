@@ -38,5 +38,21 @@
     "generadorCodigo": {},
     "idPaciente": "3",
     "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "E822",
+    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "Y580",
+    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "2",
+    "nota": "POR AUTORIZAR"
   }
 ]
