@@ -66,6 +66,7 @@ public class MedicoRepository
         DoubleLinkedList<Medico> medicosEspecialidad = new DoubleLinkedList<>();
         for (int i = 0; i < medicos.tamano(); i++) { // Recorrer la lista de pacientes
             Medico medico = medicos.buscarPorIndiceIterar(i); // Obtener el paciente en el índice actual
+            System.out.println(medico.toString());
             if (medico.getEspecialidad().name().equals(especialidad)) {
                 medicosEspecialidad.agregarAlFinal(medico);
             }

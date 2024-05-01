@@ -2,31 +2,30 @@ package oasis.aplicacion.controllerView;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import oasis.controller.MedicosController;
-import oasis.controller.PacientesController;
 import oasis.model.domain.Especialidad;
 import oasis.model.domain.medico.Medico;
-import oasis.model.domain.paciente.TipoDocumento;
 
 public class ViewRegistroMedicoController {
-
-    //Atributos de la vista
     @FXML
     private ComboBox<Especialidad> tipoEspecialidadComboBox;
     @FXML
     private TextField idNombreMedico;
     @FXML
     private TextField idNumeroDeDocumentoMedico;
+    @FXML
+    private Label idMensajeLabel; // Nuevo campo para el Label
 
-    private final MedicosController medicosController; //Se instancia el controlador de Medico
+    private final MedicosController medicosController;
+
     public ViewRegistroMedicoController() {
         this.medicosController = new MedicosController();
-    }//Constructor
+    }
 
     @FXML
     private void initialize() {
-        // Agregar los tipos de documento al ComboBox
         tipoEspecialidadComboBox.getItems().addAll(
                 Especialidad.CARDIOLOGIA,
                 Especialidad.DERMATOLOGIA,
@@ -36,32 +35,26 @@ public class ViewRegistroMedicoController {
                 Especialidad.PEDIATRIA,
                 Especialidad.PSIQUIATRIA
         );
-    }//Elementos del combo box
+    }
 
-    public void guardar(){
-        // Obtener los valores de los campos de la vista
-        /* Se debe declaran las variables que se quieren extraer con su tipo de variable y nombre y se igualan
-         * a la get de los id de los campos de la vista, por eso estos nombres deben coincidir con los id creados
-         * para cada campo*/
+    public void guardar() {
         Especialidad especialidad = tipoEspecialidadComboBox.getValue();
         String nombre = idNombreMedico.getText();
         String idMedico = idNumeroDeDocumentoMedico.getText();
 
-        //Creamos un objeto de tipo medico
-        Medico nuevoMedico = new Medico(nombre, especialidad, idMedico);
-
-        //agregar el nuevo medico utilizando el controlador de paciente
-        medicosController.agregarMedico(nuevoMedico);
-
-        // Limpiar los campos después de agregar el paciente (opcional)
-        limpiarCampos();
-
-        System.out.println("Medico guardado con éxito");
-    }//guardar
+        if (nombre.isEmpty() || idMedico.isEmpty() || especialidad == null) {
+            idMensajeLabel.setText("Por favor completa todos los campos");
+        } else {
+            Medico nuevoMedico = new Medico(nombre, especialidad, idMedico);
+            medicosController.agregarMedico(nuevoMedico);
+            limpiarCampos();
+            idMensajeLabel.setText("Médico registrado con éxito!");
+        }
+    }
 
     private void limpiarCampos() {
         tipoEspecialidadComboBox.getSelectionModel().clearSelection();
         idNombreMedico.clear();
         idNumeroDeDocumentoMedico.clear();
-    }//limpiarCampos
+    }
 }

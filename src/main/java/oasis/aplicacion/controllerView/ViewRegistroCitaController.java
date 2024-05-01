@@ -3,6 +3,7 @@ package oasis.aplicacion.controllerView;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import oasis.controller.CitasController;
 import oasis.controller.MedicosController;
@@ -34,6 +35,8 @@ public class ViewRegistroCitaController {
     @FXML
     private ComboBox<String> idComboBoxMedicos;
 
+    @FXML
+    private Label idMensajeLabel;
 
     private final CitasController citaController;
     private final MedicosController medicosController;
@@ -88,12 +91,15 @@ public class ViewRegistroCitaController {
 
         if (documentoPaciente.isEmpty() || motivoCita.isEmpty() || medico.isEmpty() || especialidad == null) {
             System.out.println("Por favor completa todos los campos.");
+            idMensajeLabel.setText("Por favor completa todos los campos");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
             return; // Salir del método si falta algún dato
         }
 
         // Agregar la cita utilizando el controlador de citas
         citaController.agendarCitaControlValoracion(documentoPaciente, motivoCita, especialidad.toString(), medico, pagado);
-
+        idMensajeLabel.setText("Cita agendada con éxito");
+        idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
 
         System.out.println("Cita guardada con éxito");
 

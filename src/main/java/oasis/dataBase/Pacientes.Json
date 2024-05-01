@@ -43,5 +43,32 @@
     "edad": "69",
     "telefono": "777777777",
     "correo": "qwwee.com"
+  },
+  {
+    "tipoDocumento": "CC",
+    "id": "85763542",
+    "nombre": "Juank",
+    "apellido": "rojo",
+    "edad": "34",
+    "telefono": "23456789065",
+    "correo": "sdd@"
+  },
+  {
+    "tipoDocumento": "CE",
+    "id": "3",
+    "nombre": "3",
+    "apellido": "3",
+    "edad": "3",
+    "telefono": "3",
+    "correo": "3"
+  },
+  {
+    "tipoDocumento": "CE",
+    "id": "8",
+    "nombre": "8",
+    "apellido": "8",
+    "edad": "8",
+    "telefono": "8",
+    "correo": "8"
   }
 ]

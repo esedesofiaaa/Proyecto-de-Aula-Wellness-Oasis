@@ -28,5 +28,15 @@
     "nombre": "1",
     "especialidad": "MEDICINA_GENERAL",
     "idMedico": "852"
+  },
+  {
+    "nombre": "sof",
+    "especialidad": "PSIQUIATRIA",
+    "idMedico": "951"
+  },
+  {
+    "nombre": "6",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "000000000000"
   }
 ]

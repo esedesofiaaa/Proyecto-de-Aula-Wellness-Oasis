@@ -96,7 +96,8 @@
                 <ComboBox fx:id="tipoDocumentoComboBox" opacity="0.35" prefHeight="26.0" prefWidth="320.0" promptText="Seleccione" style="-fx-background-color: #23B9CE;" GridPane.columnIndex="1" />
             </children>
         </GridPane>
-        <AnchorPane layoutX="244.0" layoutY="519.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="244.0" AnchorPane.rightAnchor="243.0" AnchorPane.topAnchor="519.0">
+        <Label fx:id="mensajeLabel" alignment="TOP_CENTER" layoutX="190.0" layoutY="555.0" prefHeight="30.0" prefWidth="214.0" textAlignment="CENTER" textFill="#23B9CE" />
+        <AnchorPane layoutX="250.6" layoutY="506.4" prefHeight="45.0" prefWidth="94.0" AnchorPane.bottomAnchor="53.60000000000002" AnchorPane.leftAnchor="250.6" AnchorPane.rightAnchor="245.40000000000003" AnchorPane.topAnchor="506.4">
             <children>
                 <HBox prefHeight="26.0" prefWidth="93.0" spacing="10.0" AnchorPane.bottomAnchor="15.0">
                     <children>

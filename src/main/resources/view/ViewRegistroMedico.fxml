@@ -66,6 +66,7 @@
                      </font></Button>
                </children>
             </HBox>
+            <Label fx:id="idMensajeLabel" layoutX="200.0" layoutY="22.0" prefHeight="30.0" prefWidth="300.0" textFill="cornflowerblue" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="63.0" prefWidth="652.0" style="-fx-background-color: #23B9CE;">

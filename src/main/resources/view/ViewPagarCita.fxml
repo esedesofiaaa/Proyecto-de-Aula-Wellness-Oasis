@@ -31,6 +31,7 @@
         <AnchorPane layoutY="70.0" prefHeight="330.0" prefWidth="652.0">
             <children>
                 <Button fx:id="idBottonPagarCita" layoutX="221.0" layoutY="152.0" mnemonicParsing="false" onAction="#pagarCita" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Pagar Cita" textFill="WHITE" />
+                <Label fx:id="idMensajeLabel" layoutX="226.0" layoutY="200.0" prefWidth="200.0" textFill="cornflowerblue" />
                 <GridPane layoutX="226.0" layoutY="85.0">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

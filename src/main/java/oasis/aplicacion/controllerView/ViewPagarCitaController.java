@@ -1,22 +1,31 @@
 package oasis.aplicacion.controllerView;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import oasis.controller.CitasController;
-import oasis.controller.PacientesController;
 
 public class ViewPagarCitaController {
     @FXML
     private TextField idCodigoCita;
 
-    private final CitasController citasController; //Instanciamos el controlador del backend
+    @FXML
+    private Label idMensajeLabel;
 
-    public ViewPagarCitaController() {//Constructor
+    private final CitasController citasController;
+
+    public ViewPagarCitaController() {
         this.citasController = new CitasController();
-    }//Constructor
+    }
 
-    public void pagarCita(){
-        String idCita = idCodigoCita.getText(); //el get de lo que se escribe en el textfield
-        citasController.pagarCita(idCita);
-    }//pagarCita
+    public void pagarCita() {
+        String idCita = idCodigoCita.getText();
+        boolean pagoExitoso = citasController.pagarCita(idCita); // Suponiendo que el método pagarCita devuelve un booleano indicando si el pago fue exitoso
+
+        if (pagoExitoso) {
+            idMensajeLabel.setText("Tu cita fue pagada con éxito.");
+        } else {
+            idMensajeLabel.setText("Cita no encontrada.");
+        }
+    }
 }

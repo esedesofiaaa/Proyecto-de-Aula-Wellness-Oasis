@@ -192,15 +192,15 @@ public class CitasController {
         }
     }
         //Metodo para pagar cita
-        public void pagarCita (String idCita){
+        public boolean pagarCita (String idCita){
             Cita cita = citaRepository.buscarCitaPorId(idCita);
             if (cita != null) {
                 cita.setPagado(true);
                 citaRepository.guardarCita(cita);
                 System.out.println("La cita con id " + idCita + " ha sido pagada.");
-            } else {
-                System.out.println("La cita con id " + idCita + " no existe.");
+                return true;
             }
+            return false;
         }
         // 1 REVISAR SI FUNCIONA COMO TIPO CITA
         // 2 SI AL CAMBIAR EL MOTIVOCITA
