@@ -45,7 +45,19 @@ public class ViewPacienteController {
         }
     }
 
-
+    @FXML
+    void abrirSolicitarAutorizacion(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewSolicitarAutorizacion.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Solicitar  Autorizacion");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     // Aquí puedes agregar más métodos para controlar otros aspectos de la vista del paciente
 
 }

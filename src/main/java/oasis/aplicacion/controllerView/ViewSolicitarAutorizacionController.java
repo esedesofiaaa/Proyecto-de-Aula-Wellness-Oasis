@@ -87,22 +87,24 @@ public class ViewSolicitarAutorizacionController {
         // Obtener el documento del paciente del TextField
         String documentoPaciente = idDocumentoPaciente.getText();
         String radicadoExamen = idComboBoxExamenesAutorizar.getValue().split(" - ")[0];
-        // Verificar si el documento del paciente no está vacío
-        if (!autorizacionController.controlParaNoRepetirExamenParaAutorizar(radicadoExamen)) {
-            // Agregar el examen a la pila de autorizaciones
-            autorizacionController.agregarPilaAutroizacion(radicadoExamen);
-            idMensajeLabel.setText("Exámenes encontrados.");
-            idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+        logger.log(Level.INFO, "Rdicado Examen: {0}", radicadoExamen);
 
-        } else {
+        // Verificar si el documento del paciente no está vacío
+        if (autorizacionController.controlParaNoRepetirExamenParaAutorizar(radicadoExamen)) {
+            // Agregar el examen a la pila de autorizaciones
+
             idMensajeLabel.setText("El examen ya está en la lista de autorizaciones.");
             idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
 
+        } else {
+            autorizacionController.agregarPilaAutroizacion(radicadoExamen);
+            idMensajeLabel.setText("Examen en espera de ser autorizado.");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+
+
         }
 
-        autorizacionController.agregarPilaAutroizacion(radicadoExamen);
-        idMensajeLabel.setText("Exámenes encontrados.");
-        idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+
 
     }
 
@@ -129,7 +131,7 @@ public class ViewSolicitarAutorizacionController {
                 idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
 
             } else {
-                idMensajeLabel.setText("Exámenes encontrados.");
+                idMensajeLabel.setText("Selecciona un examen.");
                 idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
 
             }

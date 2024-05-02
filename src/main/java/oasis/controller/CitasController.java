@@ -195,6 +195,7 @@ public class CitasController {
         public boolean pagarCita (String idCita){
             Cita cita = citaRepository.buscarCitaPorId(idCita);
             if (cita != null) {
+                citaRepository.eliminarCita(cita);
                 cita.setPagado(true);
                 citaRepository.guardarCita(cita);
                 System.out.println("La cita con id " + idCita + " ha sido pagada.");

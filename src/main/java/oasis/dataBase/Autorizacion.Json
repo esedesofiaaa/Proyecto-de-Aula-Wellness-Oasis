@@ -6,5 +6,21 @@
     "generadorCodigo": {},
     "idPaciente": "2",
     "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "Y580",
+    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "2",
+    "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "X911",
+    "motivoCitaExamen": "ANALISIS_DE_SANGRE",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "POR AUTORIZAR"
   }
 ]
