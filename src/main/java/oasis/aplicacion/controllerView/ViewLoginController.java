@@ -1,15 +1,20 @@
 package oasis.aplicacion.controllerView;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import oasis.aplicacion.mainView.MainUsuarioNoExiste;
-import oasis.controller.UserController;
+import javafx.stage.Stage;
+import oasis.model.repository.UserRepository;
 import oasis.model.domain.User;
 import oasis.aplicacion.mainView.MainViewAdministrador;
-import oasis.aplicacion.mainView.MainViewPaciente;
 
 public class ViewLoginController {
 
@@ -22,45 +27,59 @@ public class ViewLoginController {
     @FXML
     private Button idIniciarSesionButton;
 
-    private final UserController userController;
+    private final UserRepository UserRepository;
+    private User user;
+
+    private static final Logger logger = Logger.getLogger(ViewLoginController.class.getName());
 
     public ViewLoginController() {
-        this.userController = new UserController();
+        this.UserRepository = new UserRepository();
     }
 
     @FXML
-    void initialize() {
-        idIniciarSesionButton.setOnAction(event -> iniciarSesion());
-    }
-
-    private void iniciarSesion() {
+    private void iniciarSesion() throws IOException {
         String idUsuario = idUsuarioField.getText();
         String contraseña = idContraseñaField.getText();
 
-        // Crear un objeto User con los datos ingresados
-        User usuario = new User(idUsuario, contraseña);
+        logger.log(Level.INFO, "Intento de inicio de sesión con usuario: {0}", idUsuario);
+        logger.log(Level.INFO, "Intento de inicio de sesión con contraseña: {0}", contraseña);
 
-        // Obtener el tipo de interfaz de usuario desde el controlador
-        String tipoUsuario = userController.interfazUsuario(usuario);
+        user = new User(idUsuario, contraseña);
 
-        // Determinar la acción basada en el tipo de usuario
-        switch (tipoUsuario) {
-            case "admin":
+        logger.log(Level.INFO, "Intento de inicio de sesión con USER: {0}", user.getIdUser() + " " + user.getPassword());
+        UserRepository.buscarUsuarioPorUsuario(user);
+
+        if (user != null) {
+            logger.log(Level.INFO, "Usuario encontrado en el repositorio: {0}", user.getIdUser());
+            logger.log(Level.INFO, "Contraseña encontrada en el repositorio: {0}", user.getPassword());
+            if ("admin".equals(user.getIdUser())) {
+                UserRepository.logearUsuario(user);
+                logger.log(Level.INFO, "Intento de inicio de buscar con usuario: {0}", user);
+
                 // Abrir la ventana de administrador
                 MainViewAdministrador.main(new String[0]);
-                break;
-            case "user":
-                // Abrir la ventana de usuario
-                MainViewPaciente.main(new String[0]);
-                break;
-            case "No existe":
-                // Mostrar mensaje de error si el usuario no existe
-                MainUsuarioNoExiste.main(new String[0]);
-                break;
-            default:
-                // Manejar cualquier otro caso inesperado
-                mostrarMensajeError("Error desconocido.");
-                break;
+            } else {
+
+                UserRepository.logearUsuario(user);
+                logger.log(Level.INFO, "Intento de inicio de buscar con usuario: {0}", user);
+
+                // Mostrar mensaje de error
+                mostrarMensajeError("Usuario encontrado");
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewPaciente.fxml"));
+                Parent root = loader.load();
+
+                // Obtener el controlador de la vista de paciente
+                ViewPacienteController pacienteController = loader.getController();
+
+                // Configurar el escenario y mostrar la escena
+                Stage stage = (Stage) idIniciarSesionButton.getScene().getWindow();
+                stage.setTitle("Paciente");
+                stage.setScene(new Scene(root, 600, 500));
+                stage.show();                // Continuar con la lógica para abrir la vista de paciente si es necesario
+            }
+        } else {
+            mostrarMensajeError("El usuario no existe.");
+            logger.log(Level.WARNING, "Usuario no encontrado en el repositorio");
         }
     }
 

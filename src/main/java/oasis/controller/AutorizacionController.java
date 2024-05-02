@@ -7,6 +7,9 @@ import oasis.model.repository.RegistroExamenRepository;
 
 public class AutorizacionController {
 
+
+
+
     private RegistroExamenRepository registroExamenRepository ;
 
     private AutorizacionRepository autorizacionRepository = new AutorizacionRepository();

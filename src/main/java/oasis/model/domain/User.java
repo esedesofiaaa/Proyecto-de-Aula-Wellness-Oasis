@@ -34,4 +34,12 @@ public class User {
         this.logged = logged;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "idUser='" + idUser + '\'' +
+                ", password='" + password + '\'' +
+                ", logged=" + logged +
+                '}';
+    }
 }

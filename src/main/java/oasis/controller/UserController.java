@@ -22,7 +22,7 @@ public class UserController {
     }
 
     public String interfazUsuario(User user) {
-        if (userRepository.buscarUsuario(user) == true) {
+        if (userRepository.buscarUsuarioPorUsuario(user)!=null) {
             if (user.getIdUser().equals("admin") && user.getPassword().equals("admin")) {
                 userRepository.iniciarSession(user);
                 return "admin";
@@ -34,4 +34,5 @@ public class UserController {
         }
         return "No existe";
     }
+
 }

@@ -163,7 +163,7 @@ public class DoubleLinkedList<T> implements DoubleLinkedListInterface<T> {
             indice++;//Y aumentando su indice para indicarle al programa o al usuario de que con forme avanza el nodo avanza el indice
 
         }
-        System.out.println("No se encontro la pagina");
+        System.out.println("No se encontro el valor");
         return -1;//Si ninguno es similar retorna un -1 indicado en los requerimientos del programa
 
     }
@@ -303,5 +303,15 @@ public class DoubleLinkedList<T> implements DoubleLinkedListInterface<T> {
         }
         return actual.getValor(); // Retornar el valor del nodo actual después de iterar hasta el índice deseado
     }
-
+    //buscar un objeto y devuelve un objeto
+    public T buscarElementoPorObjeto(T valor) {
+        Nodo<T> actual = cabeza;
+        while (actual != null) {
+            if (actual.getValor().equals(valor)) {
+                return actual.getValor();
+            }
+            actual = actual.getSiguiente();
+        }
+        return null;
+    }
 }

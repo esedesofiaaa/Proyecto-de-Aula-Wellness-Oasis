@@ -1,4 +1,5 @@
 package oasis.controller;
+import oasis.estructurasDatos.listas.DoubleLinkedList;
 import oasis.model.domain.motivoCita.Examen;
 import oasis.model.domain.paciente.Paciente;
 import oasis.model.domain.registroExamen.RegistroExamen;
@@ -27,18 +28,18 @@ public class RegistroExamenController {
         }
     }
 
-    public void agregarExamen(Examen motivoCitaExamen, String idPaciente) {
+    public String agregarExamen(Examen motivoCitaExamen, String idPaciente) {
         boolean autorizado = false;
         if (!validarIdPaciente(idPaciente)) {
             System.out.println("El paciente con id " + idPaciente + " no existe, el examen no fue registrado");
-            return;
+            return null; // Devuelve null si el paciente no existe
         }
         RegistroExamen registroExamen = new RegistroExamen(motivoCitaExamen, idPaciente);
         registroExamenRepository.añadirNuevoRegistroExamen(registroExamen);
         System.out.println("Examen registrado: " + registroExamen.getRadicadoExamen());
-
-        // Aquí podrías realizar más lógica relacionada con la creación o manipulación de registros de examen
+        return registroExamen.getRadicadoExamen(); // Devuelve el ID del examen registrado
     }
+
 
     //Metodo para revisar si el radicado examen existe
     public boolean validarRadicadoExamen(String radicadoExamen) {
@@ -62,5 +63,12 @@ public class RegistroExamenController {
         }
         return null;
     }
+
+    public DoubleLinkedList<RegistroExamen> buscarPorIdPaciente(String idPaciente) {
+        return registroExamenRepository.buscarPorIdPaciente(idPaciente);
+    }
+
+        //Metodo para buscar  Examenenes por paciente y retorne la lista de examenes agendada
+
 
 }

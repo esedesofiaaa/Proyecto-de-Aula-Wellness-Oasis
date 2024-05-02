@@ -54,5 +54,21 @@
     "generadorCodigo": {},
     "idPaciente": "2",
     "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "Q413",
+    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "T887",
+    "motivoCitaExamen": "ECOGRAFIA_ABDOMINAL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "POR AUTORIZAR"
   }
 ]

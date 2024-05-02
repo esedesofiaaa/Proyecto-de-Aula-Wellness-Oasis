@@ -16,7 +16,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oasis.aplicacion.controllerView.ViewRegistroPacienteController">
     <children>
-        <GridPane alignment="TOP_CENTER" layoutX="41.0" layoutY="106.0" prefHeight="386.0" prefWidth="437.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="103.0">
+        <GridPane alignment="TOP_CENTER" layoutX="41.0" layoutY="108.0" prefHeight="386.0" prefWidth="522.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="108.0">
             <columnConstraints>
                 <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="255.19996643066406" minWidth="10.0" prefWidth="175.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.6000213623047" minWidth="10.0" prefWidth="291.0" />
@@ -109,7 +109,7 @@
                 </HBox>
             </children>
         </AnchorPane>
-      <AnchorPane prefHeight="70.0" prefWidth="580.0" style="-fx-background-color: #23B9CE;">
+      <AnchorPane prefHeight="71.0" prefWidth="590.0" style="-fx-background-color: #23B9CE;">
          <children>
             <Label layoutX="262.0" layoutY="20.0" text="Registro de Paciente" textFill="WHITE">
                <font>

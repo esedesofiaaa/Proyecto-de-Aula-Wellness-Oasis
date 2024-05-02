@@ -82,10 +82,18 @@
                 <Image url="@../loginsd.png" />
             </image>
         </ImageView>
-        <Button fx:id="idIniciarSesionButton" layoutX="342.0" layoutY="286.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #23B9CE;" text="INGRESAR" textFill="WHITE">
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Button>
+      <AnchorPane layoutX="342.0" layoutY="284.0" prefHeight="30.0" prefWidth="158.0">
+         <children>
+            <HBox layoutX="-6.0" layoutY="-36.0" prefHeight="64.0" prefWidth="194.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                    <Button fx:id="idIniciarSesionButton" mnemonicParsing="false" onAction="#iniciarSesion" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #23B9CE;" text="INGRESAR" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+                    </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>

@@ -62,12 +62,18 @@ public class ViewRegistroExamenController {
             idMensajeLabel.setText("Por favor completa todos los campos");
             idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
         } else {
-            registroExamenController.agregarExamen(examen, idDocumento);
-            idMensajeLabel.setText("Cita agendada con éxito");
-            idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+            String idCita = registroExamenController.agregarExamen(examen, idDocumento);
+            if (idCita != null) {
+                idMensajeLabel.setText("Cita agendada con éxito. ID de la cita: " + idCita);
+                idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+            } else {
+                idMensajeLabel.setText("Error al registrar el examen. Verifica los datos.");
+                idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
+            }
         }
         limpiarCampos();
     }
+
 
     private void limpiarCampos() {
         idDocumentoPaciente.clear();

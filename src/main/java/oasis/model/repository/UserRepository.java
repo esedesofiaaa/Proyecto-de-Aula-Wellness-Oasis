@@ -55,4 +55,24 @@ public class UserRepository {
             return false;
         }
     }
+
+    //buscar un usuario y retorna un usuario
+    public User buscarUsuarioPorUsuario(User user) {
+        User user1 = listaUsers.buscarElementoPorObjeto(user);
+        return user1;
+    }
+
+    public void logearUsuario(User user) {
+        for (int i = 0; i < listaUsers.tamano(); i++) {
+            User currentUser = listaUsers.buscarPorIndiceIterar(i);
+            if (currentUser.getIdUser().equals(user.getIdUser())) {
+                currentUser.setLogged(true);
+                jsonAdapterUser.writeObjects(pathFile, listaUsers);
+                System.out.println("Estado de logged cambiado a true para el usuario con ID: " + user.getIdUser());
+                return;
+            }
+        }
+        System.out.println("El usuario con ID " + user.getIdUser() + " no fue encontrado.");
+    }
+
 }
