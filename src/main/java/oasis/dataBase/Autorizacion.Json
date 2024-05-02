@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "radicadoExamen": "N141",
+    "motivoCitaExamen": "ELECTROCARDIOGRAMA",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "2",
+    "nota": "POR AUTORIZAR"
+  }
+]

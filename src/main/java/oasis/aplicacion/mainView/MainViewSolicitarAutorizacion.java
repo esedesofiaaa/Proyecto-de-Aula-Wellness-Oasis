@@ -11,7 +11,7 @@ public class MainViewSolicitarAutorizacion extends Application {
     public void start(Stage primaryStage) {
         try {
             AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("/view/ViewSolicitarAutorizacion.fxml"));
-            Scene scene = new Scene(root, 520, 740);
+            Scene scene = new Scene(root, 650, 400);
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (Exception e) {

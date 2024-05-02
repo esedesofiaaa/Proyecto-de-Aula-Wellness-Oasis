@@ -19,7 +19,9 @@ public class MainRegistroExamen {
         registroExamenController.agregarExamen(Examen.DERMATOSCOPIA, "2");
         registroExamenController.registroExamenRepository.obtenerTodos().mostrarLista();
     */
-        registroExamenRepository.eliminarExamen(registroExamenRepository.buscarPorRadicadoExamen("S953"));
+        //registroExamenRepository.eliminarExamen(registroExamenRepository.buscarPorRadicadoExamen("S953"));
+        registroExamenController.buscarPorIdPaciente("2").mostrarLista();
+
     }
 
 

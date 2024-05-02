@@ -53,4 +53,9 @@ public class AutorizacionController {
         examen.setAutorizado(false);
         autorizacionRepository.eliminarRegistroExamenPila();
     }
+
+    // implementa este metodo del repositorio controlParaNoRepetirExamenParaAutorizar
+    public boolean controlParaNoRepetirExamenParaAutorizar(String radicado) {
+        return autorizacionRepository.controlParaNoRepetirExamenParaAutorizar( radicado);
+    }
 }

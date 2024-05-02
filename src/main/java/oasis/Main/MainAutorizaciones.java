@@ -17,8 +17,7 @@ public class MainAutorizaciones {
             autorizacionController.agregarPilaAutroizacion( "A637");
   */
 
-            autorizacionController.autorizarExamen();
-
+            System.out.println(            autorizacionController.controlParaNoRepetirExamenParaAutorizar("N141"));
             //autorizacionRepository.actualizarAutorizacionExamen();
 
 

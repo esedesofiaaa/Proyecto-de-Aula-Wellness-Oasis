@@ -15,6 +15,9 @@ public class ViewPacienteController {
     private Button idAgendarCita; // Este es el botón que ejecuta la acción de agendar cita en la vista del paciente
 
     @FXML
+    private Button IdRegistrarExamen; // Este es el botón que ejecuta la acción de registrar examen en la vista del paciente
+
+    @FXML
     void abrirAgendarCita(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewRegistroCita.fxml"));
@@ -27,6 +30,21 @@ public class ViewPacienteController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    void abrirRegistrarExamen(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewRegistroExamen.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Registo de Examen");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     // Aquí puedes agregar más métodos para controlar otros aspectos de la vista del paciente
 

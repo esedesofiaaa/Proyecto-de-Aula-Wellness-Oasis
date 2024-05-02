@@ -83,5 +83,39 @@ public class AutorizacionRepository {
         return registroAutorizado; // Retornar el registro de examen autorizado encontrado (o null si no hay ninguno)
     }
 
+    public boolean controlParaNoRepetirExamenParaAutorizar(String radicado) {
+        // Hacer una copia de la pila original
+        StackList<RegistroExamen> copiaPila = new StackList<>();
+        while (!examenesPorAutorizar.estaVacia()) {
+            RegistroExamen examen = examenesPorAutorizar.pop();
+            copiaPila.push(examen);
+        }
+
+        // Convertir la copia de la pila en una lista doblemente enlazada
+        DoubleLinkedList<RegistroExamen> copiaLista = new DoubleLinkedList<>();
+        while (!copiaPila.estaVacia()) {
+            RegistroExamen examen = copiaPila.pop();
+            copiaLista.agregarAlInicio(examen);
+        }
+
+        // Iterar sobre la lista para buscar el radicado
+        boolean radicadoExistente = false;
+        for (int i = 0; i < copiaLista.tamano(); i++) {
+            RegistroExamen examen = copiaLista.buscarPorIndiceIterar(i);
+            if (examen.getRadicadoExamen().equals(radicado)) {
+                radicadoExistente = true;
+                break;
+            }
+        }
+
+        // Restaurar la pila original
+        while (!copiaLista.estaVacia()) {
+            RegistroExamen examen = copiaLista.eliminarDelInicio();
+            examenesPorAutorizar.push(examen);
+        }
+
+        return radicadoExistente;
+    }
+
 
 }
