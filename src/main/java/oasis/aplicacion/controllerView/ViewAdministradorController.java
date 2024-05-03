@@ -20,6 +20,9 @@ public class ViewAdministradorController {
 
     @FXML
     private Button idBottonPagarCita;
+    @FXML
+    private Button idBottonAutorizarExamen;
+
 
     // Otros botones y métodos aquí
 
@@ -79,5 +82,19 @@ public class ViewAdministradorController {
         }
     }//abrirPagarCita
 
+
+    @FXML
+    void autorizarExamen(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewAutorizar.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Pagar Cita");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }//abrirPagarCita
     // Otros métodos para abrir otras vistas con los otros botones
 }

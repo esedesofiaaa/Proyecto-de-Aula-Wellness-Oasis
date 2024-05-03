@@ -28,7 +28,7 @@ public class AutorizacionController {
     }
 
     public void autorizarExamen() {
-        autorizacionRepository.actualizarAutorizacionExamen();
+
         registroExamenRepository = new RegistroExamenRepository();
 
         RegistroExamen examen = obtenerTodos().peek();
@@ -49,13 +49,28 @@ public class AutorizacionController {
     }
 
     public void noAutorizarExamen() {
-        RegistroExamen examen = pilaAutorizaciones.peek();
-        examen.setAutorizado(false);
+        registroExamenRepository = new RegistroExamenRepository();
+
+        RegistroExamen examen = obtenerTodos().peek();
+        //examen.setAutorizado(true);
+        //examen.setNota("AUTORIZADO");
+        RegistroExamen examenFinal = examen;
+        examenFinal.setAutorizado(false);
+        examenFinal.setNota("AUTORIZACION NEGADA");
+
+        registroExamenRepository.eliminarExamen(registroExamenRepository.buscarPorRadicadoExamen(examen.getRadicadoExamen()));
+
+        registroExamenRepository.añadirNuevoRegistroExamen( autorizacionRepository.buscarPorAutorizado(true));
         autorizacionRepository.eliminarRegistroExamenPila();
     }
 
     // implementa este metodo del repositorio controlParaNoRepetirExamenParaAutorizar
     public boolean controlParaNoRepetirExamenParaAutorizar(String radicado) {
         return autorizacionRepository.controlParaNoRepetirExamenParaAutorizar( radicado);
+    }
+
+    //Metodo que solo  haga un peek
+    public RegistroExamen peek(){
+        return autorizacionRepository.obtenerTodos().peek();
     }
 }

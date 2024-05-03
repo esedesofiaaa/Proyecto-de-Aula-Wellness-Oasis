@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="920fcd69-fc65-4536-91ad-7aa6750c12e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAutorizarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewAutorizar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewAutorizar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewPacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewPacienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewSolicitarAutorizacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewSolicitarAutorizacionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/CitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/CitasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainAutorizaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/Main/MainAutorizaciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroExamenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroExamenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/AutorizacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/AutorizacionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Autorizacion.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Autorizacion.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewPaciente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewPaciente.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewSolicitarAutorizacion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewSolicitarAutorizacion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Pacientes.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Pacientes.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,6 +52,7 @@
     "Application.MainRegistroExamen.executor": "Run",
     "Application.MainUser.executor": "Run",
     "Application.MainViewAdministrador.executor": "Run",
+    "Application.MainViewAutorizar.executor": "Run",
     "Application.MainViewLogin.executor": "Run",
     "Application.MainViewPaciente.executor": "Run",
     "Application.MainViewPagarCita.executor": "Run",
@@ -81,12 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainRegistroExamen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oasis.Main.MainRegistroExamen" />
+    <configuration name="MainViewAdministrador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewAdministrador" />
       <module name="Wellness-Oasis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="oasis.Main.*" />
+          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,8 +100,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainViewAdministrador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewAdministrador" />
+    <configuration name="MainViewAutorizar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewAutorizar" />
       <module name="Wellness-Oasis" />
       <extension name="coverage">
         <pattern>
@@ -149,10 +155,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainViewAdministrador" />
+        <item itemvalue="Application.MainAutorizaciones" />
         <item itemvalue="Application.MainViewPaciente" />
         <item itemvalue="Application.MainViewSolicitarAutorizacion" />
-        <item itemvalue="Application.MainAutorizaciones" />
-        <item itemvalue="Application.MainRegistroExamen" />
+        <item itemvalue="Application.MainViewAutorizar" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +181,7 @@
       <workItem from="1714474668544" duration="2296000" />
       <workItem from="1714477112886" duration="5315000" />
       <workItem from="1714485342546" duration="38000" />
-      <workItem from="1714485511985" duration="60149000" />
+      <workItem from="1714485511985" duration="72371000" />
     </task>
     <servers />
   </component>

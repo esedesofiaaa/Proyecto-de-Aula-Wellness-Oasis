@@ -1,74 +1,26 @@
 [
   {
-    "radicadoExamen": "N141",
-    "motivoCitaExamen": "ELECTROCARDIOGRAMA",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "2",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "A637",
-    "motivoCitaExamen": "DERMATOSCOPIA",
+    "radicadoExamen": "H646",
+    "motivoCitaExamen": "ECOGRAFIA_ABDOMINAL",
     "autorizado": true,
     "generadorCodigo": {},
-    "idPaciente": "3",
+    "idPaciente": "2",
     "nota": "AUTORIZADO"
   },
   {
-    "radicadoExamen": "X911",
+    "radicadoExamen": "U488",
+    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "AUTORIZACION NEGADA"
+  },
+  {
+    "radicadoExamen": "D492",
     "motivoCitaExamen": "ANALISIS_DE_SANGRE",
     "autorizado": true,
     "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "V566",
-    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
-    "autorizado": true,
-    "generadorCodigo": {},
     "idPaciente": "2",
     "nota": "AUTORIZADO"
-  },
-  {
-    "radicadoExamen": "S953",
-    "motivoCitaExamen": "ENTREVISTA_PSIQUIATRICA",
-    "autorizado": true,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "AUTORIZADO"
-  },
-  {
-    "radicadoExamen": "E822",
-    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "Y580",
-    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "2",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "Q413",
-    "motivoCitaExamen": "EXAMEN_FISICO_INFANTIL",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "T887",
-    "motivoCitaExamen": "ECOGRAFIA_ABDOMINAL",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
   }
 ]

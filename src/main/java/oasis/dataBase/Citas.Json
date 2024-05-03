@@ -61,5 +61,18 @@
     "radicadoExamen": "No aplica",
     "autorizado": true,
     "generadorCodigo": {}
+  },
+  {
+    "idCita": "PSC977",
+    "idPaciente": "3",
+    "pagado": false,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "PSIQUIATRIA",
+    "medico": "951",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
   }
 ]

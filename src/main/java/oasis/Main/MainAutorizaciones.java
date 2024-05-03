@@ -17,11 +17,10 @@ public class MainAutorizaciones {
             autorizacionController.agregarPilaAutroizacion( "A637");
   */
 
-            System.out.println(            autorizacionController.controlParaNoRepetirExamenParaAutorizar("N141"));
-            //autorizacionRepository.actualizarAutorizacionExamen();
+        /*    System.out.println(            autorizacionController.controlParaNoRepetirExamenParaAutorizar("N141"));
+            //autorizacionRepository.actualizarAutorizacionExamen();*/
 
-
-            //autorizacionController.obtenerTodos();
-
+            autorizacionController.noAutorizarExamen();
+            System.out.println(            autorizacionController.obtenerTodos());
       }
 }

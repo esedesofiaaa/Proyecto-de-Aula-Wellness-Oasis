@@ -55,15 +55,6 @@
   },
   {
     "tipoDocumento": "CE",
-    "id": "3",
-    "nombre": "3",
-    "apellido": "3",
-    "edad": "3",
-    "telefono": "3",
-    "correo": "3"
-  },
-  {
-    "tipoDocumento": "CE",
     "id": "8",
     "nombre": "8",
     "apellido": "8",
