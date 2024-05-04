@@ -30,12 +30,12 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="128.0" layoutY="208.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 1" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="128.0" layoutY="208.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 2" textFill="WHITE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="128.0" layoutY="290.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 1" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="128.0" layoutY="290.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 3" textFill="WHITE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

@@ -61,6 +61,11 @@ public class SalaEsperaRepository {
         return salaDeEspera.peek();
     }
 
+    //metodo obtenerSiguiente
+    public Cita obtenerSiguienteCita() {
+        return salaDeEspera.peek();
+    }
+
 }
 
 

@@ -15,8 +15,7 @@ module oasis {
     opens oasis.model.repository to com.google.gson;
 
     opens oasis.estructurasDatos to com.google.gson;
-    opens   oasis. model. domain. motivoCita to com.google.gson;
-
+    opens oasis.model.domain.motivoCita to com.google.gson;
 
     exports oasis.aplicacion.controllerView;
     exports oasis.aplicacion.mainView;
@@ -29,4 +28,6 @@ module oasis {
     opens oasis.model.domain.registroExamen to com.google.gson;
     exports oasis.model.domain;
     opens oasis.model.domain to com.google.gson;
+
+    exports oasis.Main; // Exporta el paquete oasis.Main
 }

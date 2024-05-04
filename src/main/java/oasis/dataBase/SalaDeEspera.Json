@@ -1,17 +1,5 @@
 [
   {
-    "idCita": "PV358",
-    "idPaciente": "3",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "VALORACION",
-    "especialidad": "PEDIATRIA",
-    "medico": "098765",
-    "radicadoExamen": "No aplica",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
     "idCita": "DE335",
     "idPaciente": "3",
     "pagado": true,
