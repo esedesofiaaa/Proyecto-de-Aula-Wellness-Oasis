@@ -40,14 +40,7 @@ public class AutorizacionRepository {
         jsonAdapterAutorizacion.writeObjectsStack(pathFile, examenesPorAutorizar);
     }
 
-    //Metodo para cambiar el boolean autorizado a true
-    public void actualizarAutorizacionExamen() {
-        RegistroExamen examen = examenesPorAutorizar.peek();
-        examen.setAutorizado(true);
-        examen.setNota("AUTORIZADO");
 
-        jsonAdapterAutorizacion.writeObjectsStack(pathFile, examenesPorAutorizar);
-    }
 
     /**
      * Método para buscar los registros de examen relacionados a un idPaciente específico

@@ -1,26 +1,18 @@
 [
   {
-    "radicadoExamen": "H646",
-    "motivoCitaExamen": "ECOGRAFIA_ABDOMINAL",
-    "autorizado": true,
-    "generadorCodigo": {},
-    "idPaciente": "2",
-    "nota": "AUTORIZADO"
-  },
-  {
     "radicadoExamen": "U488",
     "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
-    "autorizado": true,
+    "autorizado": false,
     "generadorCodigo": {},
     "idPaciente": "3",
-    "nota": "AUTORIZACION NEGADA"
+    "nota": "POR AUTORIZAR"
   },
   {
     "radicadoExamen": "D492",
     "motivoCitaExamen": "ANALISIS_DE_SANGRE",
-    "autorizado": true,
+    "autorizado": false,
     "generadorCodigo": {},
     "idPaciente": "2",
-    "nota": "AUTORIZADO"
+    "nota": "POR AUTORIZAR"
   }
 ]

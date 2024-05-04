@@ -74,6 +74,7 @@ public class ViewSolicitarAutorizacionController {
                 idMensajeLabel.setText("No se encontraron exámenes para el paciente.");
             } else {
                 idMensajeLabel.setText("Exámenes encontrados.");
+                idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
             }
         } else {
             idMensajeLabel.setText("Ingrese el documento del paciente.");

@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="920fcd69-fc65-4536-91ad-7aa6750c12e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAutorizarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewAutorizar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewAutorizar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewSalaDeEsperaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewSalaDeEspera.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainAutorizaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/Main/MainAutorizaciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroExamenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroExamenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/AutorizacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/AutorizacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAutorizarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAutorizarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewSolicitarAutorizacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewSolicitarAutorizacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/SalaEsperaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/SalaEsperaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Autorizacion.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Autorizacion.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Pacientes.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Pacientes.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/SalaDeEspera.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/SalaDeEspera.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/AutorizacionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/AutorizacionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewAutorizar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewAutorizar.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,8 +153,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainViewAdministrador" />
-        <item itemvalue="Application.MainAutorizaciones" />
         <item itemvalue="Application.MainViewPaciente" />
+        <item itemvalue="Application.MainAutorizaciones" />
         <item itemvalue="Application.MainViewSolicitarAutorizacion" />
         <item itemvalue="Application.MainViewAutorizar" />
       </list>
@@ -181,7 +179,7 @@
       <workItem from="1714474668544" duration="2296000" />
       <workItem from="1714477112886" duration="5315000" />
       <workItem from="1714485342546" duration="38000" />
-      <workItem from="1714485511985" duration="72371000" />
+      <workItem from="1714485511985" duration="79119000" />
     </task>
     <servers />
   </component>

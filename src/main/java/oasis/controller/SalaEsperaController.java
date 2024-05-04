@@ -44,5 +44,8 @@ public class SalaEsperaController {
     */
 
 
-    //metodo para agregar el eliminado a la lista final
+    //metodo para ver la primera cita en la cola de espera
+    public Cita verCitaEnPantalla() {
+        return salaEsperaRepository.verCitaEnPantalla();
+    }
 }
