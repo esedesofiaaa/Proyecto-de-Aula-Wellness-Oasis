@@ -29,12 +29,18 @@ public class ViewAutorizarController {
     }
     @FXML
     private void initialize() {
-        RegistroExamen examen = autorizacionController.obtenerTodos().peek();
+        if (!autorizacionController.obtenerTodos().estaVacia()) {
+            RegistroExamen examen = autorizacionController.obtenerTodos().peek();
 
-        idDocumentoLabel.setText(examen.getIdPaciente());
-        idRadicadoLabel.setText(examen.getRadicadoExamen());
-        idTipoExamenLabel.setText(examen.getMotivoCitaExamen().getTipoExamen());
-
+            idDocumentoLabel.setText(examen.getIdPaciente());
+            idRadicadoLabel.setText(examen.getRadicadoExamen());
+            idTipoExamenLabel.setText(examen.getMotivoCitaExamen().getTipoExamen());
+            idNotaLabel.setText("Examen por autorizar");
+            idNotaLabel.setTextFill(Color.BLACK);
+        } else {
+            idNotaLabel.setText("No hay exámenes por autorizar");
+            idNotaLabel.setTextFill(Color.RED);
+        }
     }
 
     @FXML
@@ -56,15 +62,14 @@ public class ViewAutorizarController {
 
     @FXML
     private void siguienteExamen(){
-      if(autorizacionController.peek() !=null){
-          initialize();
-      } else{
-          idNotaLabel.setText("No hay más exámenes por autorizar");
-          idNotaLabel.setTextFill(javafx.scene.paint.Color.RED);
-          System.out.println("No hay más exámenes por autorizar");
 
-            //poner esto dentrode un label
-      }
+        if (!autorizacionController.obtenerTodos().estaVacia()) {
+            initialize(); // Mostrar el próximo examen si hay más
+        } else {
+            idNotaLabel.setText("No hay más exámenes por autorizar");
+            idNotaLabel.setTextFill(Color.RED);
+            System.out.println("No hay más exámenes por autorizar");
+        }
     }
 
 //Separar el combobox en dos botones y que cada uno se inicialice, falta hacer los botones en la visual

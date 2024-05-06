@@ -1,17 +1,1 @@
-[{
-  "radicadoExamen": "D492",
-  "motivoCitaExamen": "ANALISIS_DE_SANGRE",
-  "autorizado": false,
-  "generadorCodigo": {},
-  "idPaciente": "2",
-  "nota": "POR AUTORIZAR"
-},
-  {
-    "radicadoExamen": "U488",
-    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  }
-]
+[]

@@ -1,5 +1,17 @@
 [
   {
+    "idCita": "PV358",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "VALORACION",
+    "especialidad": "PEDIATRIA",
+    "medico": "098765",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
     "idCita": "DE335",
     "idPaciente": "3",
     "pagado": true,
@@ -25,6 +37,19 @@
     "generadorCodigo": {}
   },
   {
+    "idCita": "CC604",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "CARDIOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
     "idCita": "DV858",
     "idPaciente": "2",
     "pagado": true,
@@ -33,6 +58,19 @@
     "motivoCita": "VALORACION",
     "especialidad": "DERMATOLOGIA",
     "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "PSC977",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "PSIQUIATRIA",
+    "medico": "951",
     "radicadoExamen": "No aplica",
     "autorizado": true,
     "generadorCodigo": {}

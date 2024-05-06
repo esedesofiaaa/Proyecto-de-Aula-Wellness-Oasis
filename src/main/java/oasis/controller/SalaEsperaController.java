@@ -1,5 +1,6 @@
 package oasis.controller;
 
+import javafx.application.Platform;
 import oasis.aplicacion.controllerView.ViewSalaDeEsperaController;
 import oasis.model.domain.cita.Cita;
 import oasis.model.repository.SalaEsperaRepository;
@@ -8,17 +9,19 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class SalaEsperaController {
-    private final SalaEsperaRepository salaEsperaRepository;
-    private final ViewSalaDeEsperaController viewSalaDeEsperaController;
     private Timer timer;
+    private final ViewSalaDeEsperaController viewSalaDeEsperaController;
+    private final SalaEsperaRepository salaEsperaRepository;
 
-    public SalaEsperaController() {
+    public SalaEsperaController(ViewSalaDeEsperaController viewSalaDeEsperaController) {
+        this.viewSalaDeEsperaController = viewSalaDeEsperaController;
         this.salaEsperaRepository = new SalaEsperaRepository();
-        this.viewSalaDeEsperaController = new ViewSalaDeEsperaController();
-        this.timer = new Timer();
+        iniciarTemporizador();
+    }
 
-        // Iniciar el temporizador para actualizar cada 30 segundos
-        timer.schedule(new TimerTask() {
+    private void iniciarTemporizador() {
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 actualizarYMostrarCita();
@@ -27,25 +30,15 @@ public class SalaEsperaController {
     }
 
     private void actualizarYMostrarCita() {
-        Cita cita = salaEsperaRepository.verCitaEnPantalla();
-        if (cita != null) {
-            viewSalaDeEsperaController.agregarCita(cita);
-            salaEsperaRepository.eliminarCitaDeSalaDeEspera();
+        // Lógica para obtener la siguiente cita y actualizar la vista
+        Cita siguienteCita = obtenerSiguienteCita();
+        if (siguienteCita != null) {
+            viewSalaDeEsperaController.mostrarCita(siguienteCita);
         }
     }
 
-    // Método para obtener la siguiente cita de la sala de espera
-    public Cita obtenerSiguienteCita() {
-        return salaEsperaRepository.obtenerSiguienteCita();
-    }
-
-    // Método para ver la cita en pantalla
-    public Cita verCitaEnPantalla() {
-        return salaEsperaRepository.verCitaEnPantalla();
-    }
-
-    // Método para eliminar cita de la sala de espera
-    public void eliminarCitaDeSalaDeEspera() {
-        salaEsperaRepository.eliminarCitaDeSalaDeEspera();
+    private Cita obtenerSiguienteCita() {
+        // Lógica para obtener la siguiente cita de la sala de espera
+        return null; // Debes implementar este método según la lógica de tu aplicación
     }
 }

@@ -20,11 +20,8 @@ public class MainViewSalaDeEspera extends Application {
             // Obtener el controlador de la vista
             ViewSalaDeEsperaController controller = loader.getController();
 
-            // Crear el controlador de la sala de espera
-            SalaEsperaController salaEsperaController = new SalaEsperaController();
-
-            // Establecer el controlador de la sala de espera en la vista
-            controller.setSalaEsperaController(salaEsperaController);
+            // Crear y configurar el controlador de la sala de espera
+            SalaEsperaController salaEsperaController = new SalaEsperaController(controller);
 
             // Configurar la escena y mostrar la ventana principal
             Scene scene = new Scene(root, 600, 400);

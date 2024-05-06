@@ -3,11 +3,11 @@ package oasis.aplicacion.controllerView;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import oasis.controller.SalaEsperaController;
 import oasis.model.domain.cita.Cita;
+import oasis.estructurasDatos.listas.QueueList;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ViewSalaDeEsperaController {
 
@@ -18,63 +18,50 @@ public class ViewSalaDeEsperaController {
     @FXML
     private Label idModulo3;
 
-    private SalaEsperaController salaEsperaController;
-    private Queue<Cita> colaCitas = new LinkedList<>();
+    private QueueList<Cita> colaCitas = new QueueList<>();
     private static final int ESPACIOS_SALA = 3;
     private int contador = 0;
 
-    public void setSalaEsperaController(SalaEsperaController salaEsperaController) {
-        this.salaEsperaController = salaEsperaController;
-        iniciarTemporizador();
-    }
-
-    private void iniciarTemporizador() {
-        Thread thread = new Thread(() -> {
-            while (true) {
-                try {
-                    Thread.sleep(30000); // Esperar 30 segundos
-                    Platform.runLater(this::actualizarInterfaz); // Actualizar la interfaz en el hilo de JavaFX
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        thread.setDaemon(true); // Hacer que el hilo sea daemon para que se detenga al cerrar la aplicación
-        thread.start();
-    }
-
-    private void actualizarInterfaz() {
-        if (!colaCitas.isEmpty()) {
-            Cita nuevaCita = salaEsperaController.obtenerSiguienteCita();
-            if (nuevaCita != null) {
-                colaCitas.add(nuevaCita);
-                actualizarVista();
-            }
-        }
-    }
-
-    private void actualizarVista() {
-        Cita cita = colaCitas.poll(); // Obtener y eliminar el primer elemento de la cola
-        if (cita != null) {
+    public void mostrarCita(Cita cita) {
+        Platform.runLater(() -> {
+            // Mostrar la cita en el espacio correspondiente
             switch (contador % ESPACIOS_SALA) {
                 case 0:
-                    Platform.runLater(() -> idModulo1.setText(cita.getIdCita() + " - " + cita.getIdPaciente()));
+                    mostrarCitaEnEspacio(idModulo1, cita);
                     break;
                 case 1:
-                    Platform.runLater(() -> idModulo2.setText(cita.getIdCita() + " - " + cita.getIdPaciente()));
+                    mostrarCitaEnEspacio(idModulo2, cita);
                     break;
                 case 2:
-                    Platform.runLater(() -> idModulo3.setText(cita.getIdCita() + " - " + cita.getIdPaciente()));
+                    mostrarCitaEnEspacio(idModulo3, cita);
                     break;
                 default:
                     break;
             }
             contador++;
-        }
+        });
+    }
+
+    private void mostrarCitaEnEspacio(Label label, Cita cita) {
+        Platform.runLater(() -> {
+            if (label != null) {
+                label.setText(cita.getIdCita() + " - " + cita.getIdPaciente());
+                // Temporizador para eliminar la cita después de 30 segundos
+                Timer temporizador = new Timer();
+                temporizador.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        Platform.runLater(() -> label.setText(""));
+                    }
+                }, 30 * 1000); // 30 segundos
+            } else {
+                System.err.println("Error: El Label es nulo en mostrarCitaEnEspacio");
+            }
+        });
     }
 
     public void agregarCita(Cita cita) {
-        colaCitas.add(cita);
-        actualizarVista();
+        colaCitas.enqueue(cita);
+        mostrarCita(colaCitas.dequeue()); // Mostrar la primera cita al agregarla
     }
 }

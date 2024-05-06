@@ -6,66 +6,41 @@ import oasis.shared.FileJsonAdapter;
 
 public class SalaEsperaRepository {
 
-    private final FileJsonAdapter<Cita>jsonAdapterSalasEspera;
-    private final String pathFile; // Esta variable de referencia guarda la ruta del archivo JSON que contiene los datos de los pacientes
-    // pero guarda la direccion dentro del proyecto no dentro del disco
+    private final FileJsonAdapter<Cita> jsonAdapterSalasEspera;
+    private final String pathFile;
     private QueueList<Cita> salaDeEspera;
 
-    /**
-     * Constructor de la clase RegistroExamenRepository
-     */
     public SalaEsperaRepository() {
-        this.pathFile = "C:\\ProyectoEstructuras\\Proyecto-de-Aula-Wellness-Oasis\\src\\main\\java\\oasis\\dataBase\\SalaDeEspera.Json"; // Ruta del archivo JSON dentro del proyecto
-        this.jsonAdapterSalasEspera = FileJsonAdapter.getInstance(); // Obtener una instancia del adaptador JSON para Pacientes
+        this.pathFile = "C:\\ProyectoEstructuras\\Proyecto-de-Aula-Wellness-Oasis\\src\\main\\java\\oasis\\dataBase\\SalaDeEspera.Json";
+        this.jsonAdapterSalasEspera = FileJsonAdapter.getInstance();
         this.salaDeEspera = jsonAdapterSalasEspera.getObjectsQueue(pathFile, Cita[].class);
     }
 
-    /**
-     * Método para guardar un nuevo registro de examen en el archivo JSON
-     */
     public QueueList<Cita> obtenerTodos() {
-        return salaDeEspera; // Retorna la lista de pacientes
+        return salaDeEspera;
     }
 
-    /**
-     * Método para agregar un nuevo registro de examen a la lista de registros de examen
-     * @param nuevaCita Objeto de tipo Cita que se va a agregar a la lista de registros de examen
-     */
     public void agregarCitaASalaDeEspera(Cita nuevaCita) {
-        salaDeEspera.enqueue(nuevaCita); // Agrega el nuevo paciente a la lista
-        jsonAdapterSalasEspera.writeObjectsQueue(pathFile, salaDeEspera); // Actualizar el archivo JSON con la lista actualizada de pacientes
-    }
-
-    /**
-     * Método para eliminar un registro de examen de la lista de registros de examen
-     */
-    public void eliminarCitaDeSalaDeEspera() {
-        salaDeEspera.dequeue();
+        salaDeEspera.enqueue(nuevaCita);
         jsonAdapterSalasEspera.writeObjectsQueue(pathFile, salaDeEspera);
     }
 
-    /*
-    * Metodo para cambiar el booleano de tomado a true
-    * Sofia mmhvo, este metodo tiene que hacer dequeue en vez de peek
-    * pero primero debes termiar el repositry de Final.Json
-    * Cuando esto haga dequeue lo envia a el Json de Final con el boleen de tomado en true
-     */
+    public void eliminarCitaDeSalaDeEspera() {
+        salaDeEspera.dequeue(); // Cambiar a dequeue para eliminar la cita
+        jsonAdapterSalasEspera.writeObjectsQueue(pathFile, salaDeEspera);
+    }
+
     public void actualizarCitaTomada() {
-        Cita cita = salaDeEspera.peek();
+        Cita cita = salaDeEspera.dequeue(); // Cambiar a dequeue para obtener y eliminar la cita
         cita.setTomado(true);
         jsonAdapterSalasEspera.writeObjectsQueue(pathFile, salaDeEspera);
     }
 
-//Metodo para ver la cita en pantalla
     public Cita verCitaEnPantalla() {
         return salaDeEspera.peek();
     }
 
-    //metodo obtenerSiguiente
     public Cita obtenerSiguienteCita() {
         return salaDeEspera.peek();
     }
-
 }
-
-

@@ -54,13 +54,12 @@ public class AutorizacionController {
         RegistroExamen examen = obtenerTodos().peek();
         //examen.setAutorizado(true);
         //examen.setNota("AUTORIZADO");
-        RegistroExamen examenFinal = examen;
-        examenFinal.setAutorizado(false);
-        examenFinal.setNota("AUTORIZACION NEGADA");
+        examen.setAutorizado(false);
+        examen.setNota("AUTORIZACION NEGADA");
 
         registroExamenRepository.eliminarExamen(registroExamenRepository.buscarPorRadicadoExamen(examen.getRadicadoExamen()));
 
-        registroExamenRepository.añadirNuevoRegistroExamen( autorizacionRepository.buscarPorAutorizado(true));
+        registroExamenRepository.añadirNuevoRegistroExamen(examen);
         autorizacionRepository.eliminarRegistroExamenPila();
     }
 
@@ -73,4 +72,10 @@ public class AutorizacionController {
     public RegistroExamen peek(){
         return autorizacionRepository.obtenerTodos().peek();
     }
+
+    //Metodo que haga pop
+    public void pop(){
+        autorizacionRepository.eliminarRegistroExamenPila();
+    }
+
 }
