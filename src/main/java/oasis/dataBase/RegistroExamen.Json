@@ -1,0 +1,18 @@
+[
+  {
+    "radicadoExamen": "G532",
+    "motivoCitaExamen": "DERMATOSCOPIA",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "AUTORIZACION NEGADA"
+  },
+  {
+    "radicadoExamen": "U488",
+    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "AUTORIZACION NEGADA"
+  }
+]
