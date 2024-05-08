@@ -5,9 +5,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 import oasis.controller.CitasController;
+import oasis.controller.MedicosController;
 import oasis.estructurasDatos.listas.DoubleLinkedList;
+import oasis.model.domain.Especialidad;
 import oasis.model.domain.cita.Cita;
+import oasis.model.domain.medico.Medico;
 import oasis.model.domain.registroExamen.RegistroExamen;
 
 import java.util.logging.Level;
@@ -25,60 +29,85 @@ public class ViewModificarCitaController {
 
     @FXML
     private ComboBox<String> idValorComboBox;
+    @FXML
+    private Text idTextMedicoExtra;
+    @FXML
+    private ComboBox<String> idComboBoxMedicoExtra;
 
     @FXML
     private Label idMensajeLabel;
 
     private final CitasController citasController;
+    private final MedicosController medicosController;
 
     private static final Logger logger = Logger.getLogger(ViewLoginController.class.getName());
 
 
     public ViewModificarCitaController() {
         this.citasController = new CitasController();
+        this.medicosController = new MedicosController();
     }
 
     @FXML
     public void initialize() {
+        idComboBoxMedicoExtra.setVisible(false);
+        idTextMedicoExtra.setVisible(false);
 
         idCitasComboBox.getItems().clear();
 
         // Agregar un listener al TextField para detectar cambios en su contenido
         idDocumento.textProperty().addListener((observable, oldValue, newValue) -> {
-            actualizarComboBox(newValue);
+            actualizarComboBoxCitas(newValue);
         });
 
-
-        
-        
         // Agregar opciones al ComboBox idAtributoComboBox
         idAtributoComboBox.getItems().addAll("Motivo Cita", "Medico", "Especialidad", "Radicado Examen");
 
-        if(idAtributoComboBox.getValue()!=null){
-            if(idAtributoComboBox.getValue().equals("Motivo Cita")){
-                idValorComboBox.getItems().addAll("CONTROL", "VALORACION", "EXAMEN");
-            }
+        idAtributoComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            actualizarComboBoxValor(newValue);
+        });
 
-        }
 
     }
+
+    private void mostrarOcultarExamen() {
+        String tipoSeleccionado = idAtributoComboBox.getValue();
+        if (tipoSeleccionado != null && tipoSeleccionado.equals("Especialidad")) {
+            idComboBoxMedicoExtra.setVisible(true);
+            idTextMedicoExtra.setVisible(true);
+        } else {
+            idComboBoxMedicoExtra.setVisible(false);
+            idTextMedicoExtra.setVisible(false);
+        }
+    }
+    private DoubleLinkedList<Medico> filtrarMedicosPorEspecialidad(Especialidad especialidad) {
+        // Este método debería devolver la lista de médicos filtrada por la especialidad
+        return medicosController.buscarMedicoPorEspecialidad(especialidad);
+    }//filtrarMedicosPorEspecialidad
 
 
     @FXML
     private void modificarCita() {
         String documentoPaciente = idDocumento.getText();
+        String idCita = idCitasComboBox.getValue().split(" - ")[0];
         String atributo = idAtributoComboBox.getValue();
         String valor = idValorComboBox.getValue();
+        //Falta revisar los casos en los que entra al metodo modificar cita, a punta de if
+        //Cuando entra a citaCitaExamen y usar los logs
+        //Falta el combo box cuando selecciona como radicado examen
+        //Usar alerts en vez de label si es necesario
+        //Si la cita es de tipo examen no puede cambiar la especialidad, solo el medico y radicado
+        if(atributo == "")
+        citasController.modificarCita(idCita,atributo, valor);
 
         Cita casoExamen = citasController.buscarCitaPorId(idCitasComboBox.getValue().split(" - ")[0]);
         if (casoExamen.getMotivoCita() == "EXAMEN") {
-
            // citasController.citaACitaExamen(documentoPaciente,atributo,valor);
-
         }
+
     }
 
-    private void actualizarComboBox(String documentoPaciente) {
+    private void actualizarComboBoxCitas(String documentoPaciente) {
         // Limpiar el ComboBox
         idCitasComboBox.getItems().clear();
 
@@ -97,11 +126,11 @@ public class ViewModificarCitaController {
 
             // Verificar si se encontraron exámenes para el paciente
             if (idCitasComboBox.getItems().isEmpty()) {
-                idMensajeLabel.setText("No se encontraron exámenes para el paciente.");
+                idMensajeLabel.setText("No se encontraron citas para el paciente.");
                 idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
 
             } else {
-                idMensajeLabel.setText("Selecciona un examen.");
+                idMensajeLabel.setText("Selecciona una cita.");
                 idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
 
             }
@@ -110,10 +139,41 @@ public class ViewModificarCitaController {
             idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
 
         }
+    }
 
-
-
+    private void actualizarComboBoxValor(String atributo) {
+        if(idAtributoComboBox.getValue()!=null){
+            if(idAtributoComboBox.getValue().equals("Motivo Cita")){
+                idValorComboBox.getItems().addAll("CONTROL", "VALORACION", "EXAMEN");
+            }
+            if(idAtributoComboBox.getValue().equals("Medico")){
+                Especialidad especialidadTemp = Especialidad.valueOf(idCitasComboBox.getValue().split(" - ")[2]);
+                DoubleLinkedList<Medico> medicoEspecialidad = filtrarMedicosPorEspecialidad(especialidadTemp);
+                for (int i = 0; i < medicoEspecialidad.tamano(); i++) {
+                    Medico medico = medicoEspecialidad.buscarPorIndiceIterar(i);
+                    idValorComboBox.getItems().add(medico.getNombre());
+                }
+            }
+            if(idAtributoComboBox.getValue().equals("Especialidad")){
+                idValorComboBox.getItems().addAll(
+                        "CARDIOLOGIA",
+                        "DERMATOLOGIA",
+                        "NUTRICION",
+                        "MEDICINA_GENERAL",
+                        "ODONTOLOGIA",
+                        "PEDIATRIA",
+                        "PSIQUIATRIA"
+                );
+                mostrarOcultarExamen();
+            }
         }
+
+
+    }
+
+
+
+
     }
 
 

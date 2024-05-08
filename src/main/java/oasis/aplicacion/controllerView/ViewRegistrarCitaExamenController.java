@@ -4,9 +4,7 @@ package oasis.aplicacion.controllerView;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import oasis.controller.CitasController;
 import oasis.controller.MedicosController;
 import oasis.controller.RegistroExamenController;
@@ -100,30 +98,43 @@ public class ViewRegistrarCitaExamenController {
             return; // Salir del método si falta algún dato
         }
         // Verificar si ya existe una cita con el mismo radicado
+        if (!citaController.existeCitaPorRadicado(idRadicadoComboBox.getValue().split(" - ")[0])) {
+            Cita cita = citaController.agendarCitaExamen(documentoPaciente, radicado, medico, pagado); // Obtener el código de la cita
 
+            if (pagado) {
+                salaEsperaRepository.agregarCitaASalaDeEspera(cita);
 
-        Cita cita = citaController.agendarCitaExamen(documentoPaciente, radicado, medico, pagado); // Obtener el código de la cita
+                // Actualizar el Label dentro del hilo de la interfaz de usuario
+                Platform.runLater(() -> {
+                    idMensajeLabel.setText("Cita agendada con éxito (\nCódigo: " + cita.getIdCita() + ").\n Puede pasar a la sala de espera.");
+                    idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+                });
+            } else {
+                // Actualizar el Label dentro del hilo de la interfaz de usuario
+                Platform.runLater(() -> {
+                    idMensajeLabel.setText("Cita agendada con éxito (\nCódigo: " + cita.getIdCita() + "). \nEl pago está pendiente.");
+                    idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+                });
+            }
 
-        if (pagado) {
-            salaEsperaRepository.agregarCitaASalaDeEspera(cita);
+            System.out.println("Cita guardada con éxito");
 
-            // Actualizar el Label dentro del hilo de la interfaz de usuario
-            Platform.runLater(() -> {
-                idMensajeLabel.setText("Cita agendada con éxito (\nCódigo: " + cita.getIdCita() + ").\n Puede pasar a la sala de espera.");
-                idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
-            });
-        } else {
-            // Actualizar el Label dentro del hilo de la interfaz de usuario
-            Platform.runLater(() -> {
-                idMensajeLabel.setText("Cita agendada con éxito (\nCódigo: " + cita.getIdCita() + "). \nEl pago está pendiente.");
-                idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
-            });
+            // Limpiar los campos después de agregar la cita
+            limpiarCampos();
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Cita Existente");
+            alert.setHeaderText(null);
+            alert.setContentText("Ya existe una cita con el radicado seleccionado.");
+            alert.showAndWait();
+
+            // Limpiar los campos y reiniciar la interfaz
+            limpiarCampos();
+            return;
+
         }
 
-        System.out.println("Cita guardada con éxito");
 
-        // Limpiar los campos después de agregar la cita
-        limpiarCampos();
 
     }
 
@@ -174,10 +185,6 @@ public class ViewRegistrarCitaExamenController {
             } else {
                 idMensajeLabel.setText("Selecciona un examen.");
                 idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
-                if (citaController.existeCitaPorRadicado(idRadicadoComboBox.getValue().split(" - ")[0])) {
-                    idMensajeLabel.setText("Ya existe una cita con el radicado seleccionado.");
-                    idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
-                }
             }
 
 

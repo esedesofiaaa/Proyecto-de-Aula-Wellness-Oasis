@@ -5,40 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d52d659-bc81-4269-b10c-8aadadb5dc76" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistrarCitaExamenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewCancelarCita.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewModificarCita.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewRegistrarCitaExamen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistrarCitaExamen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainMedicos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/Main/MainMedicos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewCancelarCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewCancelarCitaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewLoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewModificarCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewModificarCitaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewSalaDeEsperaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewSalaDeEsperaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewSolicitarAutorizacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewSolicitarAutorizacionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainRegistroCita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainRegistroCita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/CitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/CitasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/MedicosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/MedicosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/RegistroExamenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/RegistroExamenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/SalaEsperaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/SalaEsperaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Autorizacion.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Autorizacion.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistrarCitaExamenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistrarCitaExamenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Final.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Final.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/SalaDeEspera.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/SalaDeEspera.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Users.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Users.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/estructurasDatos/GeneradorCodigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/estructurasDatos/GeneradorCodigo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/domain/Especialidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/domain/Especialidad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/AutorizacionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/AutorizacionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/CitaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/CitaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/FinalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/FinalRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/MedicoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/MedicoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/RegistroExamenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/RegistroExamenRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/model/repository/SalaEsperaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/model/repository/SalaEsperaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewCancelarCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewCancelarCita.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewModificarCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewModificarCita.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,9 +45,11 @@
     "Application.MainCitas.executor": "Run",
     "Application.MainRegistroCita.executor": "Run",
     "Application.MainSaladeEspera.executor": "Run",
+    "Application.MainViewAdministrador.executor": "Run",
     "Application.MainViewAutorizar.executor": "Run",
     "Application.MainViewCancelarCita.executor": "Run",
     "Application.MainViewLogin.executor": "Run",
+    "Application.MainViewModificarCita.executor": "Run",
     "Application.MainViewRegistrarCitaExamen.executor": "Run",
     "Application.MainViewSalaDeEspera.executor": "Run",
     "Application.MainViewSolicitarAutorizacion.executor": "Run",
@@ -98,20 +70,7 @@
       <recent name="oasis.aplicacion.controllerView" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainViewRegistrarCitaExamen">
-    <configuration name="MainAutorizaciones" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oasis.Main.MainAutorizaciones" />
-      <module name="Wellness-Oasis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="oasis.Main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MainViewModificarCita">
     <configuration name="MainRegistroCita" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainRegistroCita" />
       <module name="Wellness-Oasis" />
@@ -125,8 +84,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainViewCancelarCita" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewCancelarCita" />
+    <configuration name="MainViewAdministrador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewAdministrador" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainViewModificarCita" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewModificarCita" />
       <module name="Wellness-Oasis" />
       <extension name="coverage">
         <pattern>
@@ -166,19 +138,19 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainViewModificarCita" />
         <item itemvalue="Application.MainViewRegistrarCitaExamen" />
+        <item itemvalue="Application.MainViewAdministrador" />
         <item itemvalue="Application.MainRegistroCita" />
         <item itemvalue="Application.MainViewSolicitarAutorizacion" />
-        <item itemvalue="Application.MainAutorizaciones" />
-        <item itemvalue="Application.MainViewCancelarCita" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -194,7 +166,8 @@
       <workItem from="1715034204903" duration="2579000" />
       <workItem from="1715038635114" duration="3198000" />
       <workItem from="1715086677684" duration="6149000" />
-      <workItem from="1715095833065" duration="27145000" />
+      <workItem from="1715095833065" duration="27222000" />
+      <workItem from="1715182712763" duration="8926000" />
     </task>
     <servers />
   </component>

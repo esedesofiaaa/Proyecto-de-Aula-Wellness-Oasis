@@ -108,5 +108,17 @@
     "radicadoExamen": "U488",
     "autorizado": true,
     "generadorCodigo": {}
+  },
+  {
+    "idCita": "DE303",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "8520",
+    "radicadoExamen": "G532",
+    "autorizado": true,
+    "generadorCodigo": {}
   }
 ]
