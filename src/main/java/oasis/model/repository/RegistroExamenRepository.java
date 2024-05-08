@@ -96,16 +96,23 @@ public class    RegistroExamenRepository {
         }
     }
 
+    //Metodo que retorne una lista de examenes autorizados segun el id del paciente
+    public DoubleLinkedList<RegistroExamen> buscarPorIdPacienteAutorizado(String idPaciente) {
+        DoubleLinkedList<RegistroExamen> registrosPaciente = new DoubleLinkedList<>();
 
+        int indice = 0; // Inicializamos el índice en 0 para el primer nodo
+        int tamano = registroExamenes.tamano(); // Obtenemos el tamaño de la lista
 
+        while (indice < tamano) { // Mientras el índice sea menor que el tamaño de la lista
+            RegistroExamen registro = registroExamenes.buscarPorIndiceIterar(indice); // Obtener el registro en el índice actual
+            if (registro != null && registro.getIdPaciente().equals(idPaciente) && registro.isAutorizado()) { // Verificar si el registro no es nulo, el idPaciente coincide y está autorizado
+                registrosPaciente.agregarAlFinal(registro); // Agregar el registro a la lista de registros del paciente
+            }
+            indice++; // Avanzar al siguiente índice
+        }
 
-    //Metodo para cambiar el boolean autorizado a true
-    /*public void actualizarAutorizacionExamen() {
-        RegistroExamen examen = registroExamenes.peek();
-        examen.setAutorizado(true);
-        jsonAdapterRegistroExamen.writeObjects(pathFile, registroExamenes);
-    }*/
-    //Metodo para actualizar un registro de examen
+        return registrosPaciente;
+    }
 
     public void actualizarAutorizacionExamen(RegistroExamen registroExamen){
         int indice = registroExamenes.buscarElemento(registroExamen); // Busca el índice del paciente en la lista

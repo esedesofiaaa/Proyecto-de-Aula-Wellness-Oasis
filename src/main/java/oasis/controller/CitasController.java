@@ -49,7 +49,7 @@ public class CitasController {
         }
     }
 
-    public void agendarCitaExamen(String idPaciente, String radicadoExamen, String medico, boolean pagado) {
+    public Cita agendarCitaExamen(String idPaciente, String radicadoExamen, String medico, boolean pagado) {
         Paciente pacienteTemp = pacientesRepository.obtenerPorId(idPaciente);
         boolean existenciaRegistro = registroExamenController.validarRadicadoExamen(radicadoExamen);
         Medico medicoTemp = medicosController.buscarMedicoPorId(medico);
@@ -65,6 +65,7 @@ public class CitasController {
                         System.out.println("Cita agendada para el paciente: " + pacienteTemp.getNombre() + " " + pacienteTemp.getApellido() +
                                 '\'' + "Tu codigo de cita es:" + cita.getIdCita());
 
+                        return cita;
                     } else {
                         System.out.println("El examen no esta autorizado");
                     }
@@ -77,6 +78,7 @@ public class CitasController {
         } else {
             System.out.println("El paciente no esta registrado en el sistema");
         }
+        return null;
     }
 
     /**
@@ -122,7 +124,7 @@ public class CitasController {
         if (cita != null) {
             citaRepository.eliminarCita(cita);
             switch (atributo) {
-                case "motivoCita":
+                case "Motivo Cita":
                     if("VALORACION".equals(valor)||"CONTROL".equals(valor)){
                         cita.setMotivoCita(valor);
                         cita.setRadicadoExamen("No aplica");
@@ -132,16 +134,16 @@ public class CitasController {
                     //Falta cuando se convierte en Examen, hacer metodo para agregar los 2 atributos
                     //Que se elimine la cita y en la visual la redirija a crear una cita examen
                     break;
-                case "medico":
+                case "Medico":
                     cita.setMedico(valor);
                     //metodo para validar que el medico coincide con la especialidad
                     break;
-                case "especialidad":
+                case "Especialidad":
                     //si cambia la especialidad debe cambia el medico
                     //Desde la visual debe dejar escoger el medico, ya hay metodo
                     // que filtra a los medicos por especialidad
                     cita.setEspecialidad(valor);
-                case "radicadoExamen":
+                case "Radicado Examen":
                     if(cita.getMotivoCita().equals("EXAMEN")){
                     RegistroExamen registroExamen= registroExamenRepository.buscarPorRadicadoExamen(valor);
                         if (registroExamen!= null) {
@@ -171,7 +173,7 @@ public class CitasController {
                 System.out.println("La cita con id " + idCita + " no existe.");
             }
     }
-
+//Es mejor que no se use este metodo y directamente redirija a la vista de crear cita examen
     public void citaACitaExamen(String idCita, String atributo, String valor, String radicadoExamen, String medico, boolean pagado) {
         Cita cita = citaRepository.buscarCitaPorId(idCita);
         if (cita != null) {
@@ -209,14 +211,16 @@ public class CitasController {
         // 3 PENSAR COMO SERIA EL FLUJO DESDE LA VISTA
 
 
-        public void mostrarCitaPorId (String idCita){
+        public Cita buscarCitaPorId (String idCita){
             Cita cita = citaRepository.buscarCitaPorId(idCita);
             if (cita != null) {
-                System.out.println(cita.toString());
+                return cita;
             } else {
                 System.out.println("La cita con id " + idCita + " no existe.");
+                return null;
             }
         }
+
         public String mostrarCitaPorIdPaciente (String idCita){
             Cita cita = citaRepository.buscarCitaPorId(idCita);
             if (cita != null) {
@@ -230,5 +234,11 @@ public class CitasController {
         public void mostrarTodasLasCitas () {
                 citaRepository.obtenerTodos().mostrarLista();
         }
+
+
+    public boolean existeCitaPorRadicado(String radicado) {
+        return citaRepository.existeCitaPorRadicado(radicado);
     }
+}
+    //Metodo para buscar una cita por su id y que retorne la cita
 

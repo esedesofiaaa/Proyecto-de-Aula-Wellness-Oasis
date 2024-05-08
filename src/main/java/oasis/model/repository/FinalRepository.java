@@ -15,7 +15,7 @@ public class FinalRepository {
 
 
     public FinalRepository() {
-        this.pathFile = "src/main/oasis/java/dataBase/Final.Json";
+        this.pathFile = "src/main/java/oasis/dataBase/Final.Json";
         this.jsonAdapterFinal = FileJsonAdapter.getInstance();
         this.finalCitas = jsonAdapterFinal.getObjects(pathFile, Cita[].class);
     }

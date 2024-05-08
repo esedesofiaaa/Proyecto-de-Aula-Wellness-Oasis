@@ -76,6 +76,7 @@ public class AutorizacionRepository {
         return registroAutorizado; // Retornar el registro de examen autorizado encontrado (o null si no hay ninguno)
     }
 
+
     public boolean controlParaNoRepetirExamenParaAutorizar(String radicado) {
         // Hacer una copia de la pila original
         StackList<RegistroExamen> copiaPila = new StackList<>();

@@ -81,4 +81,16 @@ public class CitaRepository {
         return null;
     }
 
+    public boolean existeCitaPorRadicado(String radicado) {
+        DoubleLinkedList<Cita> citas = obtenerTodos(); // Obtener la lista completa de pacientes
+        for (int i = 0; i < citas.tamano(); i++) { // Recorrer la lista de pacientes
+            Cita cita = citas.buscarPorIndiceIterar(i); // Obtener el paciente en el índice actual
+            if (cita.getRadicadoExamen().equals(radicado)) { // Verificar si el radicado coincide
+                return true; // Retornar el paciente encontrado
+            }
+        }
+        return false; // Retornar false si no se encuentra ninguna cita con el radicado dado
+
+    }
+
 }

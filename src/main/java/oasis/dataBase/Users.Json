@@ -2,11 +2,11 @@
   {
     "idUser": "user",
     "password": "user",
-    "logged": false
+    "logged": true
   },
   {
     "idUser": "admin",
     "password": "admin",
-    "logged": false
+    "logged": true
   }
 ]

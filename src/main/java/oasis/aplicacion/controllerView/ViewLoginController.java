@@ -57,7 +57,17 @@ public class ViewLoginController {
                 logger.log(Level.INFO, "Intento de inicio de buscar con usuario: {0}", user);
 
                 // Abrir la ventana de administrador
-                MainViewAdministrador.main(new String[0]);
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewAdministrador.fxml"));
+                Parent root = loader.load();
+
+                // Obtener el controlador de la vista de paciente
+                ViewAdministradorController adminController = loader.getController();
+
+                // Configurar el escenario y mostrar la escena
+                Stage stage = (Stage) idIniciarSesionButton.getScene().getWindow();
+                stage.setTitle("Admin");
+                stage.setScene(new Scene(root, 600, 500));
+                stage.show();
             } else {
 
                 UserRepository.logearUsuario(user);

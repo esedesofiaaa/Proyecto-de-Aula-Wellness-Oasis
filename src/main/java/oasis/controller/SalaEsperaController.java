@@ -1,6 +1,5 @@
 package oasis.controller;
 
-import javafx.application.Platform;
 import oasis.aplicacion.controllerView.ViewSalaDeEsperaController;
 import oasis.model.domain.cita.Cita;
 import oasis.model.repository.SalaEsperaRepository;
@@ -30,15 +29,9 @@ public class SalaEsperaController {
     }
 
     private void actualizarYMostrarCita() {
-        // Lógica para obtener la siguiente cita y actualizar la vista
-        Cita siguienteCita = obtenerSiguienteCita();
+        Cita siguienteCita = salaEsperaRepository.obtenerSiguienteCita();
         if (siguienteCita != null) {
             viewSalaDeEsperaController.mostrarCita(siguienteCita);
         }
-    }
-
-    private Cita obtenerSiguienteCita() {
-        // Lógica para obtener la siguiente cita de la sala de espera
-        return null; // Debes implementar este método según la lógica de tu aplicación
     }
 }

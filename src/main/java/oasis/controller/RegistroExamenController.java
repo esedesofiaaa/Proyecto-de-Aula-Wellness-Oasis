@@ -70,5 +70,9 @@ public class RegistroExamenController {
 
         //Metodo para buscar  Examenenes por paciente y retorne la lista de examenes agendada
 
+    //Metodo que retorne una lista de examenes autorizados segun el id del paciente
+    public DoubleLinkedList<RegistroExamen> buscarPorIdPacienteAutorizado(String idPaciente) {
+        return registroExamenRepository.buscarPorIdPacienteAutorizado(idPaciente);
+    }
 
 }

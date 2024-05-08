@@ -12,8 +12,8 @@ public class MainMedicos {
         medicos.agregarMedico(new Medico("Juan Perez", Especialidad.PEDIATRIA, "123455"));
         medicos.agregarMedico(new Medico("Maria Lopez", Especialidad.CARDIOLOGIA, "123456"));
 
-        medicos.buscarMedicoPorEspecialidad("PEDIATRIA");
-        DoubleLinkedList<Medico> medicosPediatras = medicos.buscarMedicoPorEspecialidad("PEDIATRIA");
+        medicos.buscarMedicoPorEspecialidad(Especialidad.valueOf("PEDIATRIA"));
+        DoubleLinkedList<Medico> medicosPediatras = medicos.buscarMedicoPorEspecialidad(Especialidad.valueOf("PEDIATRIA"));
 
         medicos.eliminarMedico(medicos.buscarMedicoPorId("123455"));
 

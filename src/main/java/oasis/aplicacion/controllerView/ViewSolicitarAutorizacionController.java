@@ -36,8 +36,6 @@ public class ViewSolicitarAutorizacionController {
     private static final Logger logger = Logger.getLogger(ViewLoginController.class.getName());
 
     public ViewSolicitarAutorizacionController() {
-
-
         this.registroExamenController = new RegistroExamenController();
         this.autorizacionController = new AutorizacionController();
         this.pilaAutorizaciones = new StackList<>();
@@ -56,32 +54,7 @@ public class ViewSolicitarAutorizacionController {
         // Obtener el documento del paciente del TextField
         String documentoPaciente = idDocumentoPaciente.getText();
 
-        // Verificar si el documento del paciente no está vacío
-        if (documentoPaciente == null) {
-            // Obtener la lista de exámenes del paciente usando el controlador correspondiente
-            DoubleLinkedList<RegistroExamen> listaExamenes = registroExamenController.buscarPorIdPaciente(documentoPaciente);
-            logger.log(Level.INFO, "Lista Examenes: {0}", listaExamenes.toString());
-
-            for (int i = 0; i < listaExamenes.tamano(); i++) {
-                RegistroExamen registroTemp = listaExamenes.buscarPorIndiceIterar(i);
-                logger.log(Level.INFO, "registro encontrado: {0}", registroTemp.toString());
-
-                idComboBoxExamenesAutorizar.getItems().add(registroTemp.getRadicadoExamen() + " - " + registroTemp.getMotivoCitaExamen().getTipoExamen());
-            }
-
-            // Verificar si se encontraron exámenes para el paciente
-            if (idComboBoxExamenesAutorizar.getItems().isEmpty()) {
-                idMensajeLabel.setText("No se encontraron exámenes para el paciente.");
-            } else {
-                idMensajeLabel.setText("Exámenes encontrados.");
-                idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
-            }
-        } else {
-            idMensajeLabel.setText("Ingrese el documento del paciente.");
-        }
     }
-
-
 
     @FXML
     private void solicitarAutorizacion() {

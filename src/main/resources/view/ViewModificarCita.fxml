@@ -30,105 +30,73 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="161.0" layoutY="105.0">
-            <children>
-                <GridPane alignment="CENTER" cacheShape="false" centerShape="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="235.0" prefWidth="334.0" scaleShape="false">
-                    <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="125.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="119.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                    <children>
-                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
-                            <children>
-                                <Label alignment="TOP_LEFT" prefHeight="20.0" prefWidth="128.0" text="Id del paciente:">
-                                    <padding>
-                                        <Insets right="6.0" />
-                                    </padding>
-                                    <font>
-                                        <Font name="System Bold" size="14.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane GridPane.rowIndex="1">
-                            <children>
-                                <Label alignment="TOP_LEFT" prefHeight="20.0" prefWidth="126.0" text="Examen:">
-                                    <padding>
-                                        <Insets right="6.0" />
-                                    </padding>
-                                    <font>
-                                        <Font name="System Bold" size="14.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane GridPane.rowIndex="2">
-                            <children>
-                                <Label alignment="TOP_LEFT" prefHeight="17.0" prefWidth="100.0" text="Medico:">
-                                    <padding>
-                                        <Insets right="6.0" />
-                                    </padding>
-                                    <font>
-                                        <Font name="System Bold" size="14.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane GridPane.rowIndex="3">
-                            <children>
-                                <Label alignment="TOP_LEFT" prefHeight="17.0" prefWidth="100.0" text="Pagado:">
-                                    <padding>
-                                        <Insets right="6.0" />
-                                    </padding>
-                                    <font>
-                                        <Font name="System Bold" size="14.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane GridPane.columnIndex="1">
-                            <children>
-                                <TextField fx:id="idDocuementoPaciente" promptText="Id del paciente" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
-                            <children>
-                                <ComboBox fx:id="idTipoExamenComboBox" layoutY="1.0" opacity="0.35" prefWidth="150.0" promptText="Seleccione" style="-fx-background-color: #23B9CE;" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="3">
-                            <children>
-                                <TextField fx:id="idPagado" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
-                            <children>
-                                <ComboBox fx:id="idComboBoxMedicos" opacity="0.35" prefWidth="150.0" promptText="Seleccione" style="-fx-background-color: #23B9CE;" />
-                            </children>
-                        </AnchorPane>
-                    </children>
-                </GridPane>
-            </children>
-        </AnchorPane>
-        <Label fx:id="idMensajeLabel" alignment="CENTER" layoutX="256.0" layoutY="406.0" prefHeight="18.0" prefWidth="144.0" text="Label" />
-        <AnchorPane layoutX="263.0" layoutY="353.0">
+        <AnchorPane layoutX="263.0" layoutY="307.0">
             <children>
                 <HBox>
-                    <children>
-                        <Button fx:id="idBotonModificarCita" mnemonicParsing="false" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: #23B9CE;" text="Agendar Cita" textFill="WHITE">
+               <children>
+                        <Button fx:id="idBotonModificarCita" mnemonicParsing="false" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: #23B9CE;" text="Modificar Cita" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="16.0" />
                             </font>
                         </Button>
-                    </children>
+               </children>
                 </HBox>
             </children>
         </AnchorPane>
+      <AnchorPane layoutX="85.0" layoutY="136.0">
+         <children>
+            <GridPane prefHeight="143.0" prefWidth="486.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.39996337890625" minWidth="10.0" prefWidth="220.00003662109376" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.59998474121096" minWidth="10.0" prefWidth="266.39996337890625" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                          <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="374.0" text="Id del paciente:">
+                              <padding>
+                                  <Insets right="6.0" />
+                              </padding>
+                              <font>
+                                  <Font name="System Bold" size="14.0" />
+                              </font>
+                          </Label>
+                          <TextField fx:id="idDocumento" promptText="Id del paciente" GridPane.columnIndex="1" />
+                          <ComboBox fx:id="idAtributoComboBox" opacity="0.35" prefHeight="26.0" prefWidth="276.0" promptText="Seleccione" style="-fx-background-color: #23B9CE;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                          <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="334.0" text="Dato que deseas cambiar" GridPane.rowIndex="2">
+                              <padding>
+                                  <Insets right="6.0" />
+                              </padding>
+                              <font>
+                                  <Font name="System Bold" size="14.0" />
+                              </font>
+                          </Label>
+                          <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="347.0" text="Ingresa la nueva informacion:" GridPane.rowIndex="3">
+                              <padding>
+                                  <Insets right="6.0" />
+                              </padding>
+                              <font>
+                                  <Font name="System Bold" size="14.0" />
+                              </font>
+                          </Label>
+                          <ComboBox fx:id="idValorComboBox" opacity="0.35" prefHeight="26.0" prefWidth="268.0" promptText="Seleccione" style="-fx-background-color: #23B9CE;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="374.0" text="Seleccione la cita:" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets right="6.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="idCitasComboBox" opacity="0.35" prefHeight="26.0" prefWidth="276.0" promptText="Seleccione" style="-fx-background-color: #23B9CE;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+        <Label fx:id="idMensajeLabel" alignment="CENTER" layoutX="257.0" layoutY="360.0" prefHeight="18.0" prefWidth="144.0" text="Label" />
     </children>
 </AnchorPane>

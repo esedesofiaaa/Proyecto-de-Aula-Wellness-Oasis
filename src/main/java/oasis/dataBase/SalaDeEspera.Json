@@ -1,55 +1,5 @@
 [
   {
-    "idCita": "PV358",
-    "idPaciente": "3",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "VALORACION",
-    "especialidad": "PEDIATRIA",
-    "medico": "098765",
-    "radicadoExamen": "No aplica",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "DE335",
-    "idPaciente": "3",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "EXAMEN",
-    "especialidad": "DERMATOLOGIA",
-    "medico": "123456",
-    "radicadoExamen": "A637",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "CC142",
-    "idPaciente": "2",
-    "pagado": true,
-    "tomado": false,
-    "costo": "Gratis",
-    "motivoCita": "CONTROL",
-    "especialidad": "CARDIOLOGIA",
-    "medico": "123456",
-    "radicadoExamen": "No aplica",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "CC604",
-    "idPaciente": "2",
-    "pagado": true,
-    "tomado": false,
-    "costo": "Gratis",
-    "motivoCita": "CONTROL",
-    "especialidad": "CARDIOLOGIA",
-    "medico": "123456",
-    "radicadoExamen": "No aplica",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
     "idCita": "DV858",
     "idPaciente": "2",
     "pagado": true,
@@ -72,6 +22,30 @@
     "especialidad": "PSIQUIATRIA",
     "medico": "951",
     "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "DE177",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "8520",
+    "radicadoExamen": "G532",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "NE110",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "NUTRICION",
+    "medico": "000000000000",
+    "radicadoExamen": "U488",
     "autorizado": true,
     "generadorCodigo": {}
   }

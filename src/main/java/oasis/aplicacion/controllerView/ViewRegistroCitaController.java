@@ -62,7 +62,6 @@ public class ViewRegistroCitaController {
         );
 
         // Obtener la especialidad seleccionada del ComboBox
-        Especialidad especialidadSeleccionada = tipoEspecialidadComboBox.getValue();
 
         tipoEspecialidadComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
@@ -96,6 +95,7 @@ public class ViewRegistroCitaController {
             return; // Salir del método si falta algún dato
         }
 
+
         // Agregar la cita utilizando el controlador de citas
         citaController.agendarCitaControlValoracion(documentoPaciente, motivoCita, especialidad.toString(), medico, pagado);
         idMensajeLabel.setText("Cita agendada con éxito");
@@ -126,6 +126,6 @@ public class ViewRegistroCitaController {
     //Metodo para filtrar los medicos por especialidad
     private DoubleLinkedList<Medico> filtrarMedicosPorEspecialidad(Especialidad especialidad) {
         // Este método debería devolver la lista de médicos filtrada por la especialidad
-        return medicosController.buscarMedicoPorEspecialidad(especialidad.toString());
+        return medicosController.buscarMedicoPorEspecialidad(especialidad);
     }//filtrarMedicosPorEspecialidad
 }

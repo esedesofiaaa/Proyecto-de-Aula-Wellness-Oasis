@@ -1,0 +1,28 @@
+[
+  {
+    "idCita": "CC142",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": true,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "CARDIOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "CC604",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": true,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "CARDIOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  }
+]

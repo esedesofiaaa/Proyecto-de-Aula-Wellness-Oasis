@@ -1,6 +1,7 @@
 package oasis.model.repository;
 
 import oasis.estructurasDatos.listas.DoubleLinkedList;
+import oasis.model.domain.Especialidad;
 import oasis.model.domain.medico.Medico;
 import oasis.shared.FileJsonAdapter;
 
@@ -61,13 +62,13 @@ public class MedicoRepository
     }//obtenerPorId
 
     //Metodo para buscar medicos segun su especialidad
-    public DoubleLinkedList<Medico> buscarPorEspecialidad(String especialidad) {
+    public DoubleLinkedList<Medico> buscarPorEspecialidad(Especialidad especialidad) {
         DoubleLinkedList<Medico> medicos = obtenerTodos(); // Obtener la lista completa de pacientes
         DoubleLinkedList<Medico> medicosEspecialidad = new DoubleLinkedList<>();
         for (int i = 0; i < medicos.tamano(); i++) { // Recorrer la lista de pacientes
             Medico medico = medicos.buscarPorIndiceIterar(i); // Obtener el paciente en el índice actual
             System.out.println(medico.toString());
-            if (medico.getEspecialidad().name().equals(especialidad)) {
+            if (medico.getEspecialidad().equals(especialidad)) {
                 medicosEspecialidad.agregarAlFinal(medico);
             }
         }

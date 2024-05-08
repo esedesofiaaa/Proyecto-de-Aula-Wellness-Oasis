@@ -9,11 +9,13 @@ public class SalaEsperaRepository {
     private final FileJsonAdapter<Cita> jsonAdapterSalasEspera;
     private final String pathFile;
     private QueueList<Cita> salaDeEspera;
+    private final FinalRepository finalRepository;
 
     public SalaEsperaRepository() {
         this.pathFile = "C:\\ProyectoEstructuras\\Proyecto-de-Aula-Wellness-Oasis\\src\\main\\java\\oasis\\dataBase\\SalaDeEspera.Json";
         this.jsonAdapterSalasEspera = FileJsonAdapter.getInstance();
         this.salaDeEspera = jsonAdapterSalasEspera.getObjectsQueue(pathFile, Cita[].class);
+        this.finalRepository = new FinalRepository();
     }
 
     public QueueList<Cita> obtenerTodos() {
@@ -25,22 +27,19 @@ public class SalaEsperaRepository {
         jsonAdapterSalasEspera.writeObjectsQueue(pathFile, salaDeEspera);
     }
 
-    public void eliminarCitaDeSalaDeEspera() {
-        salaDeEspera.dequeue(); // Cambiar a dequeue para eliminar la cita
-        jsonAdapterSalasEspera.writeObjectsQueue(pathFile, salaDeEspera);
-    }
-
     public void actualizarCitaTomada() {
         Cita cita = salaDeEspera.dequeue(); // Cambiar a dequeue para obtener y eliminar la cita
         cita.setTomado(true);
         jsonAdapterSalasEspera.writeObjectsQueue(pathFile, salaDeEspera);
     }
 
-    public Cita verCitaEnPantalla() {
-        return salaDeEspera.peek();
-    }
 
     public Cita obtenerSiguienteCita() {
-        return salaDeEspera.peek();
+        Cita citaBorrar = salaDeEspera.dequeue();
+        jsonAdapterSalasEspera.writeObjectsQueue(pathFile, salaDeEspera);
+        citaBorrar.setTomado(true);
+        finalRepository.agregarCitaAFinal(citaBorrar);
+
+        return citaBorrar ;
     }
 }

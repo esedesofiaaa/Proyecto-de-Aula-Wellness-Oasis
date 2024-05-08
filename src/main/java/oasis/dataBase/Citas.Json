@@ -24,19 +24,6 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "CC142",
-    "idPaciente": "2",
-    "pagado": true,
-    "tomado": false,
-    "costo": "Gratis",
-    "motivoCita": "CONTROL",
-    "especialidad": "CARDIOLOGIA",
-    "medico": "123456",
-    "radicadoExamen": "No aplica",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
     "idCita": "CC604",
     "idPaciente": "2",
     "pagado": true,
@@ -72,6 +59,53 @@
     "especialidad": "PSIQUIATRIA",
     "medico": "951",
     "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "DC891",
+    "idPaciente": "3",
+    "pagado": false,
+    "tomado": false,
+    "motivoCita": "control",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "8520",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idPaciente": "3",
+    "pagado": false,
+    "tomado": false,
+    "motivoCita": "control",
+    "especialidad": "ODONTOLOGIA",
+    "medico": "ghjkhk",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "DE177",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "8520",
+    "radicadoExamen": "G532",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "NE110",
+    "idPaciente": "3",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "NUTRICION",
+    "medico": "000000000000",
+    "radicadoExamen": "U488",
     "autorizado": true,
     "generadorCodigo": {}
   }

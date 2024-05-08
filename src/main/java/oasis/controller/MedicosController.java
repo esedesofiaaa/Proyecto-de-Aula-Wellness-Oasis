@@ -1,6 +1,7 @@
 package oasis.controller;
 
 import oasis.estructurasDatos.listas.DoubleLinkedList;
+import oasis.model.domain.Especialidad;
 import oasis.model.domain.medico.Medico;
 import oasis.model.repository.MedicoRepository;
 
@@ -29,7 +30,7 @@ public class MedicosController {
     }
 
     //buscar medico por especialidad
-    public DoubleLinkedList<Medico> buscarMedicoPorEspecialidad (String especialidad) {
+    public DoubleLinkedList<Medico> buscarMedicoPorEspecialidad (Especialidad especialidad) {
         medicoRepository.buscarPorEspecialidad(especialidad).mostrarLista();
         return medicoRepository.buscarPorEspecialidad(especialidad);
     }
