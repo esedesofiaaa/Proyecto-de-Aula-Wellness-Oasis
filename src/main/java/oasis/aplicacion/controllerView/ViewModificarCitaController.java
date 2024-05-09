@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import oasis.controller.CitasController;
 import oasis.controller.MedicosController;
+import oasis.controller.RegistroExamenController;
 import oasis.estructurasDatos.listas.DoubleLinkedList;
 import oasis.model.domain.Especialidad;
 import oasis.model.domain.cita.Cita;
@@ -39,6 +40,7 @@ public class ViewModificarCitaController {
 
     private final CitasController citasController;
     private final MedicosController medicosController;
+    private final RegistroExamenController registroExamenController;
 
     private static final Logger logger = Logger.getLogger(ViewLoginController.class.getName());
 
@@ -46,13 +48,13 @@ public class ViewModificarCitaController {
     public ViewModificarCitaController() {
         this.citasController = new CitasController();
         this.medicosController = new MedicosController();
+        this.registroExamenController = new RegistroExamenController();
     }
 
     @FXML
     public void initialize() {
         idComboBoxMedicoExtra.setVisible(false);
         idTextMedicoExtra.setVisible(false);
-
         idCitasComboBox.getItems().clear();
 
         // Agregar un listener al TextField para detectar cambios en su contenido
@@ -67,12 +69,60 @@ public class ViewModificarCitaController {
             actualizarComboBoxValor(newValue);
         });
 
+        idValorComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            actualizarComboBoxExtra();
+        });
 
     }
+
+    private void actualizarComboBoxExtra() {
+        if (idValorComboBox.getValue().equals("EXAMEN")) {
+            mostrarOcultarRadicado();
+            idComboBoxMedicoExtra.getItems().clear();
+            DoubleLinkedList<RegistroExamen> listaExamenes = registroExamenController.buscarPorIdPaciente(idDocumento.getText());
+            logger.log(Level.INFO, "Lista Examenes: {0}", listaExamenes.toString());
+
+            for (int i = 0; i < listaExamenes.tamano(); i++) {
+
+                RegistroExamen registroTemp = listaExamenes.buscarPorIndiceIterar(i);
+                logger.log(Level.INFO, "registro encontrado: {0}", registroTemp.toString());
+
+                idComboBoxMedicoExtra.getItems().add(registroTemp.getRadicadoExamen() + " - " + registroTemp.getMotivoCitaExamen().getTipoExamen());
+                logger.log(Level.INFO, "registro encontrado: {0}", idComboBoxMedicoExtra.toString());
+            }
+            // Verificar si se encontraron exámenes para el paciente
+            if (idComboBoxMedicoExtra.getItems().isEmpty()) {
+                idMensajeLabel.setText("No se encontraron exámenes para el paciente.");
+                idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
+
+            } else {
+                idMensajeLabel.setText("Selecciona un examen.");
+                idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+
+            }
+            //Falta llenar el combo box con los examenes ya autorizados
+
+        }
+        if(idValorComboBox.getValue().equals("CARDIOLOGIA") || idValorComboBox.getValue().equals("DERMATOLOGIA") || idValorComboBox.getValue().equals("NUTRICION") || idValorComboBox.getValue().equals("MEDICINA_GENERAL") || idValorComboBox.getValue().equals("ODONTOLOGIA") || idValorComboBox.getValue().equals("PEDIATRIA") || idValorComboBox.getValue().equals("PSIQUIATRIA")) {
+            mostrarOcultarExamen();
+            idComboBoxMedicoExtra.getItems().clear();
+            Especialidad especialidadTemp = Especialidad.valueOf(idCitasComboBox.getValue().split(" - ")[2]);
+            DoubleLinkedList<Medico> medicoEspecialidad = filtrarMedicosPorEspecialidad(especialidadTemp);
+            for (int i = 0; i < medicoEspecialidad.tamano(); i++) {
+                Medico medico = medicoEspecialidad.buscarPorIndiceIterar(i);
+                idComboBoxMedicoExtra.getItems().add(medico.getNombre());
+            }
+
+
+        }
+    }
+
 
     private void mostrarOcultarExamen() {
         String tipoSeleccionado = idAtributoComboBox.getValue();
         if (tipoSeleccionado != null && tipoSeleccionado.equals("Especialidad")) {
+            idTextMedicoExtra.setText("Selecciona un medico:");
+
             idComboBoxMedicoExtra.setVisible(true);
             idTextMedicoExtra.setVisible(true);
         } else {
@@ -80,6 +130,19 @@ public class ViewModificarCitaController {
             idTextMedicoExtra.setVisible(false);
         }
     }
+
+    private void mostrarOcultarRadicado() {
+        String tipoSeleccionado = idValorComboBox.getValue();
+        if (tipoSeleccionado != null && tipoSeleccionado.equals("EXAMEN")) {
+            idTextMedicoExtra.setText("Radicado Examen");
+            idComboBoxMedicoExtra.setVisible(true);
+            idTextMedicoExtra.setVisible(true);
+        } else {
+            idComboBoxMedicoExtra.setVisible(false);
+            idTextMedicoExtra.setVisible(false);
+        }
+    }
+
     private DoubleLinkedList<Medico> filtrarMedicosPorEspecialidad(Especialidad especialidad) {
         // Este método debería devolver la lista de médicos filtrada por la especialidad
         return medicosController.buscarMedicoPorEspecialidad(especialidad);
@@ -97,12 +160,14 @@ public class ViewModificarCitaController {
         //Falta el combo box cuando selecciona como radicado examen
         //Usar alerts en vez de label si es necesario
         //Si la cita es de tipo examen no puede cambiar la especialidad, solo el medico y radicado
-        if(atributo == "")
-        citasController.modificarCita(idCita,atributo, valor);
 
         Cita casoExamen = citasController.buscarCitaPorId(idCitasComboBox.getValue().split(" - ")[0]);
         if (casoExamen.getMotivoCita() == "EXAMEN") {
-           // citasController.citaACitaExamen(documentoPaciente,atributo,valor);
+            //citasController.citaACitaExamen(documentoPaciente,atributo,valor);
+        } else {
+            if (atributo == "")
+                citasController.modificarCita(idCita, atributo, valor);
+
         }
 
     }
@@ -121,7 +186,7 @@ public class ViewModificarCitaController {
                 Cita citaTemp = listaCitas.buscarPorIndiceIterar(i);
                 logger.log(Level.INFO, "registro encontrado: {0}", citaTemp.toString());
 
-                idCitasComboBox.getItems().add(citaTemp.getIdCita() + " - " + citaTemp.getMotivoCita()+ " - " + citaTemp.getEspecialidad());
+                idCitasComboBox.getItems().add(citaTemp.getIdCita() + " - " + citaTemp.getMotivoCita() + " - " + citaTemp.getEspecialidad());
             }
 
             // Verificar si se encontraron exámenes para el paciente
@@ -142,11 +207,11 @@ public class ViewModificarCitaController {
     }
 
     private void actualizarComboBoxValor(String atributo) {
-        if(idAtributoComboBox.getValue()!=null){
-            if(idAtributoComboBox.getValue().equals("Motivo Cita")){
+        if (idAtributoComboBox.getValue() != null) {
+            if (idAtributoComboBox.getValue().equals("Motivo Cita")) {
                 idValorComboBox.getItems().addAll("CONTROL", "VALORACION", "EXAMEN");
             }
-            if(idAtributoComboBox.getValue().equals("Medico")){
+            if (idAtributoComboBox.getValue().equals("Medico")) {
                 Especialidad especialidadTemp = Especialidad.valueOf(idCitasComboBox.getValue().split(" - ")[2]);
                 DoubleLinkedList<Medico> medicoEspecialidad = filtrarMedicosPorEspecialidad(especialidadTemp);
                 for (int i = 0; i < medicoEspecialidad.tamano(); i++) {
@@ -154,7 +219,7 @@ public class ViewModificarCitaController {
                     idValorComboBox.getItems().add(medico.getNombre());
                 }
             }
-            if(idAtributoComboBox.getValue().equals("Especialidad")){
+            if (idAtributoComboBox.getValue().equals("Especialidad")) {
                 idValorComboBox.getItems().addAll(
                         "CARDIOLOGIA",
                         "DERMATOLOGIA",
@@ -164,17 +229,35 @@ public class ViewModificarCitaController {
                         "PEDIATRIA",
                         "PSIQUIATRIA"
                 );
-                mostrarOcultarExamen();
+            }
+            if (idAtributoComboBox.getValue().equals("Radicado Examen")) {
+                DoubleLinkedList<RegistroExamen> listaExamenes = registroExamenController.buscarPorIdPaciente(idDocumento.getText());
+                logger.log(Level.INFO, "Lista Examenes: {0}", listaExamenes.toString());
+
+                for (int i = 0; i < listaExamenes.tamano(); i++) {
+                    RegistroExamen registroTemp = listaExamenes.buscarPorIndiceIterar(i);
+                    logger.log(Level.INFO, "registro encontrado: {0}", registroTemp.toString());
+
+                    idValorComboBox.getItems().add(registroTemp.getRadicadoExamen() + " - " + registroTemp.getMotivoCitaExamen().getTipoExamen());
+                }
+                // Verificar si se encontraron exámenes para el paciente
+                if (idValorComboBox.getItems().isEmpty()) {
+                    idMensajeLabel.setText("No se encontraron exámenes para el paciente.");
+                    idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
+
+                } else {
+                    idMensajeLabel.setText("Selecciona un examen.");
+                    idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+
+                }
             }
         }
 
 
     }
+}
 
 
-
-
-    }
 
 
     

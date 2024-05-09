@@ -1,42 +1,122 @@
 [
   {
-    "nombre": "Maria Lopez",
-    "especialidad": "CARDIOLOGIA",
+    "nombre": "Dr. Juan Pérez",
+    "especialidad": "PEDIATRIA",
+    "idMedico": "789012"
+  },
+  {
+    "nombre": "Dra. Ana García",
+    "especialidad": "PEDIATRIA",
+    "idMedico": "345678"
+  },
+  {
+    "nombre": "Dr. Carlos Martínez",
+    "especialidad": "PEDIATRIA",
     "idMedico": "123456"
   },
   {
-    "nombre": "Raul Zozorrita",
-    "especialidad": "PEDIATRIA",
-    "idMedico": "098765"
-  },
-  {
-    "nombre": "hgjk",
-    "especialidad": "ODONTOLOGIA",
-    "idMedico": "ghjkhk"
-  },
-  {
-    "nombre": "Sofia",
+    "nombre": "Dra. Laura Rodríguez",
     "especialidad": "CARDIOLOGIA",
-    "idMedico": "sadfasdfsadf"
+    "idMedico": "901234"
   },
   {
-    "nombre": "pepito",
+    "nombre": "Dr. Marcos Sánchez",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "567890"
+  },
+  {
+    "nombre": "Dra. Sofia Fernandez",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "345678"
+  },
+  {
+    "nombre": "Dr. Alejandro Gómez",
     "especialidad": "DERMATOLOGIA",
-    "idMedico": "8520"
+    "idMedico": "012345"
   },
   {
-    "nombre": "1",
-    "especialidad": "MEDICINA_GENERAL",
-    "idMedico": "852"
+    "nombre": "Dra. Patricia López",
+    "especialidad": "DERMATOLOGIA",
+    "idMedico": "678901"
   },
   {
-    "nombre": "sof",
+    "nombre": "Dr. Javier Ramirez",
+    "especialidad": "DERMATOLOGIA",
+    "idMedico": "456789"
+  },
+  {
+    "nombre": "Dra. Maria Torres",
     "especialidad": "PSIQUIATRIA",
-    "idMedico": "951"
+    "idMedico": "789012"
   },
   {
-    "nombre": "6",
+    "nombre": "Dr. Antonio Ruiz",
+    "especialidad": "PSIQUIATRIA",
+    "idMedico": "234567"
+  },
+  {
+    "nombre": "Dra. Laura Martínez",
+    "especialidad": "PSIQUIATRIA",
+    "idMedico": "890123"
+  },
+  {
+    "nombre": "Dr. Luis Fernandez",
     "especialidad": "NUTRICION",
-    "idMedico": "000000000000"
+    "idMedico": "456789"
+  },
+  {
+    "nombre": "Dra. Ana Morales",
+    "especialidad": "NUTRICION",
+    "idMedico": "012345"
+  },
+  {
+    "nombre": "Dr. Jorge Gonzalez",
+    "especialidad": "NUTRICION",
+    "idMedico": "678901"
+  },
+  {
+    "nombre": "Dra. Maria Perez",
+    "especialidad": "ODONTOLOGIA",
+    "idMedico": "890123"
+  },
+  {
+    "nombre": "Dr. Carlos Soto",
+    "especialidad": "ODONTOLOGIA",
+    "idMedico": "234567"
+  },
+  {
+    "nombre": "Dra. Laura Diaz",
+    "especialidad": "ODONTOLOGIA",
+    "idMedico": "901234"
+  },
+  {
+    "nombre": "Dra. Sofia Garcia",
+    "especialidad": "GINECOLOGIA",
+    "idMedico": "123456"
+  },
+  {
+    "nombre": "Dr. Juan Rodriguez",
+    "especialidad": "GINECOLOGIA",
+    "idMedico": "789012"
+  },
+  {
+    "nombre": "Dra. Maria Lopez",
+    "especialidad": "GINECOLOGIA",
+    "idMedico": "345678"
+  },
+  {
+    "nombre": "Dr. Pedro Sanchez",
+    "especialidad": "MEDICINA_GENERAL",
+    "idMedico": "901234"
+  },
+  {
+    "nombre": "Dra. Laura Ramirez",
+    "especialidad": "MEDICINA_GENERAL",
+    "idMedico": "567890"
+  },
+  {
+    "nombre": "Dr. Jose Martinez",
+    "especialidad": "MEDICINA_GENERAL",
+    "idMedico": "123456"
   }
 ]

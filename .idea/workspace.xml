@@ -7,8 +7,10 @@
     <list default="true" id="6d52d659-bc81-4269-b10c-8aadadb5dc76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewModificarCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewModificarCitaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistrarCitaExamenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistrarCitaExamenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Medicos.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/SalaDeEspera.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/SalaDeEspera.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewModificarCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewModificarCita.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +53,7 @@
     "Application.MainViewLogin.executor": "Run",
     "Application.MainViewModificarCita.executor": "Run",
     "Application.MainViewRegistrarCitaExamen.executor": "Run",
+    "Application.MainViewRegistroExamen.executor": "Run",
     "Application.MainViewSalaDeEspera.executor": "Run",
     "Application.MainViewSolicitarAutorizacion.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -123,8 +126,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainViewSolicitarAutorizacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewSolicitarAutorizacion" />
+    <configuration name="MainViewRegistroExamen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewRegistroExamen" />
       <module name="Wellness-Oasis" />
       <extension name="coverage">
         <pattern>
@@ -140,9 +143,9 @@
       <list>
         <item itemvalue="Application.MainViewModificarCita" />
         <item itemvalue="Application.MainViewRegistrarCitaExamen" />
+        <item itemvalue="Application.MainViewRegistroExamen" />
         <item itemvalue="Application.MainViewAdministrador" />
         <item itemvalue="Application.MainRegistroCita" />
-        <item itemvalue="Application.MainViewSolicitarAutorizacion" />
       </list>
     </recent_temporary>
   </component>
@@ -168,6 +171,7 @@
       <workItem from="1715086677684" duration="6149000" />
       <workItem from="1715095833065" duration="27222000" />
       <workItem from="1715182712763" duration="8926000" />
+      <workItem from="1715205236014" duration="10742000" />
     </task>
     <servers />
   </component>

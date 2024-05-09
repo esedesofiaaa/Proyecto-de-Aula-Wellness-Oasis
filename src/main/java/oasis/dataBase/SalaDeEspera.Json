@@ -48,5 +48,41 @@
     "radicadoExamen": "U488",
     "autorizado": true,
     "generadorCodigo": {}
+  },
+  {
+    "idCita": "PSE282",
+    "idPaciente": "1",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "PSIQUIATRIA",
+    "medico": "234567",
+    "radicadoExamen": "G132",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "OE618",
+    "idPaciente": "1",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "ODONTOLOGIA",
+    "medico": "901234",
+    "radicadoExamen": "O964",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "OE911",
+    "idPaciente": "1",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "ODONTOLOGIA",
+    "medico": "901234",
+    "radicadoExamen": "J571",
+    "autorizado": true,
+    "generadorCodigo": {}
   }
 ]

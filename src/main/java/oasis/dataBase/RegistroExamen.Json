@@ -14,5 +14,37 @@
     "generadorCodigo": {},
     "idPaciente": "3",
     "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "R978",
+    "motivoCitaExamen": "ECOGRAFIA_ABDOMINAL",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "1",
+    "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "G132",
+    "motivoCitaExamen": "EVALUACION_NEUROPSICOLOGICA",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "1",
+    "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "O964",
+    "motivoCitaExamen": "RADIOGRAFIAS_DENTALES",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "1",
+    "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "J571",
+    "motivoCitaExamen": "LIMPIEZA_DENTAL",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "1",
+    "nota": "AUTORIZADO"
   }
 ]
