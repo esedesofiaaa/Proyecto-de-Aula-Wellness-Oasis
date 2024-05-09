@@ -16,43 +16,47 @@
                   <Font name="System Bold" size="22.0" />
                </font>
             </Label>
-            <ImageView fitHeight="80.0" fitWidth="269.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="81.0" fitWidth="255.0" layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../0008.PNG" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <HBox layoutX="362.0" layoutY="290.0" />
-      <Label alignment="CENTER" layoutX="128.0" layoutY="125.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 1" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="30.0" />
-         </font>
-      </Label>
-      <Label alignment="CENTER" layoutX="128.0" layoutY="208.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 2" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="30.0" />
-         </font>
-      </Label>
-      <Label alignment="CENTER" layoutX="128.0" layoutY="290.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 3" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="30.0" />
-         </font>
-      </Label>
-      <Label fx:id="idModulo1" alignment="CENTER" layoutX="404.0" layoutY="126.0" prefHeight="46.0" prefWidth="174.0" text="XXXXXXXX">
+      <HBox layoutX="362.0" layoutY="290.0" prefHeight="0.0" prefWidth="0.0" />
+      <Label fx:id="idModulo1" alignment="CENTER" layoutX="362.0" layoutY="126.0" prefHeight="46.0" prefWidth="174.0" text="XXXXXXXX">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="idModulo2" alignment="CENTER" layoutX="404.0" layoutY="209.0" prefHeight="46.0" prefWidth="174.0" text="XXXXXXXX">
+      <Label fx:id="idModulo2" alignment="CENTER" layoutX="362.0" layoutY="203.0" prefHeight="46.0" prefWidth="174.0" text="XXXXXXXX">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="idModulo3" alignment="CENTER" layoutX="404.0" layoutY="291.0" prefHeight="46.0" prefWidth="174.0" text="XXXXXXXX">
+      <Label fx:id="idModulo3" alignment="CENTER" layoutX="362.0" layoutY="290.0" prefHeight="46.0" prefWidth="174.0" text="XXXXXXXX">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
+      <AnchorPane layoutY="76.0" prefHeight="329.0" prefWidth="255.0" style="-fx-background-color: #2A2A36;">
+         <children>
+            <Label alignment="CENTER" layoutX="41.0" layoutY="49.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="41.0" layoutY="218.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 3" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="41.0" layoutY="130.0" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #23B9CE;" text="MODULO 2" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

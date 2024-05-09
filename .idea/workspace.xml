@@ -6,12 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6d52d659-bc81-4269-b10c-8aadadb5dc76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/Main/MainCitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/Main/MainCitas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewModificarCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewModificarCitaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/controller/CitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/controller/CitasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Citas.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Pacientes.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Pacientes.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewModificarCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewModificarCita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewPacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewPacienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewCancelarCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewCancelarCita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewPaciente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewPaciente.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewPagarCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewPagarCita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewSalaDeEspera.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewSalaDeEspera.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,7 @@
     "Application.MainViewCancelarCita.executor": "Run",
     "Application.MainViewLogin.executor": "Run",
     "Application.MainViewModificarCita.executor": "Run",
+    "Application.MainViewPaciente.executor": "Run",
     "Application.MainViewRegistrarCitaExamen.executor": "Run",
     "Application.MainViewRegistroExamen.executor": "Run",
     "Application.MainViewRegistroPaciente.executor": "Run",
@@ -74,7 +76,7 @@
       <recent name="oasis.aplicacion.controllerView" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainViewModificarCita">
+  <component name="RunManager" selected="Application.MainViewPaciente">
     <configuration name="MainViewAdministrador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewAdministrador" />
       <module name="Wellness-Oasis" />
@@ -101,8 +103,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainViewRegistrarCitaExamen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewRegistrarCitaExamen" />
+    <configuration name="MainViewPaciente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewPaciente" />
       <module name="Wellness-Oasis" />
       <extension name="coverage">
         <pattern>
@@ -114,8 +116,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainViewRegistroExamen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewRegistroExamen" />
+    <configuration name="MainViewRegistrarCitaExamen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewRegistrarCitaExamen" />
       <module name="Wellness-Oasis" />
       <extension name="coverage">
         <pattern>
@@ -142,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainViewPaciente" />
+        <item itemvalue="Application.MainViewAdministrador" />
         <item itemvalue="Application.MainViewModificarCita" />
         <item itemvalue="Application.MainViewRegistroPaciente" />
         <item itemvalue="Application.MainViewRegistrarCitaExamen" />
-        <item itemvalue="Application.MainViewRegistroExamen" />
-        <item itemvalue="Application.MainViewAdministrador" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +174,7 @@
       <workItem from="1715086677684" duration="6149000" />
       <workItem from="1715095833065" duration="27222000" />
       <workItem from="1715182712763" duration="8926000" />
-      <workItem from="1715205236014" duration="17238000" />
+      <workItem from="1715205236014" duration="20975000" />
     </task>
     <servers />
   </component>

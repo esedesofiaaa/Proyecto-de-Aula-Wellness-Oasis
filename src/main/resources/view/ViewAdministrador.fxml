@@ -18,7 +18,7 @@
       </VBox>
       <AnchorPane layoutY="-2.0" prefHeight="71.0" prefWidth="652.0" style="-fx-background-color: #23B9CE;">
          <children>
-            <Label layoutX="334.0" layoutY="21.0" text="Menu-Operador" textFill="WHITE">
+            <Label layoutX="334.0" layoutY="21.0" text="MENÚ-OPERADOR" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
@@ -30,13 +30,46 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Button fx:id="idBottonRegistroMedico" layoutX="359.0" layoutY="91.0" mnemonicParsing="false" onAction="#abrirRegistroMedico" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Registrar Medico" textFill="WHITE" />
-      <Button fx:id="idBottonRegistroPaciente" layoutX="359.0" layoutY="122.0" mnemonicParsing="false" onAction="#abrirRegistroPaciente" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Registrar Paciente" textFill="WHITE" />
-      <Button fx:id="idBottonAgendarCita" layoutX="359.0" layoutY="153.0" mnemonicParsing="false" onAction="#abrirCitaControlOValoracion" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Agendar Cita" textFill="WHITE" />
-      <Button fx:id="idBottonAutorizarExamen" layoutX="359.0" layoutY="184.0" mnemonicParsing="false" onAction="#autorizarExamen" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Autorizar Examen" textFill="WHITE" />
-      <Button fx:id="idBottonPagarCita" layoutX="359.0" layoutY="215.0" mnemonicParsing="false" onAction="#abrirPagarCita" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Pagar Cita" textFill="WHITE" />
-      <Button fx:id="idBottonModificarCita" layoutX="359.0" layoutY="246.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Modificar Cita" textFill="WHITE" />
-      <Button fx:id="idBottonCancelarCita" layoutX="359.0" layoutY="277.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Cancelar Cita" textFill="WHITE" />
-      <Button fx:id="idBottonEnviarSalaEspera" layoutX="359.0" layoutY="308.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Enviar a sala de espera" textFill="WHITE" />
+      <Button fx:id="idBottonRegistroMedico" layoutX="359.0" layoutY="91.0" mnemonicParsing="false" onAction="#abrirRegistroMedico" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Registrar Medico" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="idBottonRegistroPaciente" layoutX="359.0" layoutY="122.0" mnemonicParsing="false" onAction="#abrirRegistroPaciente" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Registrar Paciente" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="idBottonAgendarCita" layoutX="359.0" layoutY="153.0" mnemonicParsing="false" onAction="#abrirCitaControlOValoracion" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Agendar Cita" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="idBottonAutorizarExamen" layoutX="359.0" layoutY="184.0" mnemonicParsing="false" onAction="#autorizarExamen" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Autorizar Examen" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="idBottonPagarCita" layoutX="359.0" layoutY="215.0" mnemonicParsing="false" onAction="#abrirPagarCita" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Pagar Cita" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="idBottonModificarCita" layoutX="359.0" layoutY="246.0" mnemonicParsing="false" onAction="#abrirModificarCita" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Modificar Cita" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="idBottonCancelarCita" layoutX="359.0" layoutY="277.0" mnemonicParsing="false" onAction="#abrirCancelarCita" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Cancelar Cita" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="idBottonEnviarSalaEspera" layoutX="359.0" layoutY="308.0" mnemonicParsing="false" onAction="#abrirSalaDeEspera" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #23B9CE;" text="Enviar a sala de espera" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <AnchorPane layoutY="71.0" prefHeight="329.0" prefWidth="232.0" style="-fx-background-color: #23B9CE;">
+         <children>
+            <ImageView fitHeight="329.0" fitWidth="232.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../4323015.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
