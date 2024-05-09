@@ -61,5 +61,23 @@
     "edad": "8",
     "telefono": "8",
     "correo": "8"
+  },
+  {
+    "tipoDocumento": "CC",
+    "id": "82236412",
+    "nombre": "Juan",
+    "apellido": "Rojo",
+    "edad": "25",
+    "telefono": "587128",
+    "correo": "qwrr@.com"
+  },
+  {
+    "tipoDocumento": "TI",
+    "id": "x",
+    "nombre": "x",
+    "apellido": "x",
+    "edad": "x",
+    "telefono": "x",
+    "correo": "x"
   }
 ]

@@ -119,7 +119,7 @@ public class CitasController {
     //Metodo para mostrar modificar citas
     //Buscar la cita, eliminarla pero mantener ese valor temporalmente
     // y modificar el atributo seleccionado
-    public void modificarCita(String idCita, String atributo, String valor) {
+    public String modificarCita(String idCita, String atributo, String valor, String valorExtra) {
         Cita cita= citaRepository.buscarCitaPorId(idCita);
         if (cita != null) {
             citaRepository.eliminarCita(cita);
@@ -130,6 +130,11 @@ public class CitasController {
                         cita.setRadicadoExamen("No aplica");
                         cita.setAutorizado(true);
 
+                    }
+                    if ("EXAMEN".equals(valor)){
+                        cita.setMotivoCita(valor);
+                        cita.setRadicadoExamen(valorExtra);
+                        cita.setAutorizado(false);
                     }
                     //Falta cuando se convierte en Examen, hacer metodo para agregar los 2 atributos
                     //Que se elimine la cita y en la visual la redirija a crear una cita examen
@@ -143,6 +148,7 @@ public class CitasController {
                     //Desde la visual debe dejar escoger el medico, ya hay metodo
                     // que filtra a los medicos por especialidad
                     cita.setEspecialidad(valor);
+                    cita.setMedico(valorExtra);
                 case "Radicado Examen":
                     if(cita.getMotivoCita().equals("EXAMEN")){
                     RegistroExamen registroExamen= registroExamenRepository.buscarPorRadicadoExamen(valor);
@@ -169,19 +175,22 @@ public class CitasController {
                 cita.setIdCita(generadorCodigo.generarCodigo(cita.getMotivoCita(), cita.getEspecialidad()));
                 citaRepository.guardarCita(cita);
                 System.out.println("Cita modificada: " + cita.getIdCita());
+                return "Cambios actualizados";
             } else{
                 System.out.println("La cita con id " + idCita + " no existe.");
-            }
+            return "La cita no existe";
+
+        }
     }
 //Es mejor que no se use este metodo y directamente redirija a la vista de crear cita examen
-    public void citaACitaExamen(String idCita, String atributo, String valor, String radicadoExamen, String medico, boolean pagado) {
+    public void citaACitaExamen(String idCita, String atributo, String valor, String radicadoExamen, String medico) {
         Cita cita = citaRepository.buscarCitaPorId(idCita);
         if (cita != null) {
             citaRepository.eliminarCita(cita);
             switch (atributo) {
                 case "motivoCita":
                     if("EXAMEN".equals(valor)){
-                        agendarCitaExamen(cita.getIdPaciente(), radicadoExamen, medico, pagado);
+                        agendarCitaExamen(cita.getIdPaciente(), radicadoExamen, medico, cita.isPagado());
                     }
                     break;
 

@@ -32,8 +32,11 @@ public class ViewModificarCitaController {
     private ComboBox<String> idValorComboBox;
     @FXML
     private Text idTextMedicoExtra;
+
     @FXML
     private ComboBox<String> idComboBoxMedicoExtra;
+    @FXML
+    private ComboBox<String> idComboBoxMedicoExamen;
 
     @FXML
     private Label idMensajeLabel;
@@ -56,10 +59,10 @@ public class ViewModificarCitaController {
         idComboBoxMedicoExtra.setVisible(false);
         idTextMedicoExtra.setVisible(false);
         idCitasComboBox.getItems().clear();
-
+        idComboBoxMedicoExamen.setVisible(false);
         // Agregar un listener al TextField para detectar cambios en su contenido
         idDocumento.textProperty().addListener((observable, oldValue, newValue) -> {
-            actualizarComboBoxCitas(newValue);
+            actualizarComboBoxAtributo(newValue);
         });
 
         // Agregar opciones al ComboBox idAtributoComboBox
@@ -76,9 +79,9 @@ public class ViewModificarCitaController {
     }
 
     private void actualizarComboBoxExtra() {
+
         if (idValorComboBox.getValue().equals("EXAMEN")) {
             mostrarOcultarRadicado();
-            idComboBoxMedicoExtra.getItems().clear();
             DoubleLinkedList<RegistroExamen> listaExamenes = registroExamenController.buscarPorIdPaciente(idDocumento.getText());
             logger.log(Level.INFO, "Lista Examenes: {0}", listaExamenes.toString());
 
@@ -100,9 +103,11 @@ public class ViewModificarCitaController {
                 idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
 
             }
+
             //Falta llenar el combo box con los examenes ya autorizados
 
         }
+
         if(idValorComboBox.getValue().equals("CARDIOLOGIA") || idValorComboBox.getValue().equals("DERMATOLOGIA") || idValorComboBox.getValue().equals("NUTRICION") || idValorComboBox.getValue().equals("MEDICINA_GENERAL") || idValorComboBox.getValue().equals("ODONTOLOGIA") || idValorComboBox.getValue().equals("PEDIATRIA") || idValorComboBox.getValue().equals("PSIQUIATRIA")) {
             mostrarOcultarExamen();
             idComboBoxMedicoExtra.getItems().clear();
@@ -110,12 +115,15 @@ public class ViewModificarCitaController {
             DoubleLinkedList<Medico> medicoEspecialidad = filtrarMedicosPorEspecialidad(especialidadTemp);
             for (int i = 0; i < medicoEspecialidad.tamano(); i++) {
                 Medico medico = medicoEspecialidad.buscarPorIndiceIterar(i);
-                idComboBoxMedicoExtra.getItems().add(medico.getNombre());
+                idComboBoxMedicoExtra.getItems().add(medico.getIdMedico());
             }
 
 
         }
+
     }
+
+
 
 
     private void mostrarOcultarExamen() {
@@ -155,24 +163,37 @@ public class ViewModificarCitaController {
         String idCita = idCitasComboBox.getValue().split(" - ")[0];
         String atributo = idAtributoComboBox.getValue();
         String valor = idValorComboBox.getValue();
+        String valorExtra = idComboBoxMedicoExtra.getValue();
         //Falta revisar los casos en los que entra al metodo modificar cita, a punta de if
         //Cuando entra a citaCitaExamen y usar los logs
         //Falta el combo box cuando selecciona como radicado examen
         //Usar alerts en vez de label si es necesario
         //Si la cita es de tipo examen no puede cambiar la especialidad, solo el medico y radicado
+        if(documentoPaciente.isEmpty()|| idCita.isEmpty() || atributo.isEmpty() || valor.isEmpty() || valorExtra.isEmpty()){
+            idMensajeLabel.setText("Por favor llene todos los campos.");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
 
-        Cita casoExamen = citasController.buscarCitaPorId(idCitasComboBox.getValue().split(" - ")[0]);
+        } else {
+            citasController.modificarCita(idCita, atributo, valor, valorExtra);
+            logger.log(Level.INFO, "Resultado: {0}", citasController.modificarCita(idCita, atributo, valor, valorExtra));
+
+            limpiarCampos();
+            idMensajeLabel.setText("Cita modificada correctamente.");
+        }
+
+        /*Cita casoExamen = citasController.buscarCitaPorId(idCitasComboBox.getValue().split(" - ")[0]);
         if (casoExamen.getMotivoCita() == "EXAMEN") {
             //citasController.citaACitaExamen(documentoPaciente,atributo,valor);
         } else {
             if (atributo == "")
                 citasController.modificarCita(idCita, atributo, valor);
 
-        }
+        }*/
+
 
     }
 
-    private void actualizarComboBoxCitas(String documentoPaciente) {
+    private void actualizarComboBoxAtributo(String documentoPaciente) {
         // Limpiar el ComboBox
         idCitasComboBox.getItems().clear();
 
@@ -216,7 +237,7 @@ public class ViewModificarCitaController {
                 DoubleLinkedList<Medico> medicoEspecialidad = filtrarMedicosPorEspecialidad(especialidadTemp);
                 for (int i = 0; i < medicoEspecialidad.tamano(); i++) {
                     Medico medico = medicoEspecialidad.buscarPorIndiceIterar(i);
-                    idValorComboBox.getItems().add(medico.getNombre());
+                    idValorComboBox.getItems().add(medico.getIdMedico());
                 }
             }
             if (idAtributoComboBox.getValue().equals("Especialidad")) {
@@ -255,6 +276,16 @@ public class ViewModificarCitaController {
 
 
     }
+
+    private void limpiarCampos() {
+        idDocumento.clear(); // Limpiar el campo de documento del paciente
+        idCitasComboBox.getSelectionModel().clearSelection();
+        idAtributoComboBox.getSelectionModel().clearSelection();
+        idValorComboBox.getSelectionModel().clearSelection();
+        idComboBoxMedicoExtra.getSelectionModel().clearSelection();
+        idMensajeLabel.setText(""); // Limpiar el mensaje de la etiqueta
+    }
+
 }
 
 
