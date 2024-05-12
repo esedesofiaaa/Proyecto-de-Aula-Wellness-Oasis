@@ -73,11 +73,11 @@ public class ViewCancelarCitaController {
 
             // Verificar si se encontraron exámenes para el paciente
             if (idCancelarCitaComboBox.getItems().isEmpty()) {
-                idMensajeLabel.setText("No se encontraron exámenes para el paciente.");
+                idMensajeLabel.setText("No se encontraron citas para el paciente.");
                 idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
 
             } else {
-                idMensajeLabel.setText("Selecciona un examen.");
+                idMensajeLabel.setText("Selecciona una cita.");
                 idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
 
             }

@@ -7,12 +7,19 @@
     <list default="true" id="6d52d659-bc81-4269-b10c-8aadadb5dc76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewAdministradorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewCancelarCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewCancelarCitaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewModificarCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewModificarCitaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewPacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewPacienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewAdministrador.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewCancelarCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewCancelarCita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroCitaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroExamenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/controllerView/ViewRegistroExamenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewPaciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/aplicacion/mainView/MainViewPaciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Autorizacion.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/Autorizacion.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oasis/dataBase/RegistroExamen.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewPaciente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewPaciente.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewPagarCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewPagarCita.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewSalaDeEspera.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewSalaDeEspera.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroCita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroExamen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroExamen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroMedico.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/ViewRegistroMedico.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,43 +49,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainAutorizaciones.executor": "Run",
-    "Application.MainCitas.executor": "Run",
-    "Application.MainRegistroCita.executor": "Run",
-    "Application.MainSaladeEspera.executor": "Run",
-    "Application.MainViewAdministrador.executor": "Run",
-    "Application.MainViewAutorizar.executor": "Run",
-    "Application.MainViewCancelarCita.executor": "Run",
-    "Application.MainViewLogin.executor": "Run",
-    "Application.MainViewModificarCita.executor": "Run",
-    "Application.MainViewPaciente.executor": "Run",
-    "Application.MainViewRegistrarCitaExamen.executor": "Run",
-    "Application.MainViewRegistroExamen.executor": "Run",
-    "Application.MainViewRegistroPaciente.executor": "Run",
-    "Application.MainViewSalaDeEspera.executor": "Run",
-    "Application.MainViewSolicitarAutorizacion.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ssant/Documents/Proyecto-de-Aula-Wellness-Oasis",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainAutorizaciones.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainCitas.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainRegistroCita.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainSaladeEspera.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewAdministrador.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewAutorizar.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewCancelarCita.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewModificarCita.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewPaciente.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewRegistrarCitaExamen.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewRegistroExamen.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewRegistroPaciente.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewSalaDeEspera.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainViewSolicitarAutorizacion.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ssant/Documents/Proyecto-de-Aula-Wellness-Oasis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="oasis.aplicacion.controllerView" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainViewPaciente">
+  <component name="RunManager" selected="Application.MainViewAdministrador">
     <configuration name="MainViewAdministrador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewAdministrador" />
+      <module name="Wellness-Oasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainViewLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewLogin" />
       <module name="Wellness-Oasis" />
       <extension name="coverage">
         <pattern>
@@ -116,21 +136,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainViewRegistrarCitaExamen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewRegistrarCitaExamen" />
-      <module name="Wellness-Oasis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="oasis.aplicacion.mainView.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainViewRegistroPaciente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewRegistroPaciente" />
+    <configuration name="MainViewRegistroExamen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oasis.aplicacion.mainView.MainViewRegistroExamen" />
       <module name="Wellness-Oasis" />
       <extension name="coverage">
         <pattern>
@@ -144,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainViewPaciente" />
         <item itemvalue="Application.MainViewAdministrador" />
+        <item itemvalue="Application.MainViewRegistroExamen" />
+        <item itemvalue="Application.MainViewPaciente" />
+        <item itemvalue="Application.MainViewLogin" />
         <item itemvalue="Application.MainViewModificarCita" />
-        <item itemvalue="Application.MainViewRegistroPaciente" />
-        <item itemvalue="Application.MainViewRegistrarCitaExamen" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +181,11 @@
       <workItem from="1715086677684" duration="6149000" />
       <workItem from="1715095833065" duration="27222000" />
       <workItem from="1715182712763" duration="8926000" />
-      <workItem from="1715205236014" duration="20975000" />
+      <workItem from="1715205236014" duration="21057000" />
+      <workItem from="1715230639191" duration="313000" />
+      <workItem from="1715525128184" duration="366000" />
+      <workItem from="1715525543439" duration="17000" />
+      <workItem from="1715525816077" duration="5721000" />
     </task>
     <servers />
   </component>

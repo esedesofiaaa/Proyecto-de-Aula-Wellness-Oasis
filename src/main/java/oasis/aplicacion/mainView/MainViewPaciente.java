@@ -13,7 +13,7 @@ public class MainViewPaciente extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/ViewPaciente.fxml"));
         primaryStage.setTitle("Paciente");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 

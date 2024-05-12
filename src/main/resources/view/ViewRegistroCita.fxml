@@ -49,11 +49,31 @@
    </left>
    <center>
       <BorderPane BorderPane.alignment="CENTER">
-         <center>
-              <GridPane alignment="CENTER" cacheShape="false" centerShape="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="235.0" prefWidth="334.0" scaleShape="false">
+         <bottom>
+            <BorderPane BorderPane.alignment="CENTER">
+               <center>
+                        <Button fx:id="botonAgendarCitaNormal" mnemonicParsing="false" onAction="#guardarCita" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: #23B9CE;" text="Agendar Cita" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </center>
+               <bottom>
+                  <Label fx:id="idMensajeLabel" alignment="CENTER" prefHeight="26.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+               </bottom>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </BorderPane>
+         </bottom>
+         <top>
+              <GridPane alignment="CENTER" cacheShape="false" centerShape="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="235.0" prefWidth="96.0" scaleShape="false" BorderPane.alignment="CENTER">
                   <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="125.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="119.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="96.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.99998779296877" minWidth="10.0" prefWidth="167.20000000000002" />
                   </columnConstraints>
                   <rowConstraints>
                       <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
@@ -130,7 +150,7 @@
                   </AnchorPane>
                   <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                            <TextField fx:id="idMotivoCita" prefHeight="25.0" prefWidth="109.0" promptText="Motivo de la cita" />
+                            <TextField fx:id="idMotivoCita" prefHeight="26.0" prefWidth="149.0" promptText="Motivo de la cita" />
                      </children>
                   </AnchorPane>
                   <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="4">
@@ -154,27 +174,7 @@
                   <Insets left="30.0" top="30.0" />
                </BorderPane.margin>
               </GridPane>
-         </center>
-         <bottom>
-            <BorderPane BorderPane.alignment="CENTER">
-               <center>
-                        <Button fx:id="botonAgendarCitaNormal" mnemonicParsing="false" onAction="#guardarCita" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: #23B9CE;" text="Agendar Cita" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Button>
-               </center>
-               <bottom>
-                  <Label fx:id="idMensajeLabel" alignment="CENTER" prefHeight="26.0" prefWidth="210.0" BorderPane.alignment="CENTER">
-                     <font>
-                        <Font size="10.0" />
-                     </font></Label>
-               </bottom>
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </BorderPane>
-         </bottom>
+         </top>
       </BorderPane>
    </center>
 </BorderPane>

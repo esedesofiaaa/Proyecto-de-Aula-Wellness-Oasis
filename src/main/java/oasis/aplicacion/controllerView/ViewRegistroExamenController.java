@@ -60,12 +60,12 @@ public class ViewRegistroExamenController {
         Examen examen = registroExamenController.buscarExamenPorTipoExamen(idComboBoxExamenes.getValue());
         if (idDocumento.isEmpty() || examen == null) {
             System.out.println("Por favor complete todos los campos.");
-            idMensajeLabel.setText("Por favor completa todos los campos");
+            idMensajeLabel.setText("Por favor complete todos los campos");
             idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
         } else {
             String idCita = registroExamenController.agregarExamen(examen, idDocumento);
             if (idCita != null) {
-                idMensajeLabel.setText("Cita agendada con éxito. ID de la cita: " + idCita);
+                idMensajeLabel.setText("Examen registrado con éxito. Numero de Radicado: " + idCita);
                 idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
             } else {
                 idMensajeLabel.setText("Error al registrar el examen. Verifica los datos.");

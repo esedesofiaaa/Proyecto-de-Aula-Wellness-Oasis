@@ -33,7 +33,7 @@ public class ViewAdministradorController {
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setTitle("Registro Médico");
-            stage.setScene(new Scene(root));
+            stage.setScene(new Scene(root, 784, 375));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -117,7 +117,7 @@ public class ViewAdministradorController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewCancelarCita.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
-            stage.setTitle("Autorizar Examen");
+            stage.setTitle("Cancelar Cita");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
@@ -131,7 +131,7 @@ public class ViewAdministradorController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewSalaDeEspera.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
-            stage.setTitle("Autorizar Examen");
+            stage.setTitle("SalaDe Espera");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {

@@ -1,21 +1,5 @@
 [
   {
-    "radicadoExamen": "G532",
-    "motivoCitaExamen": "DERMATOSCOPIA",
-    "autorizado": true,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "AUTORIZADO"
-  },
-  {
-    "radicadoExamen": "U488",
-    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
-    "autorizado": true,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "AUTORIZADO"
-  },
-  {
     "radicadoExamen": "R978",
     "motivoCitaExamen": "ECOGRAFIA_ABDOMINAL",
     "autorizado": true,
@@ -46,5 +30,77 @@
     "generadorCodigo": {},
     "idPaciente": "1",
     "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "G532",
+    "motivoCitaExamen": "DERMATOSCOPIA",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "U488",
+    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "AUTORIZACION NEGADA"
+  },
+  {
+    "radicadoExamen": "V103",
+    "motivoCitaExamen": "ECOGRAFIA_ABDOMINAL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "1",
+    "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "R180",
+    "motivoCitaExamen": "EVALUACION_NEUROPSICOLOGICA",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "2",
+    "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "K251",
+    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "POR AUTORIZAR"
+  },
+  {
+    "radicadoExamen": "M477",
+    "motivoCitaExamen": "EVALUACION_DIETETICA",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "2",
+    "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "Z752",
+    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "1",
+    "nota": "AUTORIZACION NEGADA"
+  },
+  {
+    "radicadoExamen": "U358",
+    "motivoCitaExamen": "EVALUACION_DIETETICA",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "2",
+    "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "W818",
+    "motivoCitaExamen": "RADIOGRAFIA_DE_TORAX",
+    "autorizado": false,
+    "generadorCodigo": {},
+    "idPaciente": "3",
+    "nota": "AUTORIZACION NEGADA"
   }
 ]

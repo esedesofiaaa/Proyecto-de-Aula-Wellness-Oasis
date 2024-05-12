@@ -89,7 +89,6 @@ public class ViewRegistroCitaController {
         boolean pagado = obtenerPagadoSeleccionado();
 
         if (documentoPaciente.isEmpty() || motivoCita.isEmpty() || medico.isEmpty() || especialidad == null) {
-            System.out.println("Por favor completa todos los campos.");
             idMensajeLabel.setText("Por favor completa todos los campos");
             idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
             return; // Salir del método si falta algún dato

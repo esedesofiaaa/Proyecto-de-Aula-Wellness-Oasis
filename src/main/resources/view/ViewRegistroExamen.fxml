@@ -19,7 +19,7 @@
    <center>
       <AnchorPane prefHeight="402.0" prefWidth="550.0">
           <children>
-            <AnchorPane prefHeight="326.0" prefWidth="300.0">
+            <AnchorPane prefHeight="483.0" prefWidth="600.0">
                <children>
                     <GridPane alignment="TOP_CENTER" prefHeight="133.0" prefWidth="503.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="103.0">
                         <columnConstraints>
@@ -61,7 +61,7 @@
                         </Button>
                         </children>
                     </AnchorPane>
-                  <Label fx:id="idMensajeLabel" alignment="CENTER" layoutX="180.0" layoutY="302.0" prefHeight="34.0" prefWidth="246.0" />
+                  <Label fx:id="idMensajeLabel" alignment="CENTER" layoutX="74.0" layoutY="302.0" prefHeight="34.0" prefWidth="459.0" />
                </children>
             </AnchorPane>
               <AnchorPane prefHeight="71.0" prefWidth="600.0" style="-fx-background-color: #23B9CE;">

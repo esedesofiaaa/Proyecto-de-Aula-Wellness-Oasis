@@ -38,12 +38,15 @@ public class ViewPacienteController {
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setTitle("Registo de Examen");
-            stage.setScene(new Scene(root));
+            stage.setScene(new Scene(root, 600, 400));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
     }
+
 
     @FXML
     void abrirSolicitarAutorizacion(ActionEvent event) {
@@ -65,7 +68,7 @@ public class ViewPacienteController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewRegistrarCitaExamen.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
-            stage.setTitle("Solicitar  Autorizacion");
+            stage.setTitle("Solicitar Toma de Examen");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
@@ -78,7 +81,7 @@ public class ViewPacienteController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewModificarCita.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
-            stage.setTitle("Solicitar  Autorizacion");
+            stage.setTitle("Modificar Cita");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
@@ -91,7 +94,7 @@ public class ViewPacienteController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewCancelarCita.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
-            stage.setTitle("Solicitar  Autorizacion");
+            stage.setTitle("Cancelar Cita");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {

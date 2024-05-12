@@ -60,21 +60,22 @@ public class ViewLoginController {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewAdministrador.fxml"));
                 Parent root = loader.load();
 
-                // Obtener el controlador de la vista de paciente
+                // Obtener el controlador de la vista de administrador
                 ViewAdministradorController adminController = loader.getController();
 
                 // Configurar el escenario y mostrar la escena
                 Stage stage = (Stage) idIniciarSesionButton.getScene().getWindow();
                 stage.setTitle("Admin");
-                stage.setScene(new Scene(root, 600, 500));
+                stage.setScene(new Scene(root, 600, 400));
                 stage.show();
             } else {
-
                 UserRepository.logearUsuario(user);
                 logger.log(Level.INFO, "Intento de inicio de buscar con usuario: {0}", user);
 
-                // Mostrar mensaje de error
-                mostrarMensajeError("Usuario encontrado");
+                // Mostrar mensaje de éxito
+                mostrarMensajeExito("Inicio de sesión exitoso");
+
+                // Continuar con la lógica para abrir la vista de paciente si es necesario
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ViewPaciente.fxml"));
                 Parent root = loader.load();
 
@@ -84,8 +85,8 @@ public class ViewLoginController {
                 // Configurar el escenario y mostrar la escena
                 Stage stage = (Stage) idIniciarSesionButton.getScene().getWindow();
                 stage.setTitle("Paciente");
-                stage.setScene(new Scene(root, 600, 500));
-                stage.show();                // Continuar con la lógica para abrir la vista de paciente si es necesario
+                stage.setScene(new Scene(root, 600, 400));
+                stage.show();
             }
         } else {
             mostrarMensajeError("El usuario no existe.");
@@ -96,6 +97,14 @@ public class ViewLoginController {
     private void mostrarMensajeError(String mensaje) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+
+    private void mostrarMensajeExito(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Éxito");
         alert.setHeaderText(null);
         alert.setContentText(mensaje);
         alert.showAndWait();

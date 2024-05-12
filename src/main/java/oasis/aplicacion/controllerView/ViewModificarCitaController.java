@@ -169,7 +169,7 @@ public class ViewModificarCitaController {
         //Falta el combo box cuando selecciona como radicado examen
         //Usar alerts en vez de label si es necesario
         //Si la cita es de tipo examen no puede cambiar la especialidad, solo el medico y radicado
-        if(documentoPaciente.isEmpty()|| idCita.isEmpty() || atributo.isEmpty() || valor.isEmpty() || valorExtra.isEmpty()){
+        if(documentoPaciente.isEmpty()|| idCita.isEmpty() || atributo.isEmpty() || valor.isEmpty() ){
             idMensajeLabel.setText("Por favor llene todos los campos.");
             idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
 
