@@ -1,5 +1,13 @@
 [
   {
+    "radicadoExamen": "O964",
+    "motivoCitaExamen": "RADIOGRAFIAS_DENTALES",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "1",
+    "nota": "AUTORIZADO"
+  },
+  {
     "radicadoExamen": "U358",
     "motivoCitaExamen": "EVALUACION_DIETETICA",
     "autorizado": false,

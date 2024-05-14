@@ -12,7 +12,7 @@ public class SalaEsperaRepository {
     private final FinalRepository finalRepository;
 
     public SalaEsperaRepository() {
-        this.pathFile = "C:\\ProyectoEstructuras\\Proyecto-de-Aula-Wellness-Oasis\\src\\main\\java\\oasis\\dataBase\\SalaDeEspera.Json";
+        this.pathFile = "src/main/java/oasis/dataBase/SalaDeEspera.Json";
         this.jsonAdapterSalasEspera = FileJsonAdapter.getInstance();
         this.salaDeEspera = jsonAdapterSalasEspera.getObjectsQueue(pathFile, Cita[].class);
         this.finalRepository = new FinalRepository();

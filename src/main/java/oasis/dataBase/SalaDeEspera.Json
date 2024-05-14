@@ -1,54 +1,5 @@
 [
   {
-    "idCita": "PSC977",
-    "idPaciente": "3",
-    "pagado": true,
-    "tomado": false,
-    "costo": "Gratis",
-    "motivoCita": "CONTROL",
-    "especialidad": "PSIQUIATRIA",
-    "medico": "951",
-    "radicadoExamen": "No aplica",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "DE177",
-    "idPaciente": "3",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "EXAMEN",
-    "especialidad": "DERMATOLOGIA",
-    "medico": "8520",
-    "radicadoExamen": "G532",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "NE110",
-    "idPaciente": "3",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "EXAMEN",
-    "especialidad": "NUTRICION",
-    "medico": "000000000000",
-    "radicadoExamen": "U488",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "PSE282",
-    "idPaciente": "1",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "EXAMEN",
-    "especialidad": "PSIQUIATRIA",
-    "medico": "234567",
-    "radicadoExamen": "G132",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
     "idCita": "OE618",
     "idPaciente": "1",
     "pagado": true,
