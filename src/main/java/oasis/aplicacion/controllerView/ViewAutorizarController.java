@@ -1,9 +1,9 @@
 package oasis.aplicacion.controllerView;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import oasis.controller.AutorizacionController;
 import oasis.model.domain.registroExamen.RegistroExamen;
@@ -11,22 +11,23 @@ import oasis.model.domain.registroExamen.RegistroExamen;
 public class ViewAutorizarController {
 
     @FXML
-    private Label  idDocumentoLabel;
+    private Label idDocumentoLabel;
     @FXML
-    private Label  idRadicadoLabel;
+    private Label idRadicadoLabel;
     @FXML
     private Label idTipoExamenLabel;
     @FXML
     private Label idNotaLabel;
 
     @FXML
-    private ComboBox<String>idComboBoxAutorizar;
+    private ComboBox<String> idComboBoxAutorizar;
 
     private final AutorizacionController autorizacionController;
 
     public ViewAutorizarController() {
         this.autorizacionController = new AutorizacionController();
     }
+
     @FXML
     private void initialize() {
         if (!autorizacionController.obtenerTodos().estaVacia()) {
@@ -44,25 +45,21 @@ public class ViewAutorizarController {
     }
 
     @FXML
-    private void autorizar () {
-
+    private void autorizar() {
         autorizacionController.autorizarExamen();
-        idNotaLabel.setText("Examen autorizado con éxito");
-        idNotaLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+        mostrarAlerta("Examen autorizado con éxito", Alert.AlertType.INFORMATION);
         siguienteExamen();
     }
-    @FXML
-    private void noAutorizar (){
 
+    @FXML
+    private void noAutorizar() {
         autorizacionController.noAutorizarExamen();
-        idNotaLabel.setText("Autorización negada con éxito");
-        idNotaLabel.setTextFill(javafx.scene.paint.Color.RED);
+        mostrarAlerta("Autorización negada con éxito", Alert.AlertType.ERROR);
         siguienteExamen();
     }
 
     @FXML
-    private void siguienteExamen(){
-
+    private void siguienteExamen() {
         if (!autorizacionController.obtenerTodos().estaVacia()) {
             initialize(); // Mostrar el próximo examen si hay más
         } else {
@@ -72,6 +69,11 @@ public class ViewAutorizarController {
         }
     }
 
-//Separar el combobox en dos botones y que cada uno se inicialice, falta hacer los botones en la visual
-
+    private void mostrarAlerta(String mensaje, Alert.AlertType tipo) {
+        Alert alert = new Alert(tipo);
+        alert.setTitle("Información");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
 }

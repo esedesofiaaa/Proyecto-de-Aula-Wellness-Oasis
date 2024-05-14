@@ -52,6 +52,8 @@ public class ViewCancelarCitaController {
 
         //String idCita = idCancelarCitaComboBox.getValue();
         citasController.eliminarCita(idCita);
+        idMensajeLabel.setText("Cita Cancelada.");
+        idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
     }
 
     private void actualizarComboBox(String documentoPaciente) {

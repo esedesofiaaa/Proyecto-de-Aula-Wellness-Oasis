@@ -1,18 +1,5 @@
 [
   {
-    "idCita": "DV858",
-    "idPaciente": "2",
-    "pagado": true,
-    "tomado": false,
-    "costo": "4500",
-    "motivoCita": "VALORACION",
-    "especialidad": "DERMATOLOGIA",
-    "medico": "123456",
-    "radicadoExamen": "No aplica",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
     "idCita": "PSC977",
     "idPaciente": "3",
     "pagado": true,
@@ -82,6 +69,32 @@
     "especialidad": "ODONTOLOGIA",
     "medico": "901234",
     "radicadoExamen": "J571",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "DV858",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "4500",
+    "motivoCita": "VALORACION",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "123456",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "DC801",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "678901",
+    "radicadoExamen": "No aplica",
     "autorizado": true,
     "generadorCodigo": {}
   }

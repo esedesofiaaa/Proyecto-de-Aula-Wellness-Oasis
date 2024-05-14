@@ -179,6 +179,7 @@ public class ViewModificarCitaController {
 
             limpiarCampos();
             idMensajeLabel.setText("Cita modificada correctamente.");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
         }
 
         /*Cita casoExamen = citasController.buscarCitaPorId(idCitasComboBox.getValue().split(" - ")[0]);

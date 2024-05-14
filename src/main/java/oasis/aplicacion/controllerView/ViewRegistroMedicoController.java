@@ -44,11 +44,14 @@ public class ViewRegistroMedicoController {
 
         if (nombre.isEmpty() || idMedico.isEmpty() || especialidad == null) {
             idMensajeLabel.setText("Por favor completa todos los campos");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.RED);
         } else {
             Medico nuevoMedico = new Medico(nombre, especialidad, idMedico);
             medicosController.agregarMedico(nuevoMedico);
             limpiarCampos();
             idMensajeLabel.setText("Médico registrado con éxito!");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+
         }
     }
 

@@ -32,7 +32,7 @@ public class CitasController {
     }
 
 
-    public void agendarCitaControlValoracion(String idPaciente, String motivoCita, String especialidad, String medico, boolean pagado) {
+    public Cita agendarCitaControlValoracion(String idPaciente, String motivoCita, String especialidad, String medico, boolean pagado) {
         // Ubica el paciente en la listaPacientes por su id, para evitar agregar todos los datos del paciente
         Paciente pacienteTemp = pacientesRepository.obtenerPorId(idPaciente);
         Medico medicoTemp = medicosController.buscarMedicoPorId(medico);
@@ -44,8 +44,12 @@ public class CitasController {
             citaRepository.guardarCita(cita);
             System.out.println("Cita agendada para el paciente: " + pacienteTemp.getNombre() + " " + pacienteTemp.getApellido() +
                     ". Tu código de cita es: " + cita.getIdCita());
+            return cita;
+
         } else {
             System.out.println("El paciente o el médico no están registrados en el sistema.");
+            return null;
+
         }
     }
 

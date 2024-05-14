@@ -12,6 +12,7 @@ import oasis.model.domain.Especialidad;
 import oasis.model.domain.cita.Cita;
 import oasis.model.domain.medico.Medico;
 import javafx.scene.control.ComboBox;
+import oasis.model.repository.SalaEsperaRepository;
 
 
 public class ViewRegistroCitaController {
@@ -39,6 +40,8 @@ public class ViewRegistroCitaController {
     private Label idMensajeLabel;
 
     private final CitasController citaController;
+    private final  SalaEsperaRepository salaEsperaRepository;
+
     private final MedicosController medicosController;
     private String idMedicoMomentario;
 
@@ -46,6 +49,7 @@ public class ViewRegistroCitaController {
     public ViewRegistroCitaController() {
         this.medicosController = new MedicosController();
         this.citaController = new CitasController();
+        this.salaEsperaRepository = new SalaEsperaRepository();
     }
 
     @FXML
@@ -96,10 +100,17 @@ public class ViewRegistroCitaController {
 
 
         // Agregar la cita utilizando el controlador de citas
-        citaController.agendarCitaControlValoracion(documentoPaciente, motivoCita, especialidad.toString(), medico, pagado);
-        idMensajeLabel.setText("Cita agendada con éxito");
-        idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+        Cita cita = citaController.agendarCitaControlValoracion(documentoPaciente, motivoCita, especialidad.toString(), medico, pagado);
 
+
+        if (pagado){
+            salaEsperaRepository.agregarCitaASalaDeEspera(cita);
+            idMensajeLabel.setText("Cita agendada con éxito, puedes pasar a la sala de espera directamente");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+        } else{
+            idMensajeLabel.setText("Cita agendada con éxito, recuerda pagar tu cita para ser atendido.");
+            idMensajeLabel.setTextFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+        }
         System.out.println("Cita guardada con éxito");
 
         // Limpiar los campos después de agregar la cita

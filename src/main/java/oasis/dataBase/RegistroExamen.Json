@@ -64,22 +64,6 @@
     "nota": "POR AUTORIZAR"
   },
   {
-    "radicadoExamen": "K251",
-    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "M477",
-    "motivoCitaExamen": "EVALUACION_DIETETICA",
-    "autorizado": true,
-    "generadorCodigo": {},
-    "idPaciente": "2",
-    "nota": "AUTORIZADO"
-  },
-  {
     "radicadoExamen": "Z752",
     "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
     "autorizado": false,
@@ -93,6 +77,22 @@
     "autorizado": true,
     "generadorCodigo": {},
     "idPaciente": "2",
+    "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "M477",
+    "motivoCitaExamen": "EVALUACION_DIETETICA",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "2",
+    "nota": "AUTORIZADO"
+  },
+  {
+    "radicadoExamen": "K251",
+    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
+    "autorizado": true,
+    "generadorCodigo": {},
+    "idPaciente": "3",
     "nota": "AUTORIZADO"
   },
   {

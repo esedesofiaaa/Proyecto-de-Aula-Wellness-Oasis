@@ -59,7 +59,7 @@
                   </Button>
                </center>
                <bottom>
-                  <Label fx:id="idMensajeLabel" alignment="CENTER" prefHeight="26.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+                  <Label fx:id="idMensajeLabel" alignment="CENTER" prefHeight="26.0" prefWidth="340.0" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="10.0" />
                      </font></Label>

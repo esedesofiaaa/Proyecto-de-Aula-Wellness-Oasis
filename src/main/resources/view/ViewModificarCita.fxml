@@ -96,8 +96,8 @@
                 </GridPane>
             </children>
         </AnchorPane>
-        <Label fx:id="idMensajeLabel" alignment="CENTER" layoutX="257.0" layoutY="360.0" prefHeight="18.0" prefWidth="144.0" />
-            <Button fx:id="idBotonModificarCita" layoutX="264.0" layoutY="332.0" mnemonicParsing="false" onAction="#modificarCita" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: #23B9CE;" text="Modificar Cita" textFill="WHITE">
+        <Label fx:id="idMensajeLabel" alignment="CENTER" layoutX="135.0" layoutY="317.0" prefHeight="18.0" prefWidth="386.0" />
+            <Button fx:id="idBotonModificarCita" layoutX="263.0" layoutY="349.0" mnemonicParsing="false" onAction="#modificarCita" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: #23B9CE;" text="Modificar Cita" textFill="WHITE">
                 <font>
                     <Font name="System Bold" size="16.0" />
                 </font>

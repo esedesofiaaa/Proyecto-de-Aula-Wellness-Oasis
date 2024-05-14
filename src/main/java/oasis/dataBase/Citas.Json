@@ -1,18 +1,5 @@
 [
   {
-    "idCita": "DV858",
-    "idPaciente": "2",
-    "pagado": true,
-    "tomado": false,
-    "costo": "4500",
-    "motivoCita": "VALORACION",
-    "especialidad": "DERMATOLOGIA",
-    "medico": "123456",
-    "radicadoExamen": "No aplica",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
     "idCita": "DE177",
     "idPaciente": "3",
     "pagado": true,
@@ -49,42 +36,6 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "PE256",
-    "idPaciente": "1",
-    "pagado": false,
-    "tomado": false,
-    "motivoCita": "EXAMEN",
-    "especialidad": "PEDIATRIA",
-    "medico": "789012",
-    "radicadoExamen": "R978",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "PSE282",
-    "idPaciente": "1",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "EXAMEN",
-    "especialidad": "PSIQUIATRIA",
-    "medico": "234567",
-    "radicadoExamen": "G132",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "OE618",
-    "idPaciente": "1",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "EXAMEN",
-    "especialidad": "ODONTOLOGIA",
-    "medico": "901234",
-    "radicadoExamen": "O964",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
     "idCita": "OE911",
     "idPaciente": "1",
     "pagado": true,
@@ -93,18 +44,6 @@
     "especialidad": "ODONTOLOGIA",
     "medico": "901234",
     "radicadoExamen": "J571",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "PV217",
-    "idPaciente": "3",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "VALORACION",
-    "especialidad": "PEDIATRIA",
-    "medico": "098765",
-    "radicadoExamen": "No aplica",
     "autorizado": true,
     "generadorCodigo": {}
   },
@@ -146,19 +85,6 @@
     "generadorCodigo": {}
   },
   {
-    "idCita": "CV126",
-    "idPaciente": "2",
-    "pagado": true,
-    "tomado": false,
-    "costo": "Gratis",
-    "motivoCita": "VALORACION",
-    "especialidad": "CARDIOLOGIA",
-    "medico": "123456",
-    "radicadoExamen": "No aplica",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
     "idCita": "OV759",
     "idPaciente": "3",
     "pagado": false,
@@ -166,6 +92,81 @@
     "motivoCita": "VALORACION",
     "especialidad": "ODONTOLOGIA",
     "medico": "ghjkhk",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "OE853",
+    "idPaciente": "1",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "ODONTOLOGIA",
+    "medico": "234567",
+    "radicadoExamen": "O964",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "PSE179",
+    "idPaciente": "1",
+    "pagado": true,
+    "tomado": false,
+    "motivoCita": "EXAMEN",
+    "especialidad": "PSIQUIATRIA",
+    "medico": "234567",
+    "radicadoExamen": "G132",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "PV462",
+    "idPaciente": "1",
+    "pagado": false,
+    "tomado": false,
+    "motivoCita": "VALORACION",
+    "especialidad": "PEDIATRIA",
+    "medico": "345678",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "CC814",
+    "idPaciente": "3",
+    "pagado": false,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "CARDIOLOGIA",
+    "medico": "567890",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "DC324",
+    "idPaciente": "2",
+    "pagado": false,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "678901",
+    "radicadoExamen": "No aplica",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "DC801",
+    "idPaciente": "2",
+    "pagado": true,
+    "tomado": false,
+    "costo": "Gratis",
+    "motivoCita": "CONTROL",
+    "especialidad": "DERMATOLOGIA",
+    "medico": "678901",
     "radicadoExamen": "No aplica",
     "autorizado": true,
     "generadorCodigo": {}

@@ -1,21 +1,5 @@
 [
   {
-    "radicadoExamen": "K251",
-    "motivoCitaExamen": "ANALISIS_DE_COMPOSICION_CORPORAL",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "W818",
-    "motivoCitaExamen": "RADIOGRAFIA_DE_TORAX",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "3",
-    "nota": "POR AUTORIZAR"
-  },
-  {
     "radicadoExamen": "U358",
     "motivoCitaExamen": "EVALUACION_DIETETICA",
     "autorizado": false,
@@ -30,14 +14,5 @@
     "generadorCodigo": {},
     "idPaciente": "1",
     "nota": "POR AUTORIZAR"
-  },
-  {
-    "radicadoExamen": "M477",
-    "motivoCitaExamen": "EVALUACION_DIETETICA",
-    "autorizado": false,
-    "generadorCodigo": {},
-    "idPaciente": "2",
-    "nota": "POR AUTORIZAR"
   }
-
 ]

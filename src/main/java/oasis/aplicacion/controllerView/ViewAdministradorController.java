@@ -75,7 +75,7 @@ public class ViewAdministradorController {
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setTitle("Pagar Cita");
-            stage.setScene(new Scene(root));
+            stage.setScene(new Scene(root,652 , 311));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
