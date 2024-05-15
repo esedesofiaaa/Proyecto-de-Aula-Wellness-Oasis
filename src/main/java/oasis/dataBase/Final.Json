@@ -73,5 +73,29 @@
     "radicadoExamen": "G132",
     "autorizado": true,
     "generadorCodigo": {}
+  },
+  {
+    "idCita": "OE618",
+    "idPaciente": "1",
+    "pagado": true,
+    "tomado": true,
+    "motivoCita": "EXAMEN",
+    "especialidad": "ODONTOLOGIA",
+    "medico": "901234",
+    "radicadoExamen": "O964",
+    "autorizado": true,
+    "generadorCodigo": {}
+  },
+  {
+    "idCita": "OE911",
+    "idPaciente": "1",
+    "pagado": true,
+    "tomado": true,
+    "motivoCita": "EXAMEN",
+    "especialidad": "ODONTOLOGIA",
+    "medico": "901234",
+    "radicadoExamen": "J571",
+    "autorizado": true,
+    "generadorCodigo": {}
   }
 ]

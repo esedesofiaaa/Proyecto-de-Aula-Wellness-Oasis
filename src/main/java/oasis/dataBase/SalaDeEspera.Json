@@ -1,29 +1,5 @@
 [
   {
-    "idCita": "OE618",
-    "idPaciente": "1",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "EXAMEN",
-    "especialidad": "ODONTOLOGIA",
-    "medico": "901234",
-    "radicadoExamen": "O964",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
-    "idCita": "OE911",
-    "idPaciente": "1",
-    "pagado": true,
-    "tomado": false,
-    "motivoCita": "EXAMEN",
-    "especialidad": "ODONTOLOGIA",
-    "medico": "901234",
-    "radicadoExamen": "J571",
-    "autorizado": true,
-    "generadorCodigo": {}
-  },
-  {
     "idCita": "DV858",
     "idPaciente": "2",
     "pagado": true,

@@ -11,7 +11,7 @@
    <children>
       <AnchorPane layoutX="8.0" prefHeight="74.0" prefWidth="657.0" style="-fx-background-color: #23B9CE;">
          <children>
-            <Label layoutX="358.0" layoutY="24.0" text="Autorizar Examenes" textFill="WHITE">
+            <Label layoutX="383.0" layoutY="23.0" text="Sala de Espera" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
